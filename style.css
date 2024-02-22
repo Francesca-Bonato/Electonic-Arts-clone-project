@@ -7,11 +7,13 @@ html {
   margin: 0;
   padding: 0;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 h1,
 h2,
 h3,
@@ -24,31 +26,103 @@ ul {
   margin: 0 0 1rem 0;
   padding: 0;
 }
+
 ol,
 ul {
   list-style-type: none;
 }
+
 img {
   height: auto;
 }
+
 h1 {
   font-size: 4rem;
 }
+
 h2 {
   font-size: 3rem;
 }
+
 h3 {
   font-size: 2rem;
 }
+
 h4 {
   font-size: 1rem;
 }
+
 h5 {
   font-size: 0.8rem;
 }
+
 h6 {
   font-size: 0.6rem;
 }
+
 a {
   text-decoration: none;
+}
+
+/* EA play section */
+
+.section-play {
+  height: 576px;
+  overflow: hidden;
+}
+
+.hero-figure {  
+  z-index: -1;
+  position: relative;
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.hero-content {
+  width: 576px;
+  position: absolute;
+  top: 209.9px;
+  left: 106.874px;
+}
+
+.hero-content-body {
+  color: white;
+  margin-bottom: 21px;
+}
+
+.hero-content-cta {
+  padding: 12px 0px;
+  & a {
+  color: white;
+  padding: 12px 24px;
+  border: 1px solid white; 
+  }
+} 
+
+.subsection-play {
+  background-color: #6FB0D6;
+  height: 96px;
+}
+
+.subsection-play-container {
+  padding: 0px 106.874px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subsection-play-title {
+  max-width: 599.13px;
+}
+
+.subsection-play-cta {
+  padding: 12px 0px;
+  & a {
+  color: black;
+  padding: 12px 24px;
+  border: 1px solid black; 
+  }
 }
