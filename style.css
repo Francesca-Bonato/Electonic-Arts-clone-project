@@ -1,5 +1,4 @@
 /* ! Reset */
-
 :root {
   /* colors */
   --primary-color: #F3F3F3;
@@ -14,7 +13,23 @@
   
   /* font */
   --primary-font: "Inter", "Helvetica", "Arial", sans-serif;
-  ---primary-line-height: 1.7em;
+  --primary-line-height: 1.7em;
+} 
+
+:root {
+  /* colors */
+  --primary-color: #F3F3F3;
+  --coral-color: #FB4646;
+  --hover-button-color: #DEDEDE;
+  --font-color: #161616;
+
+  /* buttons */
+  --padding-button: 12px 24px;
+  --padding-button-hover: 3px 3px 3px 3px;
+  --border-button: 2px solid;
+  
+  /* font */
+  --primary-font: "Inter", "Helvetica", "Arial", sans-serif
 } 
 
 body,
