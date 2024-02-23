@@ -1,7 +1,26 @@
 /* ! Reset */
+
+:root {
+  /* colors */
+  --primary-color: #F3F3F3;
+  --coral-color: #FB4646;
+  --hover-button-color: #DEDEDE;
+  --font-color: #161616;
+
+  /* buttons */
+  --padding-button: 12px 24px;
+  --padding-button-hover: 3px 3px 3px 3px;
+  --border-button: 1px solid;
+  
+  /* font */
+  --primary-font: "Inter", "Helvetica", "Arial", sans-serif;
+  ---primary-line-height: 1.7em;
+} 
+
 body,
 html {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: var(--primary-font);
+  line-height: var(---primary-line-height);
   font-size: 16px;
   box-sizing: border-box;
   margin: 0;
@@ -49,15 +68,15 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 h5 {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
 }
 
 h6 {
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 
 a {
@@ -69,11 +88,11 @@ a {
 .section-play {
   height: 576px;
   overflow: hidden;
+  position: relative;
 }
 
 .hero-figure {  
   z-index: -1;
-  position: relative;
   & img {
     position: absolute;
     top: 0;
@@ -91,14 +110,17 @@ a {
 .hero-content-body {
   color: white;
   margin-bottom: 21px;
+  & h6 {
+    font-weight: normal;
+  }
 }
 
 .hero-content-cta {
   padding: 12px 0px;
   & a {
   color: white;
-  padding: 12px 24px;
-  border: 1px solid white; 
+  padding: var(--padding-button);
+  border: var(--border-button) white; 
   }
 } 
 
@@ -122,7 +144,7 @@ a {
   padding: 12px 0px;
   & a {
   color: black;
-  padding: 12px 24px;
-  border: 1px solid black; 
+  padding: var(--padding-button);
+  border: var(--border-button)  black; 
   }
 }
