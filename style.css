@@ -125,6 +125,8 @@ a {
   & h6 {
     font-weight: normal;
     margin-bottom: 25px;
+    line-height: var(--primary-line-height);
+    font-size: 1.1em;
   }
 }
 
