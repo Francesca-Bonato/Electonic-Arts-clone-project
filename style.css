@@ -10,6 +10,7 @@
   --padding-button: 12px 24px;
   --padding-button-hover: 3px 3px 3px 3px;
   --border-button: 1px solid;
+  --border-radius-button: 3px;
   
   /* font */
   --primary-font: "Inter", "Helvetica", "Arial", sans-serif;
@@ -101,14 +102,12 @@ a {
 /* EA play section */
 
 .section-play {
-  height: 576px;
-  overflow: hidden;
-  position: relative;
+  position: static;
 }
 
 .hero-figure {  
-  z-index: -1;
   & img {
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
@@ -116,17 +115,16 @@ a {
 }
 
 .hero-content {
-  width: 576px;
-  position: absolute;
-  top: 209.9px;
-  left: 106.874px;
-}
-
-.hero-content-body {
+  width: 1440px;
+  height: 576px;
+  padding: 36px 734px 32px 106.874px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
   color: white;
-  margin-bottom: 21px;
   & h6 {
     font-weight: normal;
+    margin-bottom: 25px;
   }
 }
 
@@ -136,23 +134,27 @@ a {
   color: white;
   padding: var(--padding-button);
   border: var(--border-button) white; 
+  border-radius: var(--border-radius-button);
   }
 } 
 
 .subsection-play {
   background-color: #6FB0D6;
+  width: 1455px;
   height: 96px;
-}
-
-.subsection-play-container {
   padding: 0px 106.874px;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 }
 
 .subsection-play-title {
   max-width: 599.13px;
+  & h5 {
+    font-size: 1.4em;
+    margin-bottom: 0;
+  }
 }
 
 .subsection-play-cta {
@@ -161,5 +163,6 @@ a {
   color: black;
   padding: var(--padding-button);
   border: var(--border-button)  black; 
+  border-radius: var(--border-radius-button);
   }
 }
