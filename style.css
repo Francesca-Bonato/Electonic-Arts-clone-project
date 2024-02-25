@@ -78,6 +78,7 @@ a {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  background-image: url(assets/bf-2042-s5-mse-section-hero-video-xl.mp4);
 }
 
 .jumbotron-main video  {
@@ -93,7 +94,7 @@ a {
   display: none;
 }
 
-.video-l video, .video-m video {
+.video-l video, .video-m video, .video-s video {
   display: none;
   position: absolute;
   top: 0;
@@ -155,6 +156,11 @@ a {
 
 
 @media screen and (min-width:1024px) and (max-width:1456px) {
+
+  .jumbotron-main {
+    background-image: url(assets/bf-2042-s5-mse-hero-video-m.mp4);
+  }
+
   .jumbotron-main video {
     display: none;
   }
@@ -162,9 +168,11 @@ a {
   .video-l video {
     display: block;
   }
+
+
 }
 
-@media screen and (min-width:375px) and (max-width:768px) {
+@media screen and (min-width:425px) and (max-width:768px) {
 
   .video-l video, .jumbotron-main video {
     display: none;
@@ -176,22 +184,8 @@ a {
   }
 
   .jumbotron-main {
-    min-height: 100vh;
-    justify-content: flex-end;
     background-image: url(assets/bf-2042-section-768w.jpg);
-    background-position: center 150px;
-    background-size: cover;
-    background-repeat: no-repeat;
   } 
-
-
-  .jumbotron-main video {
-    height: 50%;
-  }
-
-  .overlay-content {
-    justify-content: flex-end;
-  }
 
   .overlay-content img  {
     width: 55%;
@@ -201,9 +195,32 @@ a {
     width: 55%;
   }
 
-  .overlay-content .spacer {
-    height: 100px;
+}
+
+@media screen and (max-width:425px) {
+
+
+  .video-l video, .video-m video, .jumbotron-main video {
+    display: none;
   }
 
+  .jumbotron-main {
+    height: 85vh;
+  }
+
+  .video-s video {
+    display: block;
+    z-index: 2;
+  }
+
+
+
+  .overlay-content img  {
+    width: 55%;
+  
+  } & .overlay-content h6 {
+    font-size: 15px;
+    width: 55%;
+  }
 }
 
