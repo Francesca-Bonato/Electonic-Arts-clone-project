@@ -26,7 +26,7 @@
 
   /* buttons */
   --padding-button: 12px 24px;
-  --padding-button-hover: 3px 3px 3px 3px;
+  --padding-button-hover: 15px 27px;
   --border-button: 2px solid;
   
   /* font */
@@ -138,6 +138,9 @@ a {
   border: var(--border-button) white; 
   border-radius: var(--border-radius-button);
   }
+  & a:hover {
+    padding: var(--padding-button-hover);
+  }
 } 
 
 .subsection-play {
@@ -168,3 +171,4 @@ a {
   border-radius: var(--border-radius-button);
   }
 }
+
