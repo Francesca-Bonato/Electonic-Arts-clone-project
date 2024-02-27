@@ -115,7 +115,7 @@ a {
 }
 
 .animated {
-  animation-duration: 1s;
+  animation-duration: 1.2s;
   animation-fill-mode: both;
 }
 
@@ -231,6 +231,7 @@ a {
 
   .jumbotron-main {
     height: 85vh;
+    background-image: url(assets/bf-2042-section-bg-s5-mid-season-homepage-xl.jpg.adapt.320w.jpg);
   }
 
   .video-s video {
@@ -238,7 +239,7 @@ a {
     z-index: 2;
   }
 
-
+  
 
   .overlay-content img  {
     width: 55%;
