@@ -22,6 +22,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #161616;
 }
 *,
 *:before,
@@ -78,7 +79,6 @@ a {
   width: 100%;
 }
 
-
 .nav_menu_one {
   display: flex;
   width: 100%;
@@ -130,82 +130,59 @@ a {
 
 /* Nav 2 */
 
-.container-section-games {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  overflow: hidden;
-  position: absolute;
-  top:30px;
-  left:0px;
-  background-color: #f3f3f3cb;
-  padding: 50px;
-  width: 374px;
-  border-radius: 5px;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.games{
-  position: relative;
-  height: 30px;
-}
-
-.menu_two .games:hover .container-section-games{
-   visibility: visible;
-   opacity: 1;
-}
-
 .nav_menu_two a:hover{
   color: rgb(238, 25, 96);
-}
-.container-section-games p {
-  border-bottom: 1px solid #ccc;
-  text-align: start;
-  font-size: 15px;
-  font-weight: 900;
 }
 
 .nav_menu_two {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  padding: 10px;
+  background-color: #f5f5f5;
+  padding-top: 35px;
+  padding-bottom: 25px;
   width: 100%;
-  height: 40px;
+  height: max-content;
 }
 
-.nav_menu_two img{
-   width: 150px;
-   padding: 2px;
+.nav_menu_two svg{
+   width: 200px;
+   height: 100px;
+   padding: 10px;
 }
 
 .header_nav_menu_two{
   width: 60%;
   padding: 2px;
+  margin: 0;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
 }
 
 .menu_two a{
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  font-size: 12px;
+  font-size: 20px;
 }
   
-
-.ellipsis-vertical_menu img {
-  width: 40px;
+.ellipsis-vertical_menu ion-icon {
+  font-size: 25px;
   align-items: center;
   padding: 10px;
+  color: #161616;
+  transition: all 0.3s;
 }
+
+.ellipsis-vertical_menu ion-icon:hover{
+  color: #fb4646;
+  transform: scale(1.4);
+  }
 
 .header_nav_menu_two {
   display: flex;
-  height: 40px;
-  width: 10%;
+  height: max-content;
+  width: max-content;
 }
 
 .menu_two {
@@ -213,11 +190,41 @@ a {
   justify-content: flex-start;
   gap: 20px;
   padding: 10px;
+  margin-bottom: 0;
 }
 
 .menu_two a {
   text-decoration: none;
   color: #161616;
+}
+          /* Giochi */
+.container-section-games {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  left:0px;
+  background-color: #f3f3f3cb;
+  padding: 40px;
+  width: max-content;
+  height: max-content;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.games{
+  position: relative;
+  height: 50px;
+}
+
+.container-section-games p {
+  border-bottom: 1px solid #242323c7;
+  text-align: start;
+  font-size: 15px;
+  font-weight: 900;
 }
 
 .game_list_one {
@@ -233,37 +240,126 @@ a {
 }
 
 .game_list_one p, .game_list_two p{
-  font-size: 10px;
+  font-size: 18px;
 }
 
 .game_list_one li, .game_list_two li{
   font-size: 10px;
 }
 
+.menu_two .games:hover .container-section-games{
+  visibility: visible;
+  opacity: 1;
+}
+       /* Altre esperienze */
+.container-section-other_experience{
+    overflow: hidden;
+    width: max-content;
+    height: 30px;
+} 
+
 .other_experience {
-  width: 100px;
-  line-height: 22px;
+  margin-top: 20px;
+  position: absolute;
+  background-color: #f3f3f3cb;
+  border-radius: 5px;
+  padding: 20px;
+  visibility: hidden;
+  opacity: 0; 
+  width: max-content;
+  height: max-content;
 }
 
 .other_experience li{
-
+  line-height: 40px;
 }
 
-.other_experience a{
-
+.menu_two .container-section-other_experience:hover .other_experience{
+  visibility: visible;
+  opacity: 1;
 }
+              /* Informazioni */
+
+ .container-section-information{
+    height: 25px;
+    position: relative;
+    width: max-content;
+ }      
 
 .information {
+  margin-top: 20px;
+  position: absolute;
+  background-color: #f3f3f3cb;
+  border-radius: 5px;
+  padding: 30px;
+  width: max-content;
+  height: max-content;
+  visibility: hidden;
+  opacity: 0; 
+  overflow: hidden;
+}
+
+.information li{
+  line-height: 40px;
+}
+
+.menu_two .container-section-information:hover .information{
+  visibility: visible;
+  opacity: 1;
+}
+
+              /* Impegni */
+
+.container-section-engagements{
+  height: 30px;
   position: relative;
-  line-height: 22px;
 }
 
 .engagements {
-  position: relative;
-  line-height: 22px;
+  position: absolute;
+  background-color: #f3f3f3cb;
+  border-radius: 5px;
+  padding: 30px;
+  width: max-content;
+  margin-top: 20px;
+  height: max-content;
+  opacity: 0; 
+  visibility: hidden;
 }
 
-.resources {
+.engagements li{
+  line-height: 40px;
+}
+
+.menu_two .container-section-engagements:hover .engagements{
+ visibility: visible;
+ opacity: 1;
+}
+             /* Risorse */
+
+ .container-section-resources{
+  height: 30px;
   position: relative;
-  line-height: 22px;
+  width: max-content;
+ }          
+
+.resources {
+  position: absolute;
+  background-color: #f3f3f3cb;
+  border-radius: 5px;
+  padding: 30px;
+  width: max-content;
+  margin-top: 20px;
+  height: max-content;
+  opacity: 0; 
+  visibility: hidden;
+}
+
+.resources li{
+  line-height: 40px;
+}
+
+.menu_two .container-section-resources:hover .resources{
+  visibility: visible;
+  opacity: 1;
 }
