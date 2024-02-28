@@ -59,59 +59,57 @@ a {
 
 /* Menù contenente le novità */
 .menu-cards-novita {
-  border-bottom: 2px solid #DEDEDE;
+  border-bottom: 2px solid #dedede;
 
   /* Allineamento verticale della lista */
   & ul {
     display: flex;
     justify-content: center;
 
-  /* Margine, padding e bordo di ogni li */
-    & li a{
-     color: black; 
+    /* Margine, padding e bordo di ogni li */
+    & li a {
+      color: black;
     }
   }
 
   & ul div {
     margin: 15px 0;
     padding: 0 15px;
-    border-left: 2px solid #DEDEDE;
+    border-left: 2px solid #dedede;
   }
 
   & ul li:hover {
     background-color: #dededea6;
   }
 
-
   /* Annullo del bordo sinistro al primo li */
   & ul li:first-child {
-    border: none
-    } 
+    border: none;
+  }
 }
 
 /* Allineamento orizzontale Contenitore Card */
 .flex-container-cards-novita {
   display: flex;
   justify-content: center;
+  padding: 50px;
 }
 
 /* Distanziamento e larghezza Container Cards */
 .container-Cards-novita {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 3em;
-  max-width: 1100px;
+  max-width: 1200px;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 55px 75px 0 75px;
+  gap: 16px;
 
   /* Gestione delle Card Singole */
   & .single-card-novita {
-    width: 32%;
-    min-height: 450px;
+    width: 358px;
+    height: 450px;
     box-shadow: 0 0 7px -1px gray;
     transition: 0.5s;
-
   }
 }
 
@@ -122,7 +120,7 @@ a {
 
 /* Gestione contenuto della Singola Card */
 .main-card-novita {
-  padding: 15px 20px 20px 20px ;
+  padding: 15px 20px 20px 20px;
 
   & > :first-child {
     color: #ff4747;
@@ -139,4 +137,40 @@ a {
   & p {
     margin-top: 6px;
   }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1455px) {
+  .single-card-novita {
+    flex: 0 1 30%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .single-card-novita {
+    flex: 0 1 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .single-card-novita {
+    flex-grow: 1;
+    max-height: 100px;
+  }
+
+  .single-card-novita p, 
+  .single-card-novita .header-card-novita  {
+    display: none;
+  }
+
+  .single-card-novita span,
+  .single-card-novita h3  {
+    display: block;
+    text-align: center;
+  }
+
+  .single-card-novita h3 {
+    font-size: 20px !important;
+  }
+  
 }
