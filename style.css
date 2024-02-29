@@ -83,13 +83,16 @@ a {
 /* Nav 1 */
 #content {
   background-color: var(--font-color);
-  height: 40px;
   width: 100%;
-  transition: 0.6s cubic-bezier(0.5, 0.25, 0.015, 1);
+  position: sticky;
+  top: 0;
+  visibility: visible;
+  z-index: 9999;
 }
 
 .active {
-  height: 0 !important;
+  height: 0;
+  visibility: hidden;
 }
 
 .nav_menu_one {
@@ -98,11 +101,8 @@ a {
   justify-content: flex-end;
   list-style: none;
   margin: 0;
-  padding: 0 32px 0 0;
+  padding-right: 32px;
   gap: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 
 .menu_one {
@@ -113,7 +113,7 @@ a {
 
 .user_profile {
   align-items: center;
-  display: inline-flex;
+  display: flex;
   height: 100%;
   justify-content: center;
   width: 100%;
@@ -122,7 +122,7 @@ a {
 
 .help {
   align-items: center;
-  display: inline-flex;
+  display: flex;
   height: 100%;
   justify-content: center;
   width: 100%;
@@ -167,6 +167,7 @@ a {
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
+  padding: 5px;
   background-color: #f5f5f5;
   position: fixed;
   left: 0;
@@ -197,7 +198,7 @@ a {
 .menu {
   display: flex;
   width: 100%;
-  gap: 30px;
+  gap: 20px;
   position: relative;
 }
 

@@ -1,8 +1,8 @@
 let content = document.querySelector('#content');
 let subMenu = document.querySelector('.container-section-games');
 let menu = document.querySelector('.games');
-let containerInvisile = document.querySelector('.sub-menu');
-let lastKnownScrollPosition = 0;
+// let containerInvisile = document.querySelector('.sub-menu');
+// let lastKnownScrollPosition = 0;
 
 document.addEventListener("scroll", () => {
     if (lastKnownScrollPosition = window.scrollY) {
@@ -12,6 +12,6 @@ document.addEventListener("scroll", () => {
     }
 });
 
-menu.addEventListener('mouseover', () => {
-    subMenu.classList.toggle('visible')
-})
+// menu.addEventListener('click', () => {
+//     subMenu.classList.toggle('visible')
+// })
