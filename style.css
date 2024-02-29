@@ -69,6 +69,14 @@ h6 {
 a {
   text-decoration: none;
 }
+/*  ---------------
+      CONTAINER
+------------------- */
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
 /*  ---------------------------
         Navbar 
 ------------------------------- */
@@ -77,22 +85,28 @@ a {
   background-color: var(--font-color);
   height: 40px;
   width: 100%;
+  transition: 0.6s cubic-bezier(0.5, 0.25, 0.015, 1);
+}
+
+.active {
+  height: 0 !important;
 }
 
 .nav_menu_one {
   display: flex;
   width: 100%;
-  height: 40px;
   justify-content: flex-end;
   list-style: none;
   margin: 0;
   padding: 0 32px 0 0;
   gap: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .menu_one {
   width: 40px;
-  height: 40px;
   padding: 5px;
   margin-right: 15px;
 }
@@ -115,22 +129,36 @@ a {
   font-size: 25px;
 }
 
-.menu_one svg,
-.ea-logo img {
-  opacity: 0.5;
+.menu_one svg {
+  opacity: 0.6;
 }
 
-.ea-logo img:hover {
-  opacity: 20;
+.ea-logo-svg {
+  fill: white;
+}
+
+.pointer-help {
+  fill: white;
+}
+
+.user-profile-svg {
+  fill: white;
+}
+.ea-logo a {
+  opacity: 0.6;
 }
 
 .menu_one svg:hover {
-  opacity: 20;
+  opacity: 1;
+}
+
+.ea-logo a:hover {
+  opacity: 1.5;
 }
 
 /* Nav 2 */
 
-.nav_menu_two a:hover{
+.nav_menu_two a:hover {
   color: rgb(238, 25, 96);
 }
 
@@ -138,20 +166,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 20px;
   background-color: #f5f5f5;
-  padding-top: 35px;
-  padding-bottom: 25px;
+  position: fixed;
+  left: 0;
   width: 100%;
-  height: max-content;
 }
 
-.nav_menu_two svg{
-   width: 200px;
-   height: 100px;
-   padding: 10px;
-}
-
-.header_nav_menu_two{
+.header_nav_menu_two {
   width: 60%;
   padding: 2px;
   margin: 0;
@@ -159,207 +181,146 @@ a {
   align-items: center;
 }
 
-.menu_two a{
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-size: 20px;
-}
-  
 .ellipsis-vertical_menu ion-icon {
   font-size: 25px;
   align-items: center;
-  padding: 10px;
   color: #161616;
   transition: all 0.3s;
 }
 
-.ellipsis-vertical_menu ion-icon:hover{
+.ellipsis-vertical_menu ion-icon:hover {
   color: #fb4646;
   transform: scale(1.4);
-  }
+}
 
-.header_nav_menu_two {
+/* ! MENU */
+.menu {
   display: flex;
-  height: max-content;
-  width: max-content;
+  width: 100%;
+  gap: 30px;
+  position: relative;
 }
 
-.menu_two {
+.menu-header {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
   display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  padding: 10px;
-  margin-bottom: 0;
+  background-color: #f5f5f5;
+  position: relative;
 }
 
-.menu_two a {
-  text-decoration: none;
-  color: #161616;
+.ea-local-nav {
+  height: 77%;
+  margin-top: 9px;
+  cursor: pointer;
 }
-          /* Giochi */
-.container-section-games {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  overflow: hidden;
+
+/* Button on open menu */
+.toggle-button {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-button span {
+  cursor: pointer;
+}
+
+/* ! Chevron Dropdown */
+.dropdown__chevron {
+  position: relative;
+  height: 1.4em;
+  width: 1.4em;
+  cursor: pointer;
+}
+
+.dropdown__chevron::before,
+.dropdown__chevron::after {
+  border-radius: 10px;
+  margin-left: 5px;
+  border-top: 2px solid black;
+  content: "";
+  height: 2px;
   position: absolute;
-  top: 50px;
-  left:0px;
-  background-color: #f3f3f3cb;
-  padding: 40px;
-  width: max-content;
-  height: max-content;
-  border-radius: 5px;
+  top: 50%;
+  width: 10px;
+  transition: all 0.3s;
+}
+
+.dropdown__chevron::before {
+  transform: rotate(45deg);
+}
+
+.dropdown__chevron::after {
+  margin-left: 10px;
+  transform: rotate(-45deg);
+}
+
+.ea-local-nav:hover .dropdown__chevron::before {
+  transform: rotate(-45deg);
+  border-top: 2px solid #ff5151;
+}
+
+.ea-local-nav:hover .dropdown__chevron::after {
+  transform: rotate(45deg);
+  border-top: 2px solid #ff5151;
+}
+
+.ea-local-nav:hover {
+  color: #ff5151;
+}
+
+/* Sub Menu */
+.sub-menu-games {
+  position: absolute;
+  height: 100%;
+  top: 37px;
+  z-index: 1;
   visibility: hidden;
   opacity: 0;
+  cursor: pointer;
+  transform: scaleY(0);
+  transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.games{
-  position: relative;
-  height: 50px;
-}
-
-.container-section-games p {
-  border-bottom: 1px solid #242323c7;
-  text-align: start;
-  font-size: 15px;
-  font-weight: 900;
-}
-
-.game_list_one {
-  grid-column: 1;
-  list-style: none;
-  line-height: 36px;
-} 
-
-.game_list_two {
-  grid-column: 2;
-  list-style: none;
-  line-height: 34px;
-}
-
-.game_list_one p, .game_list_two p{
-  font-size: 18px;
-}
-
-.game_list_one li, .game_list_two li{
-  font-size: 10px;
-}
-
-.menu_two .games:hover .container-section-games{
+.ea-local-nav:hover + .sub-menu-games {
   visibility: visible;
+  transform: scaleY(1);
   opacity: 1;
 }
-       /* Altre esperienze */
-.container-section-other_experience{
-    overflow: hidden;
-    width: max-content;
-    height: 30px;
-} 
 
-.other_experience {
-  margin-top: 20px;
-  position: absolute;
-  background-color: #f3f3f3cb;
-  border-radius: 5px;
-  padding: 20px;
-  visibility: hidden;
-  opacity: 0; 
-  width: max-content;
-  height: max-content;
+.sub-menu-games:hover.dropdown__chevron::after {
+  transform: rotate(45deg);
+  border-top: 2px solid #ff5151;
 }
 
-.other_experience li{
-  line-height: 40px;
-}
-
-.menu_two .container-section-other_experience:hover .other_experience{
+.sub-menu-games:hover {
   visibility: visible;
+  transform: scaleY(1);
   opacity: 1;
 }
-              /* Informazioni */
 
- .container-section-information{
-    height: 25px;
-    position: relative;
-    width: max-content;
- }      
-
-.information {
-  margin-top: 20px;
-  position: absolute;
-  background-color: #f3f3f3cb;
-  border-radius: 5px;
+.sub-menu {
+  display: flex;
+  gap: 30px;
+  background-color: white;
+  border-radius: 10px;
   padding: 30px;
-  width: max-content;
-  height: max-content;
-  visibility: hidden;
-  opacity: 0; 
-  overflow: hidden;
+
+  position: relative;
+  top: 10px;
+  left: -15px;
 }
 
-.information li{
-  line-height: 40px;
-}
-
-.menu_two .container-section-information:hover .information{
+.sub-menu-visible {
   visibility: visible;
   opacity: 1;
 }
 
-              /* Impegni */
-
-.container-section-engagements{
-  height: 30px;
-  position: relative;
+.sub-menu ul {
+  list-style-type: none;
 }
 
-.engagements {
-  position: absolute;
-  background-color: #f3f3f3cb;
-  border-radius: 5px;
-  padding: 30px;
-  width: max-content;
-  margin-top: 20px;
-  height: max-content;
-  opacity: 0; 
-  visibility: hidden;
-}
-
-.engagements li{
-  line-height: 40px;
-}
-
-.menu_two .container-section-engagements:hover .engagements{
- visibility: visible;
- opacity: 1;
-}
-             /* Risorse */
-
- .container-section-resources{
-  height: 30px;
-  position: relative;
-  width: max-content;
- }          
-
-.resources {
-  position: absolute;
-  background-color: #f3f3f3cb;
-  border-radius: 5px;
-  padding: 30px;
-  width: max-content;
-  margin-top: 20px;
-  height: max-content;
-  opacity: 0; 
-  visibility: hidden;
-}
-
-.resources li{
-  line-height: 40px;
-}
-
-.menu_two .container-section-resources:hover .resources{
-  visibility: visible;
-  opacity: 1;
+.sub-menu ul li a:hover {
+  color: #ff5151;
 }
