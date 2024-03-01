@@ -60,7 +60,7 @@ a {
 /* Menù contenente le novità */
 .menu-cards-novita {
   border-bottom: 2px solid #dedede;
-  overflow: overlay;
+  overflow-x: hidden;
 
   /* Allineamento verticale della lista */
   & ul {
@@ -85,8 +85,14 @@ a {
   }
 
   /* Annullo del bordo sinistro al primo li */
-  & ul li:first-child div{
+  & ul > :nth-child(2) div{
     border: none;
+  }
+  /* Bottoni per lo scroll larterale */
+  & #menu-novita-scroll-left, #menu-novita-scroll-right {
+    background: inherit;
+    border: none;
+    
   }
 }
 
