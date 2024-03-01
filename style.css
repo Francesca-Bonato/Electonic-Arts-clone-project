@@ -146,7 +146,7 @@ a {
     right: 0;
     top: 0;
   }
-  
+
   & a:hover::before {
     bottom: -3px;
     left: -3px;
@@ -248,5 +248,22 @@ a {
     & h5 {
       margin: 0;
     }
+  }
+}
+
+@media (min-width: 2560px) {
+  * {
+    font-weight: 20px;
+  }
+  .hero-content {
+    position: absolute;
+    top: 28%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    max-width: 544px;
+  }
+  .subsection-play {
+    padding-left: 720px;
+    padding-right: 720px;
   }
 }
