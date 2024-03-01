@@ -60,6 +60,7 @@ a {
 /* Menù contenente le novità */
 .menu-cards-novita {
   border-bottom: 2px solid #dedede;
+  overflow: overlay;
 
   /* Allineamento verticale della lista */
   & ul {
@@ -76,6 +77,7 @@ a {
     margin: 15px 0;
     padding: 0 15px;
     border-left: 2px solid #dedede;
+    width: max-content;
   }
 
   & ul li:hover {
@@ -83,7 +85,7 @@ a {
   }
 
   /* Annullo del bordo sinistro al primo li */
-  & ul li:first-child {
+  & ul li:first-child div{
     border: none;
   }
 }
@@ -106,8 +108,6 @@ a {
 
   /* Gestione delle Card Singole */
   & .single-card-novita {
-    width: 358px;
-    height: 450px;
     box-shadow: 0 0 7px -1px gray;
     transition: 0.5s;
   }
@@ -120,6 +120,7 @@ a {
 
 /* Gestione contenuto della Singola Card */
 .main-card-novita {
+
   padding: 15px 20px 20px 20px;
 
   & > :first-child {
@@ -139,38 +140,63 @@ a {
   }
 }
 
+@media screen and (min-width: 1456px) {
+  .single-card-novita {
+    width: 358px;
+    height: 450px;
+  }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1455px) {
   .single-card-novita {
     flex: 0 1 30%;
+    min-height: 450px;
   }
+  li div {
+    flex: 0 1 60px;
+  }
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .single-card-novita {
-    flex: 0 1 45%;
-  }
+    flex: 0 1 40%;
+    height: 450px;
+  }  
 }
 
 @media screen and (max-width: 768px) {
-
-  .single-card-novita {
-    flex-grow: 1;
-    max-height: 100px;
+   /* per la scrollbar senza far sparire i primi LI */
+  .menu-cards-novita {
+    display: flex;
+    outline: none;
+    position: relative;
+    user-select: none;
+    width: 100%;
+    padding: 0 50px;
   }
+
+
 
   .single-card-novita p, 
   .single-card-novita .header-card-novita  {
     display: none;
   }
-
+  /* Centraggio  contenuto card*/
   .single-card-novita span,
   .single-card-novita h3  {
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
     text-align: center;
   }
 
   .single-card-novita h3 {
     font-size: 20px !important;
   }
+
+  .single-card-novita {
+    flex: 1 1 100%;
+  }
   
 }
+
