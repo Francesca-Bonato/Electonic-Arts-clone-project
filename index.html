@@ -82,42 +82,40 @@
           <div class="title-novita">
             <h3>Ultime Novità</h3>
           </div>
-
           <div class="menu-novità">
-
-            <button id="menu-novita-scroll-left" onclick="leftScroll()">
-              <i class="fa-solid fa-less-than"></i>
-            </button>
-            <div class="menu-cards-novita">
-              <ul>
-                <li>
-                  <div><a href="#">Notizie EA</a></div>
-                </li>
-                <li>
-                  <div><a href="#">EA SPORTS FC</a></div>
-                </li>
-                <li>
-                  <div><a href="#">Apex Legends</a></div>
-                </li>
-                <li>
-                  <div><a href="#">The Sims 4</a></div>
-                </li>
-                <li>
-                  <div><a href="#">F1</a></div>
-                </li>
-                <li>
-                  <div><a href="#">Battlefield</a></div>
-                </li>
-                <li>
-                  <div><a href="#">Need For Speed</a></div>
-                </li>
-              </ul>
+            <div class="menu-scroll">
+              <div class="menu-cards-novita">
+                <button id="menu-novita-scroll-left" onclick="leftScroll()">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+                <ul class="menu-scroll-active">
+                  <li>
+                    <div><a href="#">Notizie EA</a></div>
+                  </li>
+                  <li>
+                    <div><a href="#">EA SPORTS FC</a></div>
+                  </li>
+                  <li>
+                    <div><a href="#">Apex Legends</a></div>
+                  </li>
+                  <li>
+                    <div><a href="#">The Sims 4</a></div>
+                  </li>
+                  <li>
+                    <div><a href="#">F1</a></div>
+                  </li>
+                  <li>
+                    <div><a href="#">Battlefield</a></div>
+                  </li>
+                  <li>
+                    <div><a href="#">Need For Speed</a></div>
+                  </li>
+                </ul>
+                <button id="menu-novita-scroll-right" onclick="rightScroll()">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+              </div>
             </div>
-            
-            <button id="menu-novita-scroll-right" onclick="rightScroll()">
-              <i class="fa-solid fa-greater-than"></i>
-            </button>
-
             <div class="flex-container-cards-novita">
               <div class="container-Cards-novita">
                 <div class="single-card-novita">
@@ -264,5 +262,13 @@
     </div>
     <!-- File JS -->
     <script src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

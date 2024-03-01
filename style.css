@@ -59,13 +59,16 @@ a {
 
 /* Menù contenente le novità */
 .menu-cards-novita {
-  border-bottom: 2px solid #dedede;
-  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 
   /* Allineamento verticale della lista */
   & ul {
     display: flex;
     justify-content: center;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: none;
 
     /* Margine, padding e bordo di ogni li */
     & li a {
@@ -85,14 +88,8 @@ a {
   }
 
   /* Annullo del bordo sinistro al primo li */
-  & ul > :nth-child(2) div{
+  & ul > :nth-child(2) div {
     border: none;
-  }
-  /* Bottoni per lo scroll larterale */
-  & #menu-novita-scroll-left, #menu-novita-scroll-right {
-    background: inherit;
-    border: none;
-    
   }
 }
 
@@ -126,7 +123,6 @@ a {
 
 /* Gestione contenuto della Singola Card */
 .main-card-novita {
-
   padding: 15px 20px 20px 20px;
 
   & > :first-child {
@@ -146,6 +142,22 @@ a {
   }
 }
 
+#menu-novita-scroll-left,
+#menu-novita-scroll-right {
+  visibility: hidden;
+  padding: 0;
+  width: 50px;
+  position: relative;
+  z-index: 0;
+}
+
+.menu-scroll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #dedede;
+}
 @media screen and (min-width: 1456px) {
   .single-card-novita {
     width: 358px;
@@ -161,18 +173,17 @@ a {
   li div {
     flex: 0 1 60px;
   }
-
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .single-card-novita {
     flex: 0 1 40%;
     height: 450px;
-  }  
+  }
 }
 
 @media screen and (max-width: 768px) {
-   /* per la scrollbar senza far sparire i primi LI */
+  /* per la scrollbar senza far sparire i primi LI */
   .menu-cards-novita {
     display: flex;
     outline: none;
@@ -182,15 +193,13 @@ a {
     padding: 0 50px;
   }
 
-
-
-  .single-card-novita p, 
-  .single-card-novita .header-card-novita  {
+  .single-card-novita p,
+  .single-card-novita .header-card-novita {
     display: none;
   }
   /* Centraggio  contenuto card*/
   .single-card-novita span,
-  .single-card-novita h3  {
+  .single-card-novita h3 {
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
@@ -203,6 +212,38 @@ a {
   .single-card-novita {
     flex: 1 1 100%;
   }
-  
 }
 
+@media (max-width: 1256px) {
+  .menu-cards-novita {
+    width: 80%;
+    position: relative;
+  }
+
+  #menu-novita-scroll-right {
+    background-color: inherit;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    visibility: visible;
+  }
+
+  
+  .active-arrow{
+    background-color: inherit;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    visibility: visible !important;
+  }
+
+  .active-arrow #menu-novita-scroll-right{
+    visibility: hidden;
+  }
+
+  .active-arrow #menu-novita-scroll-left{
+    visibility: hidden;
+  }
+}
