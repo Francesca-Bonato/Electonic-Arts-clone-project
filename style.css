@@ -140,7 +140,7 @@ a {
   box-sizing: border-box;
   & h3 {
     margin: 25px 0 18px;
-    text-align: right;
+    text-align: left;
     font-size: 13px;
   }
 }
@@ -148,9 +148,11 @@ a {
 .social-links {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  max-width: 49.4px;
+  min-width: 200px;
+  max-width: 200px;
+  gap: 20px;
 }
 
 .network-footer {
@@ -284,6 +286,9 @@ a {
 
   .social-networks {
     min-width: 206px;
+    & h3 {
+      text-align: right;
+    }
   }
 
   .network-footer {
