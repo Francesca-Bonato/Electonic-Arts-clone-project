@@ -261,7 +261,6 @@ a {
 @media (min-width: 1024px) {
   .local-footer {
     padding: 40px 76px;
-    align-items: center;
   }
   
   .ea-terms {
@@ -318,3 +317,32 @@ a {
   }
   }
 
+  @media (min-width: 1273px) {
+    .local-footer {
+      padding: 40px 11.11%;
+    }
+
+    .network-footer {
+      padding: 15px 11.11% 40px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .local-footer {
+      min-width: 1000px;
+      padding-left: calc(50vw - 500px);
+      padding-right: calc(50vw - 500px);
+    }
+
+    .network-footer {
+      min-width: 1000px;
+      padding-left: calc(50vw - 500px);
+      padding-right: calc(50vw - 500px);
+    }
+  }
