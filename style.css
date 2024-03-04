@@ -88,12 +88,15 @@ a {
   & ul > :nth-child(2) div{
     border: none;
   }
-  /* Bottoni per lo scroll larterale */
-  & #menu-novita-scroll-left, #menu-novita-scroll-right {
-    background: inherit;
-    border: none;
+ 
+}
+
+/* Bottoni per lo scroll larterale */
+  #menu-novita-scroll-left, #menu-novita-scroll-right {
+   background: inherit;
+   border: none;
+   display: none;
     
-  }
 }
 
 /* Allineamento orizzontale Contenitore Card */
@@ -161,7 +164,13 @@ a {
   li div {
     flex: 0 1 60px;
   }
-
+  /* Bottoni per lo scroll larterale */
+  #menu-novita-scroll-left, #menu-novita-scroll-right {
+    background: inherit;
+    border: none;
+    display: none;
+     
+ }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {

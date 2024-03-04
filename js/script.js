@@ -1,5 +1,4 @@
 
-
 function leftScroll() {
     const buttonLeft = document.querySelector(".menu-cards-novita");
     buttonLeft.scrollBy(200, 0);
