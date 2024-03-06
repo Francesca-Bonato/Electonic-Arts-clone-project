@@ -59,7 +59,7 @@ a {
 
 /* Menù contenente le novità */
 .menu-cards-novita {
-  border-bottom: 2px solid #dedede;
+
 
   /* Allineamento verticale della lista */
   & ul {
@@ -88,7 +88,7 @@ a {
   }
 
   /* Annullo del bordo sinistro al primo li */
-  & ul > :nth-child(2) div {
+  & ul > :nth-child(1) div {
     border: none;
   }
 }
@@ -264,14 +264,13 @@ a {
     left: 0;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 93%);
-    border-bottom: 2px solid #dedede;
+
   }
 
   #menu-novita-scroll-right{
     right: 0;
     background: rgb(255,255,255);
     background: linear-gradient(270deg, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 93%);
-    border-bottom: 2px solid #dedede;
   }
 
 }
