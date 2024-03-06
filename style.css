@@ -1,34 +1,66 @@
 /* ! Reset */
 :root {
   /* colors */
-  --primary-color: #F3F3F3;
-  --coral-color: #FB4646;
-  --hover-button-color: #DEDEDE;
+  --primary-color: #f3f3f3;
+  --coral-color: #fb4646;
+  --hover-button-color: #dedede;
   --font-color: #161616;
 
   /* buttons */
   --padding-button: 12px 24px;
-  --padding-button-hover: 3px 3px 3px 3px;
+  --padding-button-hover: 15px 27px;
   --border-button: 2px solid;
   --border-radius-button: 3px;
+
+  & .btn-cta {
+    position: relative;
+    padding: 12px 24px;
+    text-align: center;
+  }
+  & .btn-cta::before {
+    border: var(--border-button);
+    border-radius: var(--border-radius-button);
+    transition: border 0.3s;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
+  & .btn-cta:hover::before {
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    top: -3px;
+  }
+
+  @font-face {
+    font-family: "Morn";
+    src: url(Fonts/Morn-Thin.otf) format("truetype");
+  }
   
   /* font */
-  --primary-font: "Inter", "Helvetica", "Arial", sans-serif
-} 
+  --primary-font: "Morn", "Inter", "Helvetica", "Arial", sans-serif;
+  --primary-line-height: 1.7em;
+}
 
 body,
 html {
   font-family: var(--primary-font);
+  line-height: var(---primary-line-height);
   font-size: 16px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 h1,
 h2,
 h3,
@@ -41,31 +73,191 @@ ul {
   margin: 0 0 1rem 0;
   padding: 0;
 }
+
 ol,
 ul {
   list-style-type: none;
 }
+
 img {
   height: auto;
 }
+
 h1 {
   font-size: 4rem;
 }
+
 h2 {
   font-size: 3rem;
 }
+
 h3 {
   font-size: 2rem;
 }
+
 h4 {
   font-size: 1.6rem;
 }
+
 h5 {
   font-size: 1.3rem;
 }
+
 h6 {
   font-size: 1rem;
 }
+
 a {
   text-decoration: none;
+}
+
+/* EA play section */
+.section-play {
+  position: static;
+}
+
+.section-play picture {
+}
+
+.section-play picture img {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px 24px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  color: white;
+  & h6 {
+    font-weight: normal;
+    line-height: var(--primary-line-height);
+    font-size: 0.93em;
+    margin-bottom: 30px;
+  }
+}
+
+.hero-content-cta {
+  display: flex;
+  width: 100%;
+  & a {
+    width: 100%;
+    color: white;
+  }
+
+  & a::before {
+    border: white;  
+  }
+}
+
+.subsection-play {
+  width: 100%;
+  height: auto;
+  background-color: #6fb0d6;
+  padding: 32px 24px 16px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: space-around;
+  text-align: center;
+}
+
+.subsection-play-title {
+  & h5 {
+    line-height: 1.4em;
+    font-size: 1.35em;
+    margin-bottom: 15px;
+  }
+}
+
+.subsection-play-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  & a {
+    color: black;
+  }
+  & a::before {
+    border: black;
+  }
+}
+
+@media (min-width: 767px) {
+  .hero-content {
+    height: auto;
+    width: 40.625%;
+    position: absolute;
+    top: 50%;
+    left: 7.8125%;
+    padding: 0px;
+    transform: translate(0%, -100%);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+  }
+
+  .subsection-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content-cta a {
+    width: auto;
+  }
+
+  .subsection-play-cta {
+    width: 145px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subsection-play {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4% 7.8125%;
+  }
+
+  .subsection-play-title {
+    text-align: left;
+    max-width: 544px;
+    & h5 {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  * {
+    font-weight: 20px;
+  }
+  .hero-content {
+    position: absolute;
+    top: 28%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    max-width: 544px;
+  }
+  .subsection-play {
+    padding-left: 720px;
+    padding-right: 720px;
+  }
 }
