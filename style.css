@@ -12,8 +12,36 @@
   --border-button: 2px solid;
   --border-radius-button: 3px;
 
+  & .btn-cta {
+    position: relative;
+    padding: 12px 24px;
+    text-align: center;
+  }
+  & .btn-cta::before {
+    border: var(--border-button);
+    border-radius: var(--border-radius-button);
+    transition: border 0.3s;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
+  & .btn-cta:hover::before {
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    top: -3px;
+  }
+
+  @font-face {
+    font-family: "Morn";
+    src: url(Fonts/Morn-Thin.otf) format("truetype");
+  }
+  
   /* font */
-  --primary-font: "Inter", "Helvetica", "Arial", sans-serif;
+  --primary-font: "Morn", "Inter", "Helvetica", "Arial", sans-serif;
   --primary-line-height: 1.7em;
 }
 
@@ -129,29 +157,11 @@ a {
   width: 100%;
   & a {
     width: 100%;
-    text-align: center;
     color: white;
-    padding: 12px 24px;
-    position: relative;
   }
 
   & a::before {
-    border: 2px solid white;
-    border-radius: var(--border-radius-button);
-    transition: border 0.3s;
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
-  }
-
-  & a:hover::before {
-    bottom: -3px;
-    left: -3px;
-    right: -3px;
-    top: -3px;
+    border: white;  
   }
 }
 
@@ -181,26 +191,10 @@ a {
   justify-content: flex-end;
   width: 100%;
   & a {
-    position: relative;
     color: black;
-    padding: 12px 24px;
   }
   & a::before {
-    border: var(--border-button) black;
-    border-radius: var(--border-radius-button);
-    transition: border 0.3s;
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
-  }
-  & a:hover::before {
-    bottom: -3px;
-    left: -3px;
-    right: -3px;
-    top: -3px;
+    border: black;
   }
 }
 
