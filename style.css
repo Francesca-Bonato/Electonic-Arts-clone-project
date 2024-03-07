@@ -113,10 +113,7 @@ a {
 
 /* EA play section */
 .section-play {
-  position: static;
-}
-
-.section-play picture {
+  position: relative;
 }
 
 .section-play picture img {
@@ -206,7 +203,7 @@ a {
     top: 50%;
     left: 7.8125%;
     padding: 0px;
-    transform: translate(0%, -100%);
+    transform: translate(0%, -50%);
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
