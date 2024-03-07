@@ -114,6 +114,12 @@ a {
     box-shadow: 0 0 7px -1px gray;
     transition: 0.5s;
   }
+  /* Spostamento verticale cards */
+  & .single-card-novita:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+    box-shadow: 0 30px 30px 0px gray;
+  }
 }
 
 /* Ridimensionamento immagine card */
