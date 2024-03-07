@@ -1,4 +1,56 @@
 /* ! Reset */
+:root {
+  /* colors */
+  --primary-color: #f3f3f3;
+  --coral-color: #fb4646;
+  --hover-button-color: #dedede;
+  --font-color: #161616;
+
+  /* buttons */
+  --padding-button: 12px 24px;
+  --padding-button-hover: 15px 27px;
+  --border-button: 2px solid;
+  --border-radius-button: 3px;
+
+  & .btn-cta {
+    position: relative;
+    padding: 12px 24px;
+    text-align: center;
+  }
+
+  & .btn-cta::before {
+    border: var(--border-button);
+    border-radius: var(--border-radius-button);
+    transition: border 0.3s;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
+
+  & .btn-cta:hover::before {
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    top: -3px;
+  }
+
+  @font-face {
+    font-family: "Morn";
+    src: url(Fonts/Morn-Thin.otf) format("truetype");
+  }
+
+  /* font */
+  --primary-font: "Morn",
+  "Inter",
+  "Helvetica",
+  "Arial",
+  sans-serif;
+  --primary-line-height: 1.7em;
+}
+
 body,
 html {
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -68,133 +120,161 @@ a {
   background-color: rgb(158, 176, 197);
 }
 
-* {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 /* full section of main games */
 .mainGamesContainer {
+  background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  padding-left: 7.4218vw;
+  padding-right: 7.4218vw;
 }
 
 /* main games title */
 .mainGamesHeader {
+  color: #161616;
   margin-top: 40px;
   margin-bottom: 24px;
-  font-size: 1.5em;
+  font-size: 3.5em;
   display: flex;
   text-align: center;
   box-sizing: border-box;
+  line-height: 1.15;
 }
 
 /* main games container*/
 .layoutImages {
   width: 100%;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 40px
+  display: flex;
+  flex-flow: row wrap;
 }
 
 /* container of image and logo */
-.imageContainer {
+.card-games {
   padding: 14px;
-  width: 100%;
+  position: relative;
+  width: 33.33%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .background {
-  box-sizing: border-box;
-  display: flex;
-  width: 300px;
-  height: 300px;
-  position: absolute;
+  width: 100%;
+  height: 100%;
   filter: brightness(70%)
 }
 
 .background:hover {
   filter: blur(1px);
+  background-color: black;
 }
 
-.logoOver {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 250px;
+#main-square-fc24 .image-box {
+  padding-top: 100%;
+  position: relative;
+
+  & .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%)
+  }
+
+  & .background:hover {
+    filter: blur(1px);
+  }
+}
+
+.image-box {
+  position: relative;
+}
+
+.overlay-gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-image: linear-gradient(to right, #10123fd0, #d74045e0);
+}
+
+.overlay-gradient:hover {
+  opacity: 1;
+
+  & .logo {
+    transform: translate(-50%, -180%);
+  }
 }
 
 .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50%;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
+  text-align: center;
+  transition: .5s ease;
+  filter: drop-shadow(5px 5px 3px hsla(0, 0%, 0%, 0.666));
 }
 
 #thesims4 {
-  margin-top: 40px;
-  font-size: larger;
+  font-size: 2em;
 }
 
-.gameNews {
-  text-decoration: none;
+#apex_legends_logo {
+  width: 30%;
+}
+
+#games-cta {
   color: black;
-  border: 2px solid black;
-  padding: 12px 24px;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.1s ease;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.4);
-  position: relative;
+  border: black;
 }
 
-.gameNews:hover {
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-
-@media screen and (max-width:1650px) {
-  .layoutImages {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+@media screen and (max-width: 1456px) {
+  .mainGamesContainer {
+    padding-left: calc((100vw - 1120px)/2);
+    padding-right: calc((100vw - 1120px)/2);
   }
 }
 
-@media screen and (max-width:1200px) {
-  .layoutImages {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-  }
-
-  .gameNews {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* media query tablet */
+@media screen and (max-width: 1023px) {
+  .mainGamesContainer {
+    padding-left: 7.8125vw;
+    padding-right: 7.8125vw;
   }
 
   .mainGamesHeader {
-    font-size: 1.2em;
+    font-size: 2.7em;
   }
 
+  .card-games {
+    width: 50%;
+  }
+}
+
+/* media query mobile */
+@media screen and (max-width: 767px) {
+  .card-games {
+    width: 100%;
+  }
+
+  .mainGamesHeader {
+    font-size: 2em;
+  }
+}
+
+/* media query button */
+@media screen and (max-width: 639px) {
+  #games-cta {
+    width: 100%;
+  }
 }
