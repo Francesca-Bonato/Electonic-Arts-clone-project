@@ -7,16 +7,22 @@
   --font-color: #161616;
 
   /* buttons */
-  --padding-button: 12px 24px;
-  --padding-button-hover: 15px 27px;
   --border-button: 2px solid;
   --border-radius-button: 3px;
+
+  /* font */
+  --primary-font: "Electronic Arts Text", "Inter", "Helvetica", "Arial",
+    sans-serif;
+  --title-font: "Electronic Arts Display", "Inter", "Helvetica", "Arial",
+    sans-serif;
+  --primary-line-height: 1.7em;
 
   & .btn-cta {
     position: relative;
     padding: 12px 24px;
     text-align: center;
   }
+
   & .btn-cta::before {
     border: var(--border-button);
     border-radius: var(--border-radius-button);
@@ -34,15 +40,26 @@
     right: -3px;
     top: -3px;
   }
+}
 
-  @font-face {
-    font-family: "Morn";
-    src: url(Fonts/Morn-Thin.otf) format("truetype");
-  }
-  
-  /* font */
-  --primary-font: "Morn", "Inter", "Helvetica", "Arial", sans-serif;
-  --primary-line-height: 1.7em;
+@font-face {
+  font-family: "Electronic Display";
+  src: url(fonts/electronic_arts_display_by_02020jetixbr_df4nsio.otf);
+}
+
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
 }
 
 body,
@@ -72,6 +89,15 @@ ol,
 ul {
   margin: 0 0 1rem 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Electronic Display";
 }
 
 ol,
@@ -113,15 +139,12 @@ a {
 
 /* EA play section */
 .section-play {
-  position: static;
-}
-
-.section-play picture {
+  position: relative;
 }
 
 .section-play picture img {
   display: block;
-  min-width: 100%;
+  min-width: 100vw;
   max-width: 100%;
   max-height: 100%;
 }
@@ -139,12 +162,12 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 32px 24px;
+  padding: 32px 7.5vw;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   color: white;
-  & h6 {
+  & p {
     font-weight: normal;
     line-height: var(--primary-line-height);
     font-size: 0.93em;
@@ -161,7 +184,7 @@ a {
   }
 
   & a::before {
-    border: white;  
+    border: white;
   }
 }
 
@@ -169,20 +192,18 @@ a {
   width: 100%;
   height: auto;
   background-color: #6fb0d6;
-  padding: 32px 24px 16px;
+  padding: 32px 7.5vw 16px 7.5vw;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: space-around;
   text-align: center;
 }
 
-.subsection-play-title {
-  & h5 {
-    line-height: 1.4em;
-    font-size: 1.35em;
-    margin-bottom: 15px;
-  }
+.subsection-play-title h5 {
+  line-height: 1.4em;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #161616;
 }
 
 .subsection-play-cta {
@@ -198,15 +219,16 @@ a {
   }
 }
 
+/* ! Mediaquery  Tablet*/
 @media (min-width: 767px) {
   .hero-content {
     height: auto;
     width: 40.625%;
     position: absolute;
     top: 50%;
-    left: 7.8125%;
+    left: 7.8125vw;
     padding: 0px;
-    transform: translate(0%, -100%);
+    transform: translate(0%, -50%);
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
@@ -227,13 +249,14 @@ a {
   }
 }
 
+/* ! Mediaquery desktop */
 @media (min-width: 1024px) {
   .subsection-play {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1.4% 7.8125%;
+    padding: 1.4% 7.4218vw;
   }
 
   .subsection-play-title {
@@ -245,19 +268,22 @@ a {
   }
 }
 
-@media (min-width: 2560px) {
+/* ! Mediaquery Laptop large */
+@media (min-width: 1456px) {
   * {
-    font-weight: 20px;
+    font-size: 20px;
   }
   .hero-content {
-    position: absolute;
-    top: 28%;
-    left: 39%;
-    transform: translate(-50%, -50%);
+    left: calc((100vw - 1120px) / 2);
     max-width: 544px;
   }
   .subsection-play {
-    padding-left: 720px;
-    padding-right: 720px;
+    padding-left: calc((100vw - 1120px) / 2);
+    padding-right: calc((100vw - 1120px) / 2);
+  }
+
+  .btn-cta {
+    padding: 20px 24px !important;
+    min-width: 170px;
   }
 }
