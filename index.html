@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
@@ -54,7 +54,7 @@
     <div class="container">
       <!-- First navbar -->
       <header class="header_nav_menu_one">
-        <div id="content">
+        <div class="content">
           <nav>
             <ul class="nav_menu_one">
               <!-- icona avatar -->
@@ -126,13 +126,101 @@
           </nav>
         </div>
 
+        <!-- /*  sub menu user profile */ -->
+        <div class="sub_container_user_profile">
+          <ion-icon name="close-outline" class="close_user_profile"></ion-icon>
+
+          <div class="contenitore_icone">
+            <div class="conteiner_log_in">
+              <div class="log_in"></div>
+              <span class="scritta">Accedi</span>
+            </div>
+
+            <div class="conteiner_log_in">
+              <div class="new_profile"></div>
+              <span class="scritta">Crea account</span>
+            </div>
+          </div>
+        </div>
+        <!-- /* sub menu ? */ -->
+        <div class="sub_container_user_profile second">
+          <ion-icon name="close-outline" class="close_help"></ion-icon>
+          <div class="contenitore_icone_help">
+            <div class="contenitore_icone_help_two">
+              <div>
+                <span class="span_help">Ti serve aiuto?</span>
+              </div>
+              <div class="contenitore_icone_help_three">
+                <div class="container-icons-help-one">
+                  <div class="contenitore_icone_help_four">
+                    <img
+                      class="icone_menu_help"
+                      src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/ea-medallion-white.svg"
+                      alt=""
+                    />
+                    <span class="span_menu_help"
+                      >Verifica il mio accesso EA</span
+                    >
+                  </div>
+
+                  <div class="contenitore_icone_help_four">
+                    <img
+                      class="icone_menu_help"
+                      src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconlink-white.svg"
+                      alt=""
+                    />
+                    <span class="span_menu_help"
+                      >Collegare gli account di una <br />
+                      piattaforma al tuo account EA</span
+                    >
+                  </div>
+                </div>
+                <div class="container-icons-help-two">
+                  <div class="contenitore_icone_help_four ea">
+                    <img
+                      class="icone_menu_help"
+                      src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/ea-medallion-white.svg"
+                      alt=""
+                    />
+                    <span class="span_menu_help"
+                      >Come riscattare un codice</span
+                    >
+                  </div>
+
+                  <div class="contenitore_icone_help_four">
+                    <img
+                      class="icone_menu_help"
+                      src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconalert-white.svg"
+                      alt=""
+                    />
+                    <span class="span_menu_help"
+                      >Non riesco a giocare online</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <p class="text_help_sub_menu">
+                <b class="span_menu_help"
+                  >Non hai trovato ciò che cerchi? Vai su
+                  <a class="a_link" href="#"> Aiuto EA</a>,
+                  <a class="a_link" href="#"> Answers HQ </a> oder die
+                  <a class="a_link" href="#"> Forum EA</a>.</b
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
         <!-- NAVBAR 2 -->
-        <nav>
+        <div>
           <section class="nav_menu_two">
             <!-- logo e menu tre puntini -->
             <div class="ellipsis-vertical_menu">
               <a href="#">
-                <ion-icon name="ellipsis-vertical-sharp"></ion-icon>
+                <ion-icon
+                  name="ellipsis-vertical-sharp"
+                  class="open_icon"
+                ></ion-icon>
               </a>
             </div>
             <div>
@@ -223,7 +311,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="sub-menu-games">
+                <div class="sub-menu-games games">
                   <div class="sub-menu">
                     <ul>
                       <p>ESPLORA I GIOCHI</p>
@@ -256,12 +344,11 @@
                 <div class="sub-menu-games other-experience">
                   <div class="sub-menu">
                     <ul>
-                      <p>PIATTAFORME</p>
-                      <li><a href="#">PC</a></li>
-                      <li><a href="#">PlayStation°5</a></li>
-                      <li><a href="#">Xbox Series X</a></li>
-                      <li><a href="#">Nintendo Switch</a></li>
-                      <li><a href="#">Dispositivi mobili</a></li>
+                      <li><a href="#">EA Play</a></li>
+                      <li><a href="#">EA app</a></li>
+                      <li><a href="#">Competizioni videoludiche</a></li>
+                      <li><a href="#">Diretta di EA Play</a></li>
+                      <li><a href="#">Test di gioco</a></li>
                     </ul>
                   </div>
                 </div>
@@ -276,12 +363,13 @@
                 <div class="sub-menu-games information">
                   <div class="sub-menu">
                     <ul>
-                      <p>PIATTAFORME</p>
-                      <li><a href="#">PC</a></li>
-                      <li><a href="#">PlayStation°5</a></li>
-                      <li><a href="#">Xbox Series X</a></li>
-                      <li><a href="#">Nintendo Switch</a></li>
-                      <li><a href="#">Dispositivi mobili</a></li>
+                      <li><a href="#">Società</a></li>
+                      <li><a href="#">EA Studi</a></li>
+                      <li><a href="#">Lavora con noi</a></li>
+                      <li><a href="#">La nostra tecnologia</a></li>
+                      <li><a href="#">EA Partners</a></li>
+                      <li><a href="#">Notizie</a></li>
+                      <li><a href="#">Inside EA</a></li>
                     </ul>
                   </div>
                 </div>
@@ -296,12 +384,12 @@
                 <div class="sub-menu-games engagements">
                   <div class="sub-menu">
                     <ul>
-                      <p>PIATTAFORME</p>
-                      <li><a href="#">PC</a></li>
-                      <li><a href="#">PlayStation°5</a></li>
-                      <li><a href="#">Xbox Series X</a></li>
-                      <li><a href="#">Nintendo Switch</a></li>
-                      <li><a href="#">Dispositivi mobili</a></li>
+                      <li><a href="#">I nostri impegni</a></li>
+                      <li><a href="#">Gioco positivo</a></li>
+                      <li><a href="#">Diversità e inclusione</a></li>
+                      <li><a href="#">Impatto sociale</a></li>
+                      <li><a href="#">Persone e cultura</a></li>
+                      <li><a href="#">Ambiente</a></li>
                     </ul>
                   </div>
                 </div>
@@ -316,98 +404,65 @@
                 <div class="sub-menu-games resources">
                   <div class="sub-menu">
                     <ul>
-                      <p>PIATTAFORME</p>
-                      <li><a href="#">PC</a></li>
-                      <li><a href="#">PlayStation°5</a></li>
-                      <li><a href="#">Xbox Series X</a></li>
-                      <li><a href="#">Nintendo Switch</a></li>
-                      <li><a href="#">Dispositivi mobili</a></li>
+                      <li><a href="#">Aiuto</a></li>
+                      <li><a href="#">Forum</a></li>
+                      <li><a href="#">Filtro faiglia</a></li>
+                      <li><a href="#">Accessibilità</a></li>
+                      <li><a href="#">Stampa</a></li>
+                      <li><a href="#">Investitori</a></li>
                     </ul>
                   </div>
                 </div>
               </nav>
             </header>
-            <!-- <div class="header_nav_menu_two">
-              <ul class="menu_two">
-                <div class="games">
-                  <li>
-                    <a href="#">Giochi</a>
-                  </li>
+          </section>
+          <!-- NAV A COMPARSA LATERALE -->
+          <nav class="nav-laterale">
+            <div class="container-nav-laterale">
+              <div class="contenitore_scritta">
+                <span class="all_games">Tutti i giochi</span>
+                <span class="close">
+                  <ion-icon name="close-outline" class="close_icon"></ion-icon>
+                </span>
+              </div>
+
+              <div class="contenitore-immagini">
+                <div class="immagine-play">
+                  <div class="logo-animato"></div>
                 </div>
-                <div class="sub-menu">
-                  <div class="container-section-games">
-                    <ul class="game_list_one">
-                      <p>ESPLORA I GIOCHI</p>
-                      <li><a href="#">Ultimi giochi</a></li>
-                      <li><a href="#">Prossimamente</a></li>
-                      <li><a href="#">Giochi gratuiti</a></li>
-                      <li><a href="#">EA SPORTS</a></li>
-                      <li><a href="#">EA Originals</a></li>
-                      <li><a href="#">Libreria dei giochi</a></li>
-                      <li><a href="#">Offerte EA app</a></li>
-                    </ul>
-                    <ul class="game_list_two">
-                      <p>PIATTAFORME</p>
-                      <li><a href="#">PC</a></li>
-                      <li><a href="#">PlayStation°5</a></li>
-                      <li><a href="#">Xbox Series X</a></li>
-                      <li><a href="#">Nintendo Switch</a></li>
-                      <li><a href="#">Dispositivi mobili</a></li>
-                    </ul>
+                <div class="container-img-small">
+                  <div class="contenitore_piccole_immagini">
+                    <div class="backgroun-imagine img_one">
+                      <div class="logo log_one"></div>
+                    </div>
+
+                    <div class="backgroun-imagine img_two">
+                      <div class="logo log_two"></div>
+                    </div>
+
+                    <div class="backgroun-imagine img_three">
+                      <div class="logo log_three"></div>
+                    </div>
+                  </div>
+
+                  <div class="contenitore_piccole_immagini_2">
+                    <div class="backgroun-imagine_2 img_four">
+                      <div class="logo log_four"></div>
+                    </div>
+
+                    <div class="backgroun-imagine_2 img_five">
+                      <div class="logo log_five"></div>
+                    </div>
+
+                    <div class="backgroun-imagine_2 img_six">
+                      <div class="logo log_six"></div>
+                    </div>
                   </div>
                 </div>
-
-                <li class="container-section-other_experience">
-                  <a href="#">Altre esperienze</a>
-                  <ul class="other_experience">
-                    <li><a href="#">EA Play</a></li>
-                    <li><a href="#">EA app</a></li>
-                    <li><a href="#">Competizioni videoludiche</a></li>
-                    <li><a href="#">Diretta di EA Play</a></li>
-                    <li><a href="#">Test di gioco</a></li>
-                  </ul>
-                </li>
-
-                <li class="container-section-information">
-                  <a href="#">Informazioni</a>
-                  <ul class="information">
-                    <li><a href="#">Società</a></li>
-                    <li><a href="#">EA Studi</a></li>
-                    <li><a href="#">Lavora con noi</a></li>
-                    <li><a href="#">La nostra tecnologia</a></li>
-                    <li><a href="#">EA Partners</a></li>
-                    <li><a href="#">Notizie</a></li>
-                    <li><a href="#">Inside EA</a></li>
-                  </ul>
-                </li>
-
-                <li class="container-section-engagements">
-                  <a href="#">Impegni</a>
-                  <ul class="engagements">
-                    <li><a href="#">I nostri impegni</a></li>
-                    <li><a href="#">Gioco positivo</a></li>
-                    <li><a href="#">Diversità e inclusione</a></li>
-                    <li><a href="#">Impatto sociale</a></li>
-                    <li><a href="#">Persone e cultura</a></li>
-                    <li><a href="#">Ambiente</a></li>
-                  </ul>
-                </li>
-
-                <li class="container-section-resources">
-                  <a href="#">Risorse</a>
-                  <ul class="resources">
-                    <li><a href="#">Aiuto</a></li>
-                    <li><a href="#">Forum</a></li>
-                    <li><a href="#">Filtro faiglia</a></li>
-                    <li><a href="#">Accessibilità</a></li>
-                    <li><a href="#">Stampa</a></li>
-                    <li><a href="#">Investitori</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div> -->
-          </section>
-        </nav>
+              </div>
+            </div>
+          </nav>
+        </div>
       </header>
 
       <!-- Main content -->
@@ -438,7 +493,8 @@
       </main>
     </div>
 
-    <!-- JS -->
+    <!-- File JS -->
+    <script src="js/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -447,7 +503,13 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <!-- File JS -->
-    <script src="/js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
