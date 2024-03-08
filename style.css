@@ -159,6 +159,16 @@ a {
   height: 100%;
 }
 
+.card-games:hover {
+  & .official-site-a {
+    z-index: 1;
+  }
+
+  & .logo{
+    z-index: 2;
+  }
+}
+
 .background {
   width: 100%;
   height: 100%;
@@ -179,6 +189,12 @@ a {
   }
 }
 
+.image-box:hover {
+  & .logo {
+    transform: translate(-50%, -180%);
+  }
+}
+
 .overlay-gradient {
   position: absolute;
   top: 0;
@@ -194,10 +210,6 @@ a {
 
 .overlay-gradient:hover {
   opacity: 1;
-
-  & .logo {
-    transform: translate(-50%, -180%);
-  }
 }
 
 .logo {
@@ -218,6 +230,18 @@ a {
 
 #apex_legends_logo {
   width: 30%;
+}
+
+.official-site-a {
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  z-index: 0;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 #games-cta {
