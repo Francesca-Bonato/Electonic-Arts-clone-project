@@ -7,22 +7,16 @@
   --font-color: #161616;
 
   /* buttons */
+  --padding-button: 12px 24px;
+  --padding-button-hover: 15px 27px;
   --border-button: 2px solid;
   --border-radius-button: 3px;
-
-  /* font */
-  --primary-font: "Electronic Arts Text", "Inter", "Helvetica", "Arial",
-    sans-serif;
-  --title-font: "Electronic Arts Display", "Inter", "Helvetica", "Arial",
-    sans-serif;
-  --primary-line-height: 1.7em;
 
   & .btn-cta {
     position: relative;
     padding: 12px 24px;
     text-align: center;
   }
-
   & .btn-cta::before {
     border: var(--border-button);
     border-radius: var(--border-radius-button);
@@ -40,26 +34,15 @@
     right: -3px;
     top: -3px;
   }
-}
 
-@font-face {
-  font-family: "Electronic Display";
-  src: url(fonts/electronic_arts_display_by_02020jetixbr_df4nsio.otf);
-}
-
-@font-face {
-  font-family: "Electronic Arts Text";
-  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
-  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
-      format("svg");
+  @font-face {
+    font-family: "Morn";
+    src: url(Fonts/Morn-Thin.otf) format("truetype");
+  }
+  
+  /* font */
+  --primary-font: "Morn", "Inter", "Helvetica", "Arial", sans-serif;
+  --primary-line-height: 1.7em;
 }
 
 body,
@@ -89,15 +72,6 @@ ol,
 ul {
   margin: 0 0 1rem 0;
   padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Electronic Display";
 }
 
 ol,
@@ -136,6 +110,116 @@ h6 {
 a {
   text-decoration: none;
 }
+
+/* Jumbotron Styling */
+
+.jumbotron-main {
+  height: 50vh;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-image: url(assets/bf-2042-s5-mse-section-hero-video-xl.mp4);
+}
+
+.jumbotron-main video  {
+  height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#bf2042-background {
+  display: none;
+}
+
+.video-l video, .video-m video, .video-s video {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1.2s;
+  animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+}
+
+
+.overlay-content img{
+  width: 720px;
+}
+
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  gap: 10px;
+}
+
+.bf-2042-h6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bf-2042-h6  h6 {
+  width: 720px;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+.redirect-container {
+  margin-top: 15px;
+}
+
+.redirect-container a {
+  background-color: #F3F3F3;
+  padding: 16px 24px;
+  font-size: 18px;
+  color: black;
+}
+
+#bf2042-redirect:hover {
+  padding: 19px 27px
+}
+
 
 /* EA play section */
 .section-play {
@@ -219,7 +303,78 @@ a {
   }
 }
 
-/* ! Mediaquery  Tablet*/
+/* MediaQuery Jumbotron */
+@media screen and (min-width:1024px) and (max-width:1456px) {
+
+  .jumbotron-main {
+    background-image: url(assets/bf-2042-s5-mse-hero-video-m.mp4);
+  }
+
+  .jumbotron-main video {
+    display: none;
+  }
+
+  .video-l video {
+    display: block;
+  }
+
+
+}
+
+@media screen and (min-width:425px) and (max-width:768px) {
+
+  .video-l video, .jumbotron-main video {
+    display: none;
+  }
+
+  .video-m video {
+    display: block;
+    z-index: 2;
+  }
+
+  .jumbotron-main {
+    background-image: url(assets/bf-2042-section-768w.jpg);
+  } 
+
+  .overlay-content img  {
+    width: 55%;
+  
+  } & .overlay-content h6 {
+    font-size: 15px;
+    width: 55%;
+  }
+
+}
+
+@media screen and (max-width:425px) {
+
+
+  .video-l video, .video-m video, .jumbotron-main video {
+    display: none;
+  }
+
+  .jumbotron-main {
+    height: 85vh;
+    background-image: url(assets/bf-2042-section-bg-s5-mid-season-homepage-xl.jpg.adapt.320w.jpg);
+  }
+
+  .video-s video {
+    display: block;
+    z-index: 2;
+  }
+
+  
+
+  .overlay-content img  {
+    width: 55%;
+  
+  } & .overlay-content h6 {
+    font-size: 15px;
+    width: 55%;
+  }
+}
+
+/* ! Mediaquery Play section Tablet*/
 @media (min-width: 767px) {
   .hero-content {
     height: auto;
