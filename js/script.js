@@ -480,8 +480,38 @@ const sectionCards = [
 ];
 
 
+//evento per far apparire al click delle card
+// notezieEaNews.addEventListener("click", () => {
+
+//   sectionCards[0].data.forEach(cards => {
+    
+//       const divCard = document.createElement("div");
+//       divCard.setAttribute("class", "single-card-novita");
+  
+//       divCard.innerHTML = `
+//         <div class="header-card-novita">
+//         <img
+//           src="${cards.image}"
+//           alt="${cards.title}"
+//           />
+//         </div>
+  
+//         <div class="main-card-novita">
+//         <span>${cards.house}</span>
+//         <span>${cards.date}</span>
+//         <h3>${cards.title}</h3>
+  
+//         <div>
+//           <p>${cards.description}</p>
+//         </div>
+//       `;
+//       containerCard.appendChild(divCard);
+    
+//   });
+// })
+
 //Ciclo per prendermi tutte le card
-sectionCards.forEach((element) => {
+ sectionCards.forEach((element) => {
   element.data.forEach((card) => {
     const divCard = document.createElement("div");
     divCard.setAttribute("class", "single-card-novita");
@@ -505,27 +535,4 @@ sectionCards.forEach((element) => {
     `;
     containerCard.appendChild(divCard);
   });
-});
-
-/* function createCards() {
-  const headerCard = document.createElement("div");
-  const cardImg = document.createElement("img");
-  const mainCard = document.createElement("div");
-  const spanHouse = document.createElement("span");
-  const spanDate = document.createElement("span");
-  const title = document.createElement("h3");
-  const divDescription = document.createElement("div");
-  const description = document.createElement("p");
-
-  headerCard.setAttribute("class", "header-card-novita");
-  cardImg.setAttribute("src");
-  mainCard.setAttribute("class", "main-card-novita");
-
-  headerCard.appendChild(cardImg);
-  mainCard.appendChild(spanHouse);
-  mainCard.appendChild(spanDate);
-  mainCard.appendChild(title);
-  mainCard.appendChild(divDescription);
-  divDescription.appendChild(description);
-}
- */
+}); 
