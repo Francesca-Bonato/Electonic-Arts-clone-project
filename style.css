@@ -250,6 +250,10 @@ a {
   display: none;
 }
 
+.active {
+  display: block;
+}
+
 /* Wrapper Scroll menu */
 .menu-scroll {
   width: 100%;
