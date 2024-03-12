@@ -159,14 +159,8 @@ a {
   height: 100%;
 }
 
-.card-games:hover {
-  & .official-site-a {
-    z-index: 1;
-  }
+.image-box:hover {
 
-  & .logo{
-    z-index: 2;
-  }
 }
 
 .background {
@@ -190,7 +184,7 @@ a {
 }
 
 .image-box:hover {
-  & .logo {
+  & .logo-main-games {
     transform: translate(-50%, -180%);
   }
 }
@@ -205,14 +199,17 @@ a {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-image: linear-gradient(to right, #10123fd0, #d74045e0);
+  background-image: linear-gradient(83deg, #0d1042, #ff4747);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay-gradient:hover {
-  opacity: 1;
+  opacity: 0.9;
 }
 
-.logo {
+.logo-main-games {
   width: 50%;
   position: absolute;
   top: 50%;
@@ -221,7 +218,7 @@ a {
   color: white;
   text-align: center;
   transition: .5s ease;
-  filter: drop-shadow(5px 5px 3px hsla(0, 0%, 0%, 0.666));
+  filter: drop-shadow(8px 7px 23px #000);
 }
 
 #thesims4 {
@@ -233,15 +230,22 @@ a {
 }
 
 .official-site-a {
-  color: rgb(255, 255, 255);
-  opacity: 1;
-  z-index: 0;
-  width: 50%;
   position: absolute;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+
+  /* width: 50%;
   top: 50%;
-  left: 50%;
-  text-align: center;
+  left: 50%; 
   transform: translate(-50%, -50%);
+*/
+  text-align: center;
+}
+
+#official-site-span {
+  color: white;
+  text-align: center;
 }
 
 #games-cta {
