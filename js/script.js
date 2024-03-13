@@ -45,7 +45,7 @@ const notizieEaNews = document.querySelector(".notizie-ea");
 const eaSportsNews = document.querySelector(".ea-sports");
 const apexLegendsNews = document.querySelector(".apex-legends");
 const theSimsNews = document.querySelector(".the-sims");
-const starWarsNews = document.querySelector(".star-wars")
+const starWarsNews = document.querySelector(".star-wars");
 const f1News = document.querySelector(".f1");
 const battlefieldNews = document.querySelector(".battlefield");
 const needForSpeedNews = document.querySelector(".need-for-speed");
@@ -123,9 +123,9 @@ const sectionCards = [
           image: "assets/ultime-novita/sports-1.jpg",
           house: "",
           date: "2-feb-2024",
-          title: "Aggiornamento sulla SCR campionati TOTY 86+ -Sito ufficiale EA SPORTS",
-          description:
-            "",
+          title:
+            "Aggiornamento sulla SCR campionati TOTY 86+ -Sito ufficiale EA SPORTS",
+          description: "",
         },
         {
           image: "assets/ultime-novita/sports-2.jpg",
@@ -552,13 +552,13 @@ const sectionCards = [
   ],
 ];
 
-
 //Ciclo per prendermi tutte le card
+//ARR sarebbe l'array con le card di ogni sezione
 function generateCards(arr) {
-      arr.forEach((info) => {
-        const divCard = document.createElement("div");
-        divCard.setAttribute("class", `single-card-novita`);
-        divCard.innerHTML = `
+  arr.forEach((info) => {
+    const divCard = document.createElement("div");
+    divCard.setAttribute("class", `single-card-novita`);
+    divCard.innerHTML = `
           <div class="header-card-novita">
           <img
             src="${info.image}"
@@ -575,11 +575,13 @@ function generateCards(arr) {
             <p>${info.description}</p>
           </div>
         `;
-        containerCard.appendChild(divCard);
-      });
-      createdCards = document.querySelectorAll('.single-card-novita')
+    containerCard.appendChild(divCard);
+  });
+
+  createdCards = document.querySelectorAll(".single-card-novita");
 }
 
+//Recupero tutte le card per ogni sezione
 const cardsNotizieEa = sectionCards[0][0].data;
 const cardsEAFC = sectionCards[1][0].data;
 const cardsApex = sectionCards[2][0].data;
@@ -589,59 +591,56 @@ const cardsF1 = sectionCards[5][0].data;
 const cardsBattlefield = sectionCards[6][0].data;
 const cardsNFS = sectionCards[7][0].data;
 
+//mi prendo tutte le singole card
+let createdCards = document.querySelectorAll(".single-card-novita");
 
-let createdCards = document.querySelectorAll('.single-card-novita')
+//avvio come prime card, la funzione che genera card
+generateCards(cardsNotizieEa);
 
-
-
- generateCards(cardsNotizieEa);
- 
- notizieEaNews.addEventListener('click', () => {
-  hideAllCards(); // Hide all cards
-  generateCards(cardsNotizieEa); 
+//Al click di questa sezione,
+notizieEaNews.addEventListener("click", () => {
+  hideAllCards(); // nasconde tutte le card precedenti
+  generateCards(cardsNotizieEa); //genera le card corrispondenti alla sezione 
 });
 
-eaSportsNews.addEventListener('click', () => {
+eaSportsNews.addEventListener("click", () => {
   hideAllCards(); // Hide all cards
-  generateCards(cardsEAFC); 
+  generateCards(cardsEAFC);
 });
 
-apexLegendsNews.addEventListener('click', () => {
+apexLegendsNews.addEventListener("click", () => {
   hideAllCards(); // Hide all cards
-  generateCards(cardsApex); 
+  generateCards(cardsApex);
 });
 
-theSimsNews.addEventListener('click', () => {
+theSimsNews.addEventListener("click", () => {
   hideAllCards(); // Hide all cards
-  generateCards(cardsSims); 
+  generateCards(cardsSims);
 });
 
-starWarsNews.addEventListener('click', () => {
+starWarsNews.addEventListener("click", () => {
   hideAllCards(); // Hide all cards
-  generateCards(cardsStarWars); 
+  generateCards(cardsStarWars);
 });
 
-f1News.addEventListener('click', () => {
+f1News.addEventListener("click", () => {
   hideAllCards(); // Hide all cards
-  generateCards(cardsF1); 
+  generateCards(cardsF1);
 });
 
-battlefieldNews.addEventListener('click', () => {
+battlefieldNews.addEventListener("click", () => {
   hideAllCards(); // Hide all cards
-  generateCards(cardsBattlefield); 
+  generateCards(cardsBattlefield);
 });
 
-needForSpeedNews.addEventListener('click', () => {
+needForSpeedNews.addEventListener("click", () => {
   hideAllCards(); // Hide all cards
-  generateCards(cardsNFS); 
+  generateCards(cardsNFS);
 });
 
-
+//funzione per Eliminare le card al suo richiamo
 function hideAllCards() {
-  createdCards.forEach(card => {
-    card.remove(); 
+  createdCards.forEach((card) => {
+    card.remove();
   });
 }
-
-
-
