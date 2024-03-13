@@ -116,9 +116,9 @@ const sectionCards = [
           image: "assets/ultime-novita/sports-1.jpg",
           house: "",
           date: "2-feb-2024",
-          title: "Aggiornamento sulla SCR campionati TOTY 86+ -Sito ufficiale EA SPORTS",
-          description:
-            "",
+          title:
+            "Aggiornamento sulla SCR campionati TOTY 86+ -Sito ufficiale EA SPORTS",
+          description: "",
         },
         {
           image: "assets/ultime-novita/sports-2.jpg",
@@ -545,13 +545,13 @@ const sectionCards = [
   ],
 ];
 
-
 //Ciclo per prendermi tutte le card
+//ARR sarebbe l'array con le card di ogni sezione
 function generateCards(arr) {
-      arr.forEach((info) => {
-        const divCard = document.createElement("div");
-        divCard.setAttribute("class", `single-card-novita`);
-        divCard.innerHTML = `
+  arr.forEach((info) => {
+    const divCard = document.createElement("div");
+    divCard.setAttribute("class", `single-card-novita`);
+    divCard.innerHTML = `
           <div class="header-card-novita">
           <img
             src="${info.image}"
@@ -568,11 +568,13 @@ function generateCards(arr) {
             <p>${info.description}</p>
           </div>
         `;
-        containerCard.appendChild(divCard);
-      });
-      createdCards = document.querySelectorAll('.single-card-novita')
+    containerCard.appendChild(divCard);
+  });
+
+  createdCards = document.querySelectorAll(".single-card-novita");
 }
 
+//Recupero tutte le card per ogni sezione
 const cardsNotizieEa = sectionCards[0][0].data;
 const cardsEAFC = sectionCards[1][0].data;
 const cardsApex = sectionCards[2][0].data;
@@ -582,8 +584,11 @@ const cardsF1 = sectionCards[5][0].data;
 const cardsBattlefield = sectionCards[6][0].data;
 const cardsNFS = sectionCards[7][0].data;
 
+//mi prendo tutte le singole card
+let createdCards = document.querySelectorAll(".single-card-novita");
 
-let createdCards = document.querySelectorAll('.single-card-novita')
+//avvio come prime card, la funzione che genera card
+
 
 window.addEventListener("load", () => {
   generateCards(cardsNotizieEa);
