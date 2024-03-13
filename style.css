@@ -7,16 +7,22 @@
   --font-color: #161616;
 
   /* buttons */
-  --padding-button: 12px 24px;
-  --padding-button-hover: 15px 27px;
   --border-button: 2px solid;
   --border-radius-button: 3px;
+
+  /* font */
+  --primary-font: "Electronic Arts Text", "Inter", "Helvetica", "Arial",
+    sans-serif;
+  --title-font: "Electronic Arts Display", "Inter", "Helvetica", "Arial",
+    sans-serif;
+  --primary-line-height: 1.7em;
 
   & .btn-cta {
     position: relative;
     padding: 12px 24px;
     text-align: center;
   }
+
   & .btn-cta::before {
     border: var(--border-button);
     border-radius: var(--border-radius-button);
@@ -34,15 +40,26 @@
     right: -3px;
     top: -3px;
   }
+}
 
-  @font-face {
-    font-family: "Morn";
-    src: url(Fonts/Morn-Thin.otf) format("truetype");
-  }
-  
-  /* font */
-  --primary-font: "Morn", "Inter", "Helvetica", "Arial", sans-serif;
-  --primary-line-height: 1.7em;
+@font-face {
+  font-family: "Electronic Display";
+  src: url(fonts/electronic_arts_display_by_02020jetixbr_df4nsio.otf);
+}
+
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
 }
 
 body,
@@ -73,6 +90,16 @@ ul {
   margin: 0 0 1rem 0;
   padding: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Electronic Display";
+}
+
 
 ol,
 ul {
