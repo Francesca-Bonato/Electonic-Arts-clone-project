@@ -17,7 +17,6 @@
     padding: 12px 24px;
     text-align: center;
   }
-
   & .btn-cta::before {
     border: var(--border-button);
     border-radius: var(--border-radius-button);
@@ -29,7 +28,6 @@
     right: 0;
     top: 0;
   }
-
   & .btn-cta:hover::before {
     bottom: -3px;
     left: -3px;
@@ -41,19 +39,16 @@
     font-family: "Morn";
     src: url(Fonts/Morn-Thin.otf) format("truetype");
   }
-
+  
   /* font */
-  --primary-font: "Morn",
-  "Inter",
-  "Helvetica",
-  "Arial",
-  sans-serif;
+  --primary-font: "Morn", "Inter", "Helvetica", "Arial", sans-serif;
   --primary-line-height: 1.7em;
 }
 
 body,
 html {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: var(--primary-font);
+  line-height: var(---primary-line-height);
   font-size: 16px;
   box-sizing: border-box;
   margin: 0;
@@ -101,23 +96,19 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 h5 {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
 }
 
 h6 {
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 
 a {
   text-decoration: none;
-}
-
-:root {
-  background-color: rgb(158, 176, 197);
 }
 
 /* full section of main games */
