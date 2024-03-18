@@ -591,6 +591,7 @@ const cardsF1 = sectionCards[5][0].data;
 const cardsBattlefield = sectionCards[6][0].data;
 const cardsNFS = sectionCards[7][0].data;
 
+
 //mi prendo tutte le singole card
 let createdCards = document.querySelectorAll(".single-card-novita");
 
@@ -601,6 +602,7 @@ generateCards(cardsNotizieEa);
 notizieEaNews.addEventListener("click", () => {
   hideAllCards(); // nasconde tutte le card precedenti
   generateCards(cardsNotizieEa); //genera le card corrispondenti alla sezione 
+  
 });
 
 eaSportsNews.addEventListener("click", () => {
