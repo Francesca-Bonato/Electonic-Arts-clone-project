@@ -41,14 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Richiamo di tutta la sezione
-const notizieEaNews = document.querySelector(".notizie-ea");
-const eaSportsNews = document.querySelector(".ea-sports");
-const apexLegendsNews = document.querySelector(".apex-legends");
-const theSimsNews = document.querySelector(".the-sims");
-const starWarsNews = document.querySelector(".star-wars");
-const f1News = document.querySelector(".f1");
-const battlefieldNews = document.querySelector(".battlefield");
-const needForSpeedNews = document.querySelector(".need-for-speed");
+let ultimeNovitaFilter = Array.from(document.querySelectorAll(".ultime-novitabtn"));
 
 //Singola card novità
 const singleCard = document.querySelector(".single-card-novita");
@@ -596,53 +589,54 @@ const cardsNFS = sectionCards[7][0].data;
 let createdCards = document.querySelectorAll(".single-card-novita");
 
 //avvio come prime card, la funzione che genera card
-generateCards(cardsNotizieEa);
 
-//Al click di questa sezione,
-notizieEaNews.addEventListener("click", () => {
-  hideAllCards(); // nasconde tutte le card precedenti
-  generateCards(cardsNotizieEa); //genera le card corrispondenti alla sezione 
-  
-});
 
-eaSportsNews.addEventListener("click", () => {
-  hideAllCards(); // Hide all cards
-  generateCards(cardsEAFC);
-});
+window.addEventListener("load", () => {
+  generateCards(cardsNotizieEa);
+  console.log(ultimeNovitaFilter);
+  ultimeNovitaFilter.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.id === "notizie-ea"){
+        containerCard.innerHTML = ""
+        generateCards(cardsNotizieEa); 
+      }
+      if (btn.id === "ea-sports-news") {
+        containerCard.innerHTML = ""
+        generateCards(cardsEAFC);
+      }
+      if (btn.id === "apex-legends-news"){
+        containerCard.innerHTML = ""
+        generateCards(cardsApex);
+      }
+      if (btn.id === "the-sims-news"){
+        containerCard.innerHTML = ""
+        generateCards(cardsSims);
+      }
+      if (btn.id === "star-wars-news"){
+        containerCard.innerHTML = ""
+        generateCards(cardsStarWars);
+      }
+      if (btn.id === "f1-news"){
+        containerCard.innerHTML = ""
+        generateCards(cardsF1);
+      }
+      if (btn.id === "battlefield-news"){
+        containerCard.innerHTML = ""
+        generateCards(cardsBattlefield);
+      }
+      if (btn.id === "need-for-speed-news"){
+        containerCard.innerHTML = ""
+        generateCards(cardsNFS);
+      }
+    })
+  })
+})
 
-apexLegendsNews.addEventListener("click", () => {
-  hideAllCards(); // Hide all cards
-  generateCards(cardsApex);
-});
 
-theSimsNews.addEventListener("click", () => {
-  hideAllCards(); // Hide all cards
-  generateCards(cardsSims);
-});
 
-starWarsNews.addEventListener("click", () => {
-  hideAllCards(); // Hide all cards
-  generateCards(cardsStarWars);
-});
 
-f1News.addEventListener("click", () => {
-  hideAllCards(); // Hide all cards
-  generateCards(cardsF1);
-});
 
-battlefieldNews.addEventListener("click", () => {
-  hideAllCards(); // Hide all cards
-  generateCards(cardsBattlefield);
-});
 
-needForSpeedNews.addEventListener("click", () => {
-  hideAllCards(); // Hide all cards
-  generateCards(cardsNFS);
-});
 
-//funzione per Eliminare le card al suo richiamo
-function hideAllCards() {
-  createdCards.forEach((card) => {
-    card.remove();
-  });
-}
+
+
