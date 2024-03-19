@@ -58,8 +58,69 @@
     url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
 }
 
+:root {
+  /* colors */
+  --primary-color: #f3f3f3;
+  --coral-color: #fb4646;
+  --hover-button-color: #dedede;
+  --font-color: #161616;
+
+  /* buttons */
+  --border-button: 2px solid;
+  --border-radius-button: 3px;
+
+  /* font */
+  --primary-font: "Electronic Arts Text", "Inter", "Helvetica", "Arial",
+    sans-serif;
+  --title-font: "Electronic Arts Display", "Inter", "Helvetica", "Arial",
+    sans-serif;
+  --primary-line-height: 1.7em;
+
+  & .btn-cta {
+    position: relative;
+    padding: 12px 24px;
+    text-align: center;
+  }
+
+  & .btn-cta::before {
+    border: var(--border-button);
+    border-radius: var(--border-radius-button);
+    transition: border 0.3s;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
+
+  & .btn-cta:hover::before {
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    top: -3px;
+  }
+}
+
+@font-face {
+  font-family: "Electronic Display";
+  src: url(fonts/electronic_arts_display_by_02020jetixbr_df4nsio.otf);
+}
+
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
+}
+
 body,
 html {
+  font-family: var(--primary-font);
+  line-height: var(---primary-line-height);
   font-family: var(--primary-font);
   line-height: var(---primary-line-height);
   font-size: 16px;
@@ -68,11 +129,13 @@ html {
   padding: 0;
 }
 
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 
 h1,
 h2,
@@ -97,38 +160,60 @@ h6 {
 }
 
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Electronic Display";
+}
+
+
 ol,
 ul {
   list-style-type: none;
 }
 
+
 img {
   height: auto;
 }
+
 
 h1 {
   font-size: 4rem;
 }
 
+
 h2 {
   font-size: 3rem;
 }
+
 
 h3 {
   font-size: 2rem;
 }
 
+
 h4 {
+  font-size: 1.6rem;
   font-size: 1.6rem;
 }
 
+
 h5 {
+  font-size: 1.3rem;
   font-size: 1.3rem;
 }
 
+
 h6 {
   font-size: 1rem;
+  font-size: 1rem;
 }
+
 
 a {
   text-decoration: none;
@@ -271,7 +356,8 @@ a {
   .mainGamesContainer {
     max-width: 1120px;
   }
-  .mainGamesHeader{
+
+  .mainGamesHeader {
     font-size: 3.3em;
   }
 }
@@ -288,7 +374,8 @@ a {
   .mainGamesContainer {
     max-width: 100%;
   }
-  .mainGamesHeader{
+
+  .mainGamesHeader {
     font-size: 2.5em;
   }
 }
@@ -296,9 +383,10 @@ a {
 /* media query laptop */
 @media screen and (max-width: 1024px) {
   .mainGamesContainer {
-    width:90%
+    width: 90%
   }
-  .mainGamesHeader{
+
+  .mainGamesHeader {
     font-size: 2em;
   }
 }
