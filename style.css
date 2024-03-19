@@ -34,6 +34,7 @@
     right: 0;
     top: 0;
   }
+
   & .btn-cta:hover::before {
     bottom: -3px;
     left: -3px;
@@ -50,16 +51,11 @@
 @font-face {
   font-family: "Electronic Arts Text";
   src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
-  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
-      format("svg");
+  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
 }
 
 body,
@@ -139,15 +135,21 @@ a {
 }
 
 /* full section of main games */
-.mainGamesContainer {
+.games-featured {
+  width: 100%;
   background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+}
+
+.mainGamesContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
-  padding-left: 7.4218vw;
-  padding-right: 7.4218vw;
+  /*   padding-left: 7.4218vw;
+  padding-right: 7.4218vw; */
 }
 
 /* main games title */
@@ -177,9 +179,7 @@ a {
   height: 100%;
 }
 
-.image-box:hover {
-
-}
+.image-box:hover {}
 
 .background {
   width: 100%;
@@ -197,7 +197,8 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    filter: brightness(70%)
+    filter: brightness(70%);
+
   }
 }
 
@@ -238,7 +239,7 @@ a {
   transition: .5s ease;
   filter: drop-shadow(8px 7px 23px #000);
   pointer-events: none;
-  z-index:2;
+  z-index: 2;
 }
 
 #thesims4 {
@@ -265,6 +266,16 @@ a {
   border: black;
 }
 
+/* media query 4k */
+@media screen and (max-width: 2560px) {
+  .mainGamesContainer {
+    max-width: 1120px;
+  }
+  .mainGamesHeader{
+    font-size: 3.3em;
+  }
+}
+
 @media screen and (max-width: 1456px) {
   .mainGamesContainer {
     padding-left: calc((100vw - 1120px)/2);
@@ -272,11 +283,33 @@ a {
   }
 }
 
+/* media query 2k */
+@media screen and (max-width: 1440px) {
+  .mainGamesContainer {
+    max-width: 100%;
+  }
+  .mainGamesHeader{
+    font-size: 2.5em;
+  }
+}
+
+/* media query laptop */
+@media screen and (max-width: 1024px) {
+  .mainGamesContainer {
+    width:90%
+  }
+  .mainGamesHeader{
+    font-size: 2em;
+  }
+}
+
+
 /* media query tablet */
 @media screen and (max-width: 1023px) {
   .mainGamesContainer {
     padding-left: 7.8125vw;
     padding-right: 7.8125vw;
+    width: 100%;
   }
 
   .mainGamesHeader {
@@ -288,14 +321,16 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .mainGamesHeader {
+    font-size: 2em;
+  }
+}
+
 /* media query mobile */
 @media screen and (max-width: 767px) {
   .card-games {
     width: 100%;
-  }
-
-  .mainGamesHeader {
-    font-size: 2em;
   }
 }
 
