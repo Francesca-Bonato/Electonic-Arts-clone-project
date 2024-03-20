@@ -163,15 +163,13 @@ a {
   align-items: center;
   width: 100%;
   height: 100%;
-  /*   padding-left: 7.4218vw;
-  padding-right: 7.4218vw; */
+
 }
 
 /* main games title */
 .mainGamesHeader {
   color: #161616;
   margin-top: 40px;
-  margin-bottom: 24px;
   font-size: 3.5em;
   display: flex;
   text-align: center;
@@ -188,7 +186,7 @@ a {
 
 /* container of image and logo */
 .card-games {
-  padding: 14px;
+  padding: 10px;
   position: relative;
   width: 33.33%;
   height: 100%;
@@ -285,17 +283,20 @@ a {
 @media screen and (max-width: 2560px) {
   .mainGamesContainer {
     max-width: 1120px;
+    padding-left: 0%;
+    padding-right: 0%;
   }
 
   .mainGamesHeader {
-    font-size: 3.3em;
+    font-size: 2.8em;
   }
 }
 
 @media screen and (max-width: 1456px) {
   .mainGamesContainer {
-    padding-left: calc((100vw - 1120px)/2);
-    padding-right: calc((100vw - 1120px)/2);
+    /* padding-left: calc((90vw - 1120px)/2);
+    padding-right: calc((90vw - 1120px)/2); */
+   
   }
 }
 
@@ -303,6 +304,8 @@ a {
 @media screen and (max-width: 1440px) {
   .mainGamesContainer {
     max-width: 100%;
+    padding-left: 7vw;
+    padding-right: 7vw;
   }
 
   .mainGamesHeader {
@@ -313,11 +316,12 @@ a {
 /* media query laptop */
 @media screen and (max-width: 1024px) {
   .mainGamesContainer {
-    width: 90%
+    padding-left: 7vw;
+    padding-right: 7vw;
   }
 
   .mainGamesHeader {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 }
 
@@ -325,8 +329,8 @@ a {
 /* media query tablet */
 @media screen and (max-width: 1023px) {
   .mainGamesContainer {
-    padding-left: 7.8125vw;
-    padding-right: 7.8125vw;
+  /*   padding-left: 7.8125vw;
+    padding-right: 7.8125vw; */
     width: 100%;
   }
 
@@ -349,6 +353,14 @@ a {
 @media screen and (max-width: 767px) {
   .card-games {
     width: 100%;
+  }
+}
+
+/* media query 425px */
+@media screen and (max-width: 425px) {
+  .mainGamesContainer {
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
 }
 
