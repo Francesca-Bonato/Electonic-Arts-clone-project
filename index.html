@@ -48,6 +48,7 @@
     />
     <!-- File CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css">
   </head>
   <body>
     <!-- Container all -->
@@ -214,6 +215,10 @@
         <!-- NAVBAR 2 -->
         <div>
           <section class="nav_menu_two">
+            <!-- Hamburger menu -->
+            <div class="icon_hamburger_menu">
+              <ion-icon name="menu-outline"></ion-icon>
+            </div>
             <!-- logo e menu tre puntini -->
             <div class="ellipsis-vertical_menu">
               <a href="#">
@@ -307,12 +312,12 @@
                   <div class="toggle-text_sub-nav">
                     <div class="toggle-button">
                       <span>Giochi</span>
-                      <div class="dropdown__chevron"></div>
+                      <div class="dropdown__chevron_menu"></div>
                     </div>
                   </div>
                 </div>
                 <div class="sub-menu-games games">
-                  <div class="sub-menu">
+                  <div class="sub-menu sotto_menu_giochi">
                     <ul>
                       <p>ESPLORA I GIOCHI</p>
                       <li><a href="#">Ultimi giochi</a></li>
@@ -337,12 +342,12 @@
                   <div class="toggle-text_sub-nav">
                     <div class="toggle-button">
                       <span>Altre Esperienze</span>
-                      <div class="dropdown__chevron"></div>
+                      <div class="dropdown__chevron_menu"></div>
                     </div>
                   </div>
                 </div>
                 <div class="sub-menu-games other-experience">
-                  <div class="sub-menu">
+                  <div class="sub-menu sotto_menu_altre_espesienze">
                     <ul>
                       <li><a href="#">EA Play</a></li>
                       <li><a href="#">EA app</a></li>
@@ -355,13 +360,13 @@
                 <div class="ea-local-nav">
                   <div class="toggle-text_sub-nav">
                     <div class="toggle-button">
-                      <span>informazioni</span>
-                      <div class="dropdown__chevron"></div>
+                      <span>Informazioni</span>
+                      <div class="dropdown__chevron_menu"></div>
                     </div>
                   </div>
                 </div>
                 <div class="sub-menu-games information">
-                  <div class="sub-menu">
+                  <div class="sub-menu sotto_menu_informazioni">
                     <ul>
                       <li><a href="#">Società</a></li>
                       <li><a href="#">EA Studi</a></li>
@@ -377,12 +382,12 @@
                   <div class="toggle-text_sub-nav">
                     <div class="toggle-button">
                       <span>Impegni</span>
-                      <div class="dropdown__chevron"></div>
+                      <div class="dropdown__chevron_menu"></div>
                     </div>
                   </div>
                 </div>
                 <div class="sub-menu-games engagements">
-                  <div class="sub-menu">
+                  <div class="sub-menu sotto_menu_impegni">
                     <ul>
                       <li><a href="#">I nostri impegni</a></li>
                       <li><a href="#">Gioco positivo</a></li>
@@ -397,12 +402,12 @@
                   <div class="toggle-text_sub-nav">
                     <div class="toggle-button">
                       <span>Risorse</span>
-                      <div class="dropdown__chevron"></div>
+                      <div class="dropdown__chevron_menu"></div>
                     </div>
                   </div>
                 </div>
                 <div class="sub-menu-games resources">
-                  <div class="sub-menu">
+                  <div class="sub-menu sotto_menu_risorse">
                     <ul>
                       <li><a href="#">Aiuto</a></li>
                       <li><a href="#">Forum</a></li>
@@ -416,6 +421,7 @@
               </nav>
             </header>
           </section>
+
           <!-- NAV A COMPARSA LATERALE -->
           <nav class="nav-laterale">
             <div class="container-nav-laterale">
@@ -462,6 +468,156 @@
               </div>
             </div>
           </nav>
+
+          <!--NAV LATERALE RESPONSIVE  -->
+          <div class="lateral_menu_responsive">
+            <div class="container_logo_responsive">
+              <img
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg"
+                alt="logo Electronic Arts"
+              />
+              <div class="close_responsive">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ionicon_responsive"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                    d="M368 368L144 144M368 144L144 368"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="container_lateral_menu_responsive">
+              <div class="container_lateral_menu_responsive_two">
+                <div class="container_lateral_menu_responsive_three">
+                  <div class="header_lateral_menu games_responsive">
+                    <div class="menu_voice"><p>Giochi</p></div>
+                    <div class="dropdown__chevron"></div>
+                  </div>
+                  <div class="sub_menu_games_responsive">
+                    <div class="container_header_responsive explore_games">
+                      <div class="header_responsive esplora_giochi">
+                        <div class="sub_menu_games_responsive_two">
+                          <p>ESPLORA I GIOCHI</p>
+                        </div>
+                        <div class="plus_chevron"></div>
+                      </div>
+                    </div>
+                    <ul class="sub-menu-responsive sub_esplora_giochi">
+                      <li><a href="#">Ultimi giochi</a></li>
+                      <li><a href="#">Prossimamente</a></li>
+                      <li><a href="#">Giochi gratuiti</a></li>
+                      <li><a href="#">EA SPORTS</a></li>
+                      <li><a href="#">EA Originals</a></li>
+                      <li><a href="#">Libreria dei giochi</a></li>
+                      <li><a href="#">Offerte EA app</a></li>
+                    </ul>
+                    <div class="container_header_responsive review_platform">
+                      <div class="header_responsive piattaforme">
+                        <div class="sub_menu_games_responsive_two">
+                          <p>PIATTAFORME</p>
+                        </div>
+                        <div class="plus_chevron"></div>
+                      </div>
+                    </div>
+                    <ul class="sub-menu-responsive sub_piattaforme">
+                      <li><a href="#">PC</a></li>
+                      <li><a href="#">PlayStation°5</a></li>
+                      <li><a href="#">Xbox Series X</a></li>
+                      <li><a href="#">Nintendo Switch</a></li>
+                      <li><a href="#">Dispositivi mobili</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="container_lateral_menu_responsive_three">
+                  <div
+                    class="header_lateral_menu another_experience_responsive"
+                  >
+                    <div class="menu_voice"><p>Altre Esperienze</p></div>
+                    <div class="dropdown__chevron"></div>
+                  </div>
+                </div>
+                <div
+                  class="container_sub_menu_responsive experience_responsive"
+                >
+                  <ul class="sub-menu-responsive">
+                    <li><a href="#">EA Play</a></li>
+                    <li><a href="#">EA app</a></li>
+                    <li><a href="#">Competizioni videoludiche</a></li>
+                    <li><a href="#">Diretta di EA Play</a></li>
+                    <li><a href="#">Test di gioco</a></li>
+                  </ul>
+                </div>
+
+                <div class="container_lateral_menu_responsive_three">
+                  <div class="header_lateral_menu information_responsive">
+                    <div class="menu_voice"><p>Informazioni</p></div>
+                    <div class="dropdown__chevron"></div>
+                  </div>
+                </div>
+                <div
+                  class="container_sub_menu_responsive information_sub_responsive"
+                >
+                  <ul class="sub-menu-responsive">
+                    <li><a href="#">Società</a></li>
+                    <li><a href="#">EA Studi</a></li>
+                    <li><a href="#">Lavora con noi</a></li>
+                    <li><a href="#">La nostra tecnologia</a></li>
+                    <li><a href="#">EA Partners</a></li>
+                    <li><a href="#">Notizie</a></li>
+                    <li><a href="#">Inside EA</a></li>
+                  </ul>
+                </div>
+
+                <div class="container_lateral_menu_responsive_three">
+                  <div class="header_lateral_menu engagements_responsive">
+                    <div class="menu_voice"><p>Impegni</p></div>
+                    <div class="dropdown__chevron"></div>
+                  </div>
+                </div>
+
+                <div
+                  class="container_sub_menu_responsive engagements_sub_responsive"
+                >
+                  <ul class="sub-menu-responsive">
+                    <li><a href="#">I nostri impegni</a></li>
+                    <li><a href="#">Gioco positivo</a></li>
+                    <li><a href="#">Diversità e inclusione</a></li>
+                    <li><a href="#">Impatto sociale</a></li>
+                    <li><a href="#">Persone e cultura</a></li>
+                    <li><a href="#">Ambiente</a></li>
+                  </ul>
+                </div>
+
+                <div class="container_lateral_menu_responsive_three">
+                  <div class="header_lateral_menu resources_responsive">
+                    <div class="menu_voice"><p>Risorse</p></div>
+                    <div class="dropdown__chevron"></div>
+                  </div>
+                </div>
+                <div
+                  class="container_sub_menu_responsive resources_sub_responsive"
+                >
+                  <ul class="sub-menu-responsive">
+                    <li><a href="#">Aiuto</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Filtro faiglia</a></li>
+                    <li><a href="#">Accessibilità</a></li>
+                    <li><a href="#">Stampa</a></li>
+                    <li><a href="#">Investitori</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-lateral-responsive-menu"></div>
         </div>
       </header>
 

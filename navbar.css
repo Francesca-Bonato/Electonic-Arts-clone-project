@@ -86,6 +86,7 @@ a {
   width: 100%;
   position: sticky;
   top: 0;
+  z-index: 99999;
   visibility: visible;
   height: 40px;
   transition: all 0.4s;
@@ -173,6 +174,7 @@ a {
   position: fixed;
   left: 0;
   width: 100%;
+  height: 50px;
 }
 
 .header_nav_menu_two {
@@ -195,6 +197,16 @@ a {
   transform: scale(1.4);
 }
 
+.icon_hamburger_menu {
+  font-size: 40px;
+  margin: auto;
+  cursor: pointer;
+  display: none;
+}
+
+.icon_hamburger_menu:hover {
+  color: #fb4646;
+}
 /* ! MENU */
 .menu {
   display: flex;
@@ -229,18 +241,18 @@ a {
 }
 
 /* ! Chevron Dropdown */
-.dropdown__chevron {
+.dropdown__chevron_menu {
   position: relative;
   height: 1.4em;
   width: 1.4em;
   cursor: pointer;
 }
 
-.dropdown__chevron::before,
-.dropdown__chevron::after {
+.dropdown__chevron_menu::before,
+.dropdown__chevron_menu::after {
   border-radius: 10px;
   margin-left: 5px;
-  border-top: 2px solid black;
+  border-top: 1px solid black;
   content: "";
   height: 2px;
   position: absolute;
@@ -249,23 +261,23 @@ a {
   transition: all 0.3s;
 }
 
-.dropdown__chevron::before {
+.dropdown__chevron_menu::before {
   transform: rotate(45deg);
 }
 
-.dropdown__chevron::after {
+.dropdown__chevron_menu::after {
   margin-left: 10px;
   transform: rotate(-45deg);
 }
 
-.ea-local-nav:hover .dropdown__chevron::before {
+.ea-local-nav:hover .dropdown__chevron_menu::before {
   transform: rotate(-45deg);
-  border-top: 2px solid #ff5151;
+  border-top: 1px solid #ff5151;
 }
 
-.ea-local-nav:hover .dropdown__chevron::after {
+.ea-local-nav:hover .dropdown__chevron_menu::after {
   transform: rotate(45deg);
-  border-top: 2px solid #ff5151;
+  border-top: 1px solid #ff5151;
 }
 
 .ea-local-nav:hover {
@@ -384,10 +396,10 @@ ul > p {
   left: -50%;
   visibility: hidden;
   transform: translateX(0);
-  transition-duration: .6s;
+  transition-duration: 0.6s;
 }
 
-.open .container-nav-laterale{
+.open .container-nav-laterale {
   visibility: visible;
   left: 0;
   transition-duration: 0.8s;
@@ -771,4 +783,479 @@ ul > p {
 
 .text_help_sub_menu {
   margin-top: 20px;
+}
+
+/* NAV LATERALE RESPONSIVE */
+
+.lateral_menu_responsive {
+  height: 100vh;
+  width: 375px;
+  background-color: white;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition-duration: 0.6s;
+  position: relative;
+  z-index: 1;
+}
+
+.open_lateral_menu_responsive .lateral_menu_responsive {
+  transform: translateX(0);
+}
+
+.open_lateral_menu_responsive .container-lateral-responsive-menu {
+  background-color: #000000ba;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.container_logo_responsive {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f3f3;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 53px;
+  padding: 0 10px;
+}
+
+.close_responsive {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.container_lateral_menu_responsive {
+  margin-top: 15px;
+  padding: 0 10px;
+}
+
+.container_lateral_menu_responsive_two {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.container_lateral_menu_responsive_three {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.header_lateral_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid black;
+}
+
+.dropdown__chevron {
+  position: relative;
+  height: 1.4em;
+  width: 1.4em;
+  margin-right: 10px;
+}
+
+.dropdown__chevron::before,
+.dropdown__chevron::after {
+  border-radius: 10px;
+  margin-left: 4px;
+  border-top: 2px solid black;
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  transition: all 0.3s;
+}
+
+.dropdown__chevron::before {
+  transform: rotate(45deg);
+}
+
+.dropdown__chevron::after {
+  margin-left: 10px;
+  transform: rotate(-45deg);
+}
+
+.container_lateral_menu_responsive_three:hover {
+  color: #fb4646;
+}
+
+.container_lateral_menu_responsive_three:hover .dropdown__chevron::after {
+  border-top: 2px solid #ff5151;
+}
+.container_lateral_menu_responsive_three:hover .dropdown__chevron::before {
+  border-top: 2px solid #ff5151;
+}
+
+.menu_voice p {
+  margin: 0;
+}
+
+/* sub menu */
+
+.container_sub_menu_responsive {
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.sub-menu-responsive {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: all 380ms ease-in-out;
+  margin: 0;
+}
+
+.sub-menu-responsive li {
+  margin: 0;
+}
+
+.container_sub_menu_responsive li {
+  border-bottom: 1px solid rgba(78, 77, 77, 0.472);
+  width: 97%;
+  padding: 15px;
+}
+
+.sub-menu-responsive a {
+  text-decoration: none;
+  color: rgba(154, 152, 152, 0.777);
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.sub-menu-responsive :hover {
+  color: #fb4646;
+}
+
+.sub_menu_games_responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 0;
+  opacity: 0;
+  transition: all 380ms ease-in-out;
+}
+
+.sub_menu_games_responsive_two {
+  position: relative;
+}
+
+.sub_menu_games_responsive_two p {
+  margin: 0;
+}
+
+.sub_esplora_giochi {
+  visibility: visible;
+  height: 0;
+  opacity: 0.4;
+  padding: 0;
+  gap: 20px;
+  width: 100%;
+  align-items: flex-start;
+  border-bottom: 1px solid black;
+  margin-left: 0;
+}
+
+.sub_esplora_giochi li {
+  margin: 0 38px;
+}
+.sub_esplora_giochi a,
+.sub_piattaforme a {
+  color: black;
+}
+
+.sub_piattaforme {
+  visibility: visible;
+  height: 0;
+  opacity: 0.4;
+  padding: 0;
+  gap: 20px;
+  width: 100%;
+  align-items: flex-start;
+  border-bottom: 1px solid black;
+  margin-left: 0;
+}
+
+.sub_piattaforme li {
+  margin: 0 38px;
+}
+
+.header_responsive {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 14px;
+  padding: 14px 0 13px 0;
+  color: black;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.container_header_responsive {
+  width: 100%;
+}
+.opened .two {
+  border-bottom: 1px solid #fb4646;
+}
+
+.header_responsive:hover {
+  color: #ff5151;
+}
+
+.header_responsive:hover .plus_chevron::after,
+.header_responsive:hover .plus_chevron::before {
+  border-top: 2px solid #ff5151;
+}
+
+.plus_chevron {
+  min-width: 16px;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.plus_chevron::before,
+.plus_chevron::after {
+  border-top: 2px solid black;
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  transition: all 0.3s;
+}
+
+.plus_chevron::after {
+  transform: rotate(90deg);
+  right: 3px;
+}
+
+.plus_chevron::before {
+  transform: rotate(0);
+  left: 3px;
+}
+/* ! Giochi */
+.opened_games .games_responsive {
+  border-bottom: 1px solid #fb4646 !important;
+  color: #ff5151;
+}
+
+.opened_games .sub_menu_games_responsive {
+  visibility: visible;
+  opacity: 1;
+  height: 96px;
+}
+
+.opened_games .sub_piattaforme {
+  border-bottom: 1px solid #fb4646;
+}
+
+.opened_games .games_responsive .dropdown__chevron::after {
+  border-top: 2px solid #ff5151;
+  transform: rotate(45deg);
+}
+
+.opened_games .games_responsive .dropdown__chevron::before {
+  border-top: 2px solid #ff5151;
+  transform: rotate(-45deg);
+}
+
+/* !Sotto-sezione Giochi */
+.opened_sub_games .esplora_giochi {
+  opacity: 1;
+}
+
+.opened_sub_games .esplora_giochi .plus_chevron {
+  transform: rotate(45deg);
+}
+
+.opened_sub_games .sub_esplora_giochi {
+  opacity: 1;
+  padding: 10px 0;
+  height: 300.67px;
+}
+
+.opened_sub_games .sub_menu_games_responsive {
+  height: 100%;
+}
+
+/* Sotto-sezione Piattaforme */
+.opened_sub_platform .piattaforme {
+  opacity: 1;
+}
+
+.opened_sub_platform .piattaforme .plus_chevron {
+  transform: rotate(45deg);
+}
+
+.opened_sub_platform .sub_piattaforme {
+  opacity: 1;
+  padding: 10px 0;
+  height: 220.67px;
+}
+
+.opened_sub_platform .sub_menu_games_responsive {
+  height: 100%;
+}
+
+/* Altre Esperienze */
+.opened .another_experience_responsive {
+  border-bottom: 1px solid #fb4646;
+}
+
+.opened .experience_responsive .sub-menu-responsive {
+  visibility: visible;
+  opacity: 1;
+  height: 260px;
+}
+
+.opened .experience_responsive .sub-menu-responsive li:last-child {
+  border-bottom: 1px solid #fb4646;
+}
+
+.opened .another_experience_responsive .menu_voice {
+  color: #fb4646;
+}
+
+.opened .another_experience_responsive .dropdown__chevron::after {
+  border-top: 2px solid #ff5151;
+  transform: rotate(45deg);
+}
+
+.opened .another_experience_responsive .dropdown__chevron::before {
+  border-top: 2px solid #ff5151;
+  transform: rotate(-45deg);
+}
+
+/* Informazioni */
+.opened_information .information_responsive {
+  border-bottom: 1px solid #fb4646;
+}
+
+.opened_information .information_sub_responsive .sub-menu-responsive {
+  visibility: visible;
+  opacity: 1;
+  height: 360px;
+}
+
+.opened_information
+  .information_sub_responsive
+  .sub-menu-responsive
+  li:last-child {
+  border-bottom: 1px solid #fb4646;
+}
+
+.opened_information .information_responsive .menu_voice {
+  color: #fb4646;
+}
+
+.opened_information .information_responsive .dropdown__chevron::after {
+  border-top: 2px solid #ff5151;
+  transform: rotate(45deg);
+}
+
+.opened_information .information_responsive .dropdown__chevron::before {
+  border-top: 2px solid #ff5151;
+  transform: rotate(-45deg);
+}
+
+/* impegni */
+.opened_engagements .engagements_responsive {
+  border-bottom: 1px solid #fb4646;
+}
+
+.opened_engagements .engagements_sub_responsive .sub-menu-responsive {
+  visibility: visible;
+  opacity: 1;
+  height: 310px;
+}
+
+.opened_engagements
+  .engagements_sub_responsive
+  .sub-menu-responsive
+  li:last-child {
+  border-bottom: 1px solid #fb4646;
+}
+
+.opened_engagements .engagements_responsive .menu_voice {
+  color: #fb4646;
+}
+
+.opened_engagements .engagements_responsive .dropdown__chevron::after {
+  border-top: 2px solid #ff5151;
+  transform: rotate(45deg);
+}
+
+.opened_engagements .engagements_responsive .dropdown__chevron::before {
+  border-top: 2px solid #ff5151;
+  transform: rotate(-45deg);
+}
+
+/* risorse */
+.opened_resources .resources_responsive {
+  border-bottom: 1px solid #fb4646;
+}
+
+.opened_resources .resources_sub_responsive .sub-menu-responsive {
+  visibility: visible;
+  opacity: 1;
+  height: 310px;
+}
+
+.opened_resources .resources_sub_responsive .sub-menu-responsive li:last-child {
+  border-bottom: 1px solid #fb4646;
+}
+
+.opened_resources .resources_responsive .menu_voice {
+  color: #fb4646;
+}
+
+.opened_resources .resources_responsive .dropdown__chevron::after {
+  border-top: 2px solid #ff5151;
+  transform: rotate(45deg);
+}
+
+.opened_resources .resources_responsive .dropdown__chevron::before {
+  border-top: 2px solid #ff5151;
+  transform: rotate(-45deg);
+}
+
+/* MediaQueries tablet */
+
+@media screen and (max-width: 1024px) {
+  .menu,
+  .ellipsis-vertical_menu {
+    display: none;
+  }
+
+  .icon_hamburger_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav_menu_two {
+    padding: 0 5px;
+  }
 }
