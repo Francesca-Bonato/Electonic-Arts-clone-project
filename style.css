@@ -625,7 +625,7 @@ a {
 
 
 /* ! Mediaquery Play section Tablet*/
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .hero-content {
     height: auto;
     width: 40.625%;
