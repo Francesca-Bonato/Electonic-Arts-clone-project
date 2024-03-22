@@ -74,7 +74,7 @@ a {
 ------------------- */
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 /*  ---------------------------
@@ -86,15 +86,16 @@ a {
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 99999;
-  visibility: visible;
+  z-index: 2;
   height: 40px;
+  transform: translateY(0);
   transition: all 0.4s;
 }
 
 .active {
+  transform: translateY(-100%);
   height: 0;
-  visibility: hidden;
+  z-index: 0;
 }
 
 .nav_menu_one {
@@ -173,6 +174,7 @@ a {
   background-color: #f5f5f5;
   position: fixed;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 50px;
 }
@@ -386,35 +388,45 @@ ul > p {
 }
 
 /* ***************NAVBAR A COMPARSA LATERALE************* */
+.nav-laterale{
+  position: relative;
+  z-index: 0;
+}
+
 .container-nav-laterale {
-  height: 100vh;
   background-color: #fff;
-  overflow: hidden;
+  overflow-y: scroll;
   padding: 10px;
   width: 400px;
-  position: absolute;
-  left: -50%;
+  height: 97vh;
   visibility: hidden;
-  transform: translateX(0);
-  transition-duration: 0.6s;
+  transform: translateX(-150%);
+  transition-duration: 0.8s;
+  position: absolute;
+}
+
+.container-nav-laterale::-webkit-scrollbar {
+  display: none;
 }
 
 .open .container-nav-laterale {
   visibility: visible;
-  left: 0;
-  transition-duration: 0.8s;
-  /* width: 400px; */
+  transform: translateX(0);
 }
 
 .open .nav-laterale {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 40px);
+  z-index: 3;
   position: absolute;
-  background-color: #000000ba;
+  background-color: #202020c7;
+}
+
+.open {
+  overflow: hidden;
 }
 
 .contenitore_scritta {
-  height: 50px;
   /* border: 1px solid black; */
   display: flex;
   align-items: center;
@@ -452,16 +464,12 @@ ul > p {
 
 .contenitore-immagini {
   margin-top: 30px;
-  overflow: hidden;
-  height: 80%;
-  width: auto;
   padding: 20px;
   /* border: 1px solid black; */
 }
 
 .immagine-play {
   height: 330px;
-  width: 330px;
   background-size: cover;
   background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2021/04/ea-play-16x9.png.adapt.crop1x1.767w.png");
   margin: auto;
@@ -788,27 +796,37 @@ ul > p {
 /* NAV LATERALE RESPONSIVE */
 
 .lateral_menu_responsive {
-  height: 100vh;
+  height: 100%;
   width: 375px;
   background-color: white;
   overflow-y: auto;
   transform: translateX(-100%);
   transition-duration: 0.6s;
-  position: relative;
+  position: absolute;
+  top: 40px;
   z-index: 1;
+}
+
+.open_lateral_menu_responsive {
+  overflow: hidden;
+}
+
+.open_lateral_menu_responsive .content{
+  height: 40px;
+  z-index: 3;
+  transform: translateY(0);
 }
 
 .open_lateral_menu_responsive .lateral_menu_responsive {
   transform: translateX(0);
+  z-index: 3;
 }
 
 .open_lateral_menu_responsive .container-lateral-responsive-menu {
   background-color: #000000ba;
-  position: absolute;
-  top: 0;
-  z-index: 0;
+  z-index: 1;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .container_logo_responsive {
