@@ -11,7 +11,7 @@
     <meta name="keywords" content="ea,teamproject,electronic Arts" />
     <meta
       name="author"
-      content="Luigi Balestrucci,Francesco Foti,Francesco Balleri,Francesca Bonato,Sergio Gagliano,Daniele De Lise"
+      content="Luigi Balestrucci,Francesco Foti,Francesco Balleri,Francesca Bonato,Sergio Gagliano,Daniele De Lise,Giuseppe Buoncore"
     />
     <!-- Opengraph meta -->
     <meta
@@ -47,7 +47,7 @@
       rel="stylesheet"
     />
     <!-- File CSS -->
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navbar.css" />
   </head>
   <body>
@@ -621,18 +621,218 @@
         <div class="local-nav"></div>
         <!-- First section jumbotron -->
         <section class="jumbotron">
-          <picture></picture>
+          <picture>
+            <div class="jumbotron-main">
+              <img id="bf2042-background"src="assets/bf-2042-section-768w.jpg" alt="">
+                <video id="video-xl" autoplay loop muted>
+                  <source src="assets/bf-2042-s5-mse-section-hero-video-xl.mp4" type="video/mp4">
+                </video>
+                <div class="video-l">
+                  <video id="video-l" autoplay loop muted>
+                    <source src="assets/bf-2042-s5-mse-section-hero-video-l.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="video-m">
+                  <video id="video" autoplay loop muted>
+                    <source src="assets/bf-2042-s5-mse-hero-video-m.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-s">
+                    <video id="video" autoplay loop muted>
+                      <source src="assets/bf-2042-s5-mse-section-hero-video-s-xs.mp4" type="video/mp4">
+                    </video>
+                </div>
+              <div class="overlay-content animated animatedFadeInUp fadeInUp">
+                <img src="assets/bf2042-s5-mse-logo-horiz-white-it-it.png" alt="bf logo">
+                <div class="bf-2042-h6">
+                  <h6>Gioca subito all'evento! Tuffati nel caos delle forze combinate con il ritorno della 
+                     modalità Controllo, ora disponibile su altre due mappe. Sblocca le ricompense dell'evento 
+                     e ricorda: prendi il controllo prima che il nemico controlli te.</h6>
+                </div>
+                <div class="redirect-container">
+                  <a id="bf2042-redirect" href="https://www.ea.com/it-it/games/battlefield/battlefield-2042/community-calendar#arkangel-directive-section">Dettagli su Direttiva Arkangel</a> 
+                </div>
+              </div>
+            </div>
+          </picture>
         </section>
-        <!-- Subsection Jumbotron-->
-        <div class="eapl-section"></div>
         <!-- Section games featured -->
-        <section class="games-featured"></section>
+      <section class="games-featured">
+        <div class="mainGamesContainer">
+          <h3 class="mainGamesHeader">Giochi in evidenza</h3>
+          <div class="layoutImages">
+            <div id="main-square-ufc" class="card-games">
+              <div class="image-box">
+                <img class="background"
+                  src="https://media.contentapi.ea.com/content/dam/gin/images/2023/09/ufc-5-keyart.jpg.adapt.crop1x1.767p.jpg"
+                  width="100%" />
+                <img class="logo-main-games"
+                  src="https://media.contentapi.ea.com/content/dam/gin/common/logos/ufc-5-logo.svg" alt="UFC® 5"
+                  title="UFC® 5" width="100%" />
+                <div class="overlay-gradient">
+                  <a href="https://www.ea.com/it-it/games/ufc/ufc-5" title="" class="official-site-a"></a>
+                  <span id="official-site-span">Sito ufficiale</span>
+                </div>
+              </div>
+            </div>
+            <div id="main-square-fc24" class="card-games">
+              <div class="image-box">
+                <img class="background"
+                  src="https://media.contentapi.ea.com/content/dam/gin/images/2023/07/fc24.jpeg.adapt.crop1x1.767p.jpeg"
+                  width="100%" />
+                <img class="logo-main-games"
+                  src="https://media.contentapi.ea.com/content/dam/ea/fc/common/global/fc24-logo-nav.svg" alt="FC 24"
+                  title="FC 24" width="100%" />
+                <div class="overlay-gradient">
+                  <a href="https://www.ea.com/it-it/games/ea-sports-fc/fc-24" title="" class="official-site-a"></a>
+                  <span id="official-site-span">Sito ufficiale</span>
+                </div>
+              </div>
+            </div>
+            <div id="main-square-f123" class="card-games">
+              <div class="image-box">
+                <img class="background"
+                  src="https://media.contentapi.ea.com/content/dam/gin/images/2023/02/f123-gametile-16x9.jpg.adapt.crop1x1.767p.jpg"
+                  width="100%" />
+                <img class="logo-main-games"
+                  src="https://media.contentapi.ea.com/content/dam/ea/f1/f1-23/common/f123-logo-horizontal-light.png"
+                  alt="F1® 23" title="F1® 23" />
+                <div class="overlay-gradient">
+                  <a href="https://www.ea.com/it-it/games/f1/f1-23" title="" class="official-site-a"></a>
+                  <span id="official-site-span">Sito ufficiale</span>
+                </div>
+              </div>
+            </div>
+            <div id="main-square-nfs-unbound" class="card-games">
+              <div class="image-box">
+                <img class="background"
+                  src="https://media.contentapi.ea.com/content/dam/gin/images/2022/10/nfs-unbound-1x1.png.adapt.crop1x1.767p.png"
+                  width="100%" />
+                <img class="logo-main-games"
+                  src="https://media.contentapi.ea.com/content/dam/gin/common/logos/nfs-unbound-logo.png"
+                  alt="NFS Unbound" title="Need for Speed™ Unbound" />
+                <div class="overlay-gradient">
+                  <a href="https://www.ea.com/it-it/games/need-for-speed/need-for-speed-unbound" title=""
+                    class="official-site-a"></a>
+                  <span id="official-site-span">Sito ufficiale</span>
+                </div>
+              </div>
+            </div>
+            <div id="main-square-thesims4" class="card-games">
+              <div class="image-box">
+                <img class="background"
+                  src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg"
+                  width="100%" />
+                <h4 class="logo-main-games" id="thesims4" src="" alt="The Sims 4" title="The Sims 4">
+                  The Sims 4
+                </h4>
+                <div class="overlay-gradient">
+                  <a href="https://www.ea.com/it/games/the-sims/the-sims-4" title="" class="official-site-a"></a>
+                  <span id="official-site-span">Sito ufficiale</span>
+                </div>
+              </div>
+            </div>
+            <div id="main-square-apex-legends" class="card-games">
+              <div class="image-box">
+                <img class="background"
+                  src="https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg"
+                  width="100%" />
+                <img class="logo-main-games"
+                  src="https://media.contentapi.ea.com/content/dam/gin/common/logos/apex-legends-mono-logo.svg"
+                  alt="Apex Legends" title="Apex Legends" id="apex_legends_logo" />
+                <div class="overlay-gradient">
+                  <a href="https://www.ea.com/it-it/games/apex-legends" title="" class="official-site-a"></a>
+                  <span id="official-site-span">Sito ufficiale</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a id="games-cta" class="btn-cta" draggable="true" href="https://www.ea.com/it-it/games">Ultimi giochi</a>
+        </div>
+      </section>
         <!-- Card news -->
         <section class="container-card"></section>
-        <!-- Section link to form ea play -->
-        <section class="section-play"></section>
-        <!-- Section button after section play -->
-        <div class="subsection-play"></div>
+        <!-- Section link to EA play -->
+        <section class="section-play">
+          <picture class="hero-figure">
+            <source
+              media="(max-width: 320px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop3x5.320w.jpg
+              "
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop3x5.767w.jpg
+              "
+            />
+            <source
+              media="(max-width: 1023px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop2x1.1023w.jpg
+              "
+            />
+            <source
+              media="(max-width: 1455px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop5x2.1455w.jpg
+              "
+            />
+            <source
+              media="(min-width: 1456px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop7x2.1920w.jpg
+              "
+            />
+            <img
+              src="assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop3x5.320w.jpg"
+            />
+          </picture>
+        </picture>
+        <picture class="hero-gradient">
+          <source media="(max-width: 320px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop3x5.320w.png">
+          <source media="(max-width: 767px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop3x5.767w.png">
+          <source media="(max-width: 1023px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop2x1.1023w.png">
+          <source media="(max-width: 1455px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop5x2.1455w.png">
+          <source media="(min-width: 1456px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop7x2.1920w.png">
+          <img
+            src="assets/ea-play-hero-gradient.png.adapt.crop3x5.320w.png"
+          />
+        </picture>
+          <div class="hero-content">
+            <div class="hero-content-logo">
+              <img
+                class="hero-logo"
+                src="assets/ea-play-logo-coral-hero-logo-small.svg"
+              />
+            </div>
+            <div class="hero-content-title">
+              <p>
+                Non limitarti al gioco. Gioca al massimo. Sblocca ricompense
+                esclusive, contenuti per i soli membri e una libreria dei
+                migliori titoli.
+              </p>
+            </div>
+            <div class="hero-content-cta">
+              <a class="btn-cta" href="https://www.ea.com/it-it/ea-play"
+                >Iscriviti subito</a
+              >
+            </div>
+          </div>
+        </section>
+        <!-- Section blue banner parental tools -->
+        <section class="subsection-play">
+          <div class="subsection-play-title">
+            <h5>
+              Giocatori e genitori: il controllo dei videogiochi è nelle vostre
+              mani
+            </h5>
+          </div>
+          <div class="subsection-play-cta">
+            <a id="btn-scopri" class="btn-cta" href="/it-it/commitments/positive-play/player-and-parental-tools"
+              >Scopri di più</a>
+          </div>
+        </section>
         <!-- Terms and conditions -->
         <div class="section-column"></div>
         <!-- Footer page -->
