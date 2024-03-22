@@ -171,10 +171,21 @@ a {
     background-color: #dededea6;
   }
 
+
   /* Annullo del bordo sinistro al primo li */
   & ul > :nth-child(1) div {
     border: none;
   }
+}
+
+.btn-onclick {
+  background-color: #dededea6;
+}
+
+.btn-onclick a {
+  border-bottom: #fb4646 2px solid;
+  padding-bottom: 13px;
+
 }
 
 /* Allineamento orizzontale Contenitore Card */

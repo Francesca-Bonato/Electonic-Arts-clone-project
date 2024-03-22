@@ -590,47 +590,45 @@ let createdCards = document.querySelectorAll(".single-card-novita");
 
 //avvio come prime card, la funzione che genera card
 
+const ul = Array.from(document.querySelectorAll('.menu-scroll-active li'))
+console.log(ul);
 
 window.addEventListener("load", () => {
   generateCards(cardsNotizieEa);
-  console.log(ultimeNovitaFilter);
+  ul.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Rimuove la classe 'active' da tutti i bottoni
+      ul.forEach((button) => {
+        button.classList.remove('btn-onclick');
+      });
+      // Aggiunge la classe 'btn-onclick' al bottone cliccato
+      btn.classList.add('btn-onclick');
+    })})
   ultimeNovitaFilter.forEach((btn) => {
     btn.addEventListener("click", () => {
-      if (btn.id === "notizie-ea"){
-        containerCard.innerHTML = ""
-        generateCards(cardsNotizieEa); 
-      }
-      if (btn.id === "ea-sports-news") {
-        containerCard.innerHTML = ""
+
+      // Effettua il controllo per generare le carte appropriate
+      containerCard.innerHTML = "";
+      if (btn.id === "notizie-ea") {
+        generateCards(cardsNotizieEa);
+      } else if (btn.id === "ea-sports-news") {
         generateCards(cardsEAFC);
-      }
-      if (btn.id === "apex-legends-news"){
-        containerCard.innerHTML = ""
+      } else if (btn.id === "apex-legends-news") {
         generateCards(cardsApex);
-      }
-      if (btn.id === "the-sims-news"){
-        containerCard.innerHTML = ""
+      } else if (btn.id === "the-sims-news") {
         generateCards(cardsSims);
-      }
-      if (btn.id === "star-wars-news"){
-        containerCard.innerHTML = ""
+      } else if (btn.id === "star-wars-news") {
         generateCards(cardsStarWars);
-      }
-      if (btn.id === "f1-news"){
-        containerCard.innerHTML = ""
+      } else if (btn.id === "f1-news") {
         generateCards(cardsF1);
-      }
-      if (btn.id === "battlefield-news"){
-        containerCard.innerHTML = ""
+      } else if (btn.id === "battlefield-news") {
         generateCards(cardsBattlefield);
-      }
-      if (btn.id === "need-for-speed-news"){
-        containerCard.innerHTML = ""
+      } else if (btn.id === "need-for-speed-news") {
         generateCards(cardsNFS);
       }
-    })
-  })
-})
+    });
+  });
+});
 
 
 
