@@ -53,11 +53,16 @@
 @font-face {
   font-family: "Electronic Arts Text";
   src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
-  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
+  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
 }
 
 body,
@@ -97,7 +102,6 @@ h5,
 h6 {
   font-family: "Electronic Display";
 }
-
 
 ol,
 ul {
@@ -149,6 +153,8 @@ a {
 
 .hero-gradient {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
 }
@@ -165,11 +171,9 @@ a {
   flex-flow: column wrap;
   justify-content: center;
   color: white;
-
   & p {
-    font-weight: normal;
     line-height: var(--primary-line-height);
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 30px;
   }
 }
@@ -252,6 +256,10 @@ a {
 
 /* ! Mediaquery Play section desktop */
 @media (min-width: 1024px) {
+  .hero-content p {
+    font-size: 18px;
+  }
+
   .subsection-play {
     display: flex;
     flex-direction: row;
