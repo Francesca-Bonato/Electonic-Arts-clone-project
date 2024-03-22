@@ -571,7 +571,10 @@ function generateCards(arr) {
     containerCard.appendChild(divCard);
   });
 
-  createdCards = document.querySelectorAll(".single-card-novita");
+  createdCards = document.querySelectorAll(".single-card-novita")
+  createdCards.forEach((card) => {
+    card.classList.add('fadeIn')
+  })
 }
 
 //Recupero tutte le card per ogni sezione
@@ -586,12 +589,24 @@ const cardsNFS = sectionCards[7][0].data;
 
 
 //mi prendo tutte le singole card
-let createdCards = document.querySelectorAll(".single-card-novita");
+let createdCards = Array.from(document.querySelectorAll(".single-card-novita"));
+
+
 
 //avvio come prime card, la funzione che genera card
 
 const ul = Array.from(document.querySelectorAll('.menu-scroll-active li'))
-console.log(ul);
+const ulLinks = Array.from(document.querySelectorAll('.ultime-novitabtn a'))
+ulLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    ulLinks.forEach((e) => {
+      e.classList.remove('expand-border')
+    })
+    link.classList.add('expand-border')
+  })
+})
+
+
 
 window.addEventListener("load", () => {
   generateCards(cardsNotizieEa);

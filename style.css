@@ -185,7 +185,22 @@ a {
 .btn-onclick a {
   border-bottom: #fb4646 2px solid;
   padding-bottom: 13px;
+  
+}
 
+@keyframes expandBorder {
+  0% {
+    border-bottom-width: 0;
+  }
+  100% {
+    border-bottom-width: 100%; /* Larghezza desiderata del bordo */
+  }
+}
+
+/* Applica l'animazione al nuovo elemento */
+.expand-border {
+  border-right: 0 solid transparent; /* Imposta lo spessore e il colore del bordo desiderati */
+  animation: expandBorder 0.5s ease-in-out forwards; /* Durata e timing dell'animazione */
 }
 
 /* Allineamento orizzontale Contenitore Card */
@@ -207,13 +222,28 @@ a {
   /* Gestione delle Card Singole */
   & .single-card-novita {
     box-shadow: 0 0 7px -1px gray;
-    transition: 0.5s;
+    transition: all 0.3s;
   }
   /* Spostamento verticale cards */
   & .single-card-novita:hover {
     transform: translateY(-10px);
     box-shadow: 0 30px 30px 0px gray;
   }
+}
+
+/* Definisci l'animazione */
+@keyframes fadeIn {
+  from {
+    transform: translateY(-8px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Applica l'animazione al nuovo elemento */
+.fadeIn {
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 /* Ridimensionamento immagine card */
@@ -255,14 +285,6 @@ a {
   border: none;
 }
 
-/* Classe per nascondere i bottoni quando necessario */
-.hidden {
-  display: none;
-}
-
-.active {
-  display: block;
-}
 
 /* Wrapper Scroll menu */
 .menu-scroll {
