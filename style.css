@@ -391,6 +391,8 @@ a {
 
 .hero-gradient {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
 }
@@ -407,10 +409,9 @@ a {
   flex-flow: column wrap;
   justify-content: center;
   color: white;
-
   & p {
     line-height: var(--primary-line-height);
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 30px;
   }
 }
@@ -644,6 +645,10 @@ a {
 
 /* ! Mediaquery Play section desktop */
 @media (min-width: 1024px) {
+  .hero-content p {
+    font-size: 18px;
+  }
+
   .subsection-play {
     display: flex;
     flex-direction: row;
