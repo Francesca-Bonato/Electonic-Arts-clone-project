@@ -18,6 +18,7 @@
   --primary-line-height: 1.7em;
 
   & .btn-cta {
+    font-size: 18px;
     position: relative;
     padding: 12px 24px;
     text-align: center;
@@ -168,7 +169,7 @@ a {
   & p {
     font-weight: normal;
     line-height: var(--primary-line-height);
-    font-size: 0.93em;
+    font-size: 18px;
     margin-bottom: 30px;
   }
 }
@@ -198,7 +199,7 @@ a {
 
 .subsection-play-title h5 {
   line-height: 1.4em;
-  font-size: 1.5em;
+  font-size: 24px;
   margin-bottom: 15px;
   color: #161616;
 }
@@ -213,6 +214,9 @@ a {
   }
   & a::before {
     border: black;
+  }
+  & #btn-scopri {
+    min-width: 148.65px;
   }
 }
 
@@ -281,9 +285,11 @@ a {
     padding-left: calc((100vw - 1120px) / 2);
     padding-right: calc((100vw - 1120px) / 2);
   }
+  .subsection-play-title h5 {
+    font-size: 26px;
+  }
 
   .btn-cta {
     padding: 20px 24px !important;
-    min-width: 170px;
   }
 }
