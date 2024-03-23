@@ -18,6 +18,7 @@
   --primary-line-height: 1.7em;
 
   & .btn-cta {
+    font-size: 18px;
     position: relative;
     padding: 12px 24px;
     text-align: center;
@@ -52,11 +53,16 @@
 @font-face {
   font-family: "Electronic Arts Text";
   src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
-  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"),
-    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
+  src: url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
 }
 
 body,
@@ -96,7 +102,6 @@ h5,
 h6 {
   font-family: "Electronic Display";
 }
-
 
 ol,
 ul {
@@ -172,12 +177,12 @@ a {
 
 @keyframes fadeInUp {
   from {
-    transform: translate3d(0, 40px, 0)
+    transform: translate3d(0, 40px, 0);
   }
 
   to {
     transform: translate3d(0, 0, 0);
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -187,14 +192,13 @@ a {
 }
 
 .animatedFadeInUp {
-  opacity: 0
+  opacity: 0;
 }
 
 .fadeInUp {
   opacity: 0;
   animation-name: fadeInUp;
 }
-
 
 .overlay-content img {
   width: 720px;
@@ -236,14 +240,14 @@ a {
 }
 
 .redirect-container a {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   padding: 16px 24px;
   font-size: 18px;
   color: black;
 }
 
 #bf2042-redirect:hover {
-  padding: 19px 27px
+  padding: 19px 27px;
 }
 
 /* full section of main games */
@@ -324,7 +328,7 @@ a {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-image: linear-gradient(83deg, #0d1042, #ff4747);
   display: flex;
   justify-content: center;
@@ -374,7 +378,6 @@ a {
   margin-top: 15px;
 }
 
-
 /* EA play section */
 .section-play {
   position: relative;
@@ -406,9 +409,8 @@ a {
   color: white;
 
   & p {
-    font-weight: normal;
     line-height: var(--primary-line-height);
-    font-size: 0.93em;
+    font-size: 18px;
     margin-bottom: 30px;
   }
 }
@@ -421,7 +423,6 @@ a {
     width: 100%;
     color: white;
   }
-
   & a::before {
     border: white;
   }
@@ -440,7 +441,7 @@ a {
 
 .subsection-play-title h5 {
   line-height: 1.4em;
-  font-size: 1.5em;
+  font-size: 24px;
   margin-bottom: 15px;
   color: #161616;
 }
@@ -450,19 +451,19 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-
   & a {
     color: black;
   }
-
   & a::before {
     border: black;
+  }
+  & #btn-scopri {
+    min-width: 148.65px;
   }
 }
 
 /* MediaQuery Jumbotron */
-@media screen and (min-width:1024px) and (max-width:1456px) {
-
+@media screen and (min-width: 1024px) and (max-width: 1456px) {
   .jumbotron-main {
     background-image: url(assets/bf-2042-s5-mse-hero-video-m.mp4);
   }
@@ -474,12 +475,9 @@ a {
   .video-l video {
     display: block;
   }
-
-
 }
 
-@media screen and (min-width:425px) and (max-width:768px) {
-
+@media screen and (min-width: 425px) and (max-width: 768px) {
   .video-l video,
   .jumbotron-main video {
     display: none;
@@ -496,19 +494,15 @@ a {
 
   .overlay-content img {
     width: 55%;
-
   }
 
   & .overlay-content h6 {
     font-size: 15px;
     width: 55%;
   }
-
 }
 
-@media screen and (max-width:425px) {
-
-
+@media screen and (max-width: 425px) {
   .video-l video,
   .video-m video,
   .jumbotron-main video {
@@ -527,7 +521,6 @@ a {
 
   .overlay-content img {
     width: 55%;
-
   }
 
   & .overlay-content h6 {
@@ -536,9 +529,7 @@ a {
   }
 }
 
-
 /* media query mainGames section */
-
 
 /* media query mainGames 4k */
 @media screen and (max-width: 2560px) {
@@ -630,8 +621,6 @@ a {
   }
 }
 
-
-
 /* ! Mediaquery Play section Tablet*/
 @media (min-width: 768px) {
   .hero-content {
@@ -675,7 +664,6 @@ a {
   .subsection-play-title {
     text-align: left;
     max-width: 544px;
-
     & h5 {
       margin: 0;
     }
@@ -698,8 +686,11 @@ a {
     padding-right: calc((100vw - 1120px) / 2);
   }
 
+  .subsection-play-title h5 {
+    font-size: 26px;
+  }
+  
   .btn-cta {
     padding: 20px 24px !important;
-    min-width: 170px;
   }
 }
