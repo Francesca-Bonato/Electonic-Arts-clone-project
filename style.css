@@ -18,6 +18,7 @@
   --primary-line-height: 1.7em;
 
   & .btn-cta {
+    font-size: 18px;
     position: relative;
     padding: 12px 24px;
     text-align: center;
@@ -26,7 +27,7 @@
   & .btn-cta::before {
     border: var(--border-button);
     border-radius: var(--border-radius-button);
-    transition: border 0.3s;
+    transition: 100ms;
     content: "";
     position: absolute;
     left: 0;
@@ -40,6 +41,7 @@
     left: -3px;
     right: -3px;
     top: -3px;
+    transition: 100ms;
   }
 }
 
@@ -62,21 +64,17 @@ body,
 html {
   font-family: var(--primary-font);
   line-height: var(---primary-line-height);
-  font-family: var(--primary-font);
-  line-height: var(---primary-line-height);
   font-size: 16px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-
 
 h1,
 h2,
@@ -100,50 +98,38 @@ h6 {
   font-family: "Electronic Display";
 }
 
-
 ol,
 ul {
   list-style-type: none;
 }
 
-
 img {
   height: auto;
 }
-
 
 h1 {
   font-size: 4rem;
 }
 
-
 h2 {
   font-size: 3rem;
 }
-
 
 h3 {
   font-size: 2rem;
 }
 
-
 h4 {
   font-size: 1.6rem;
-  font-size: 1.6rem;
 }
-
 
 h5 {
   font-size: 1.3rem;
-  font-size: 1.3rem;
 }
-
 
 h6 {
   font-size: 1rem;
-  font-size: 1rem;
 }
-
 
 a {
   text-decoration: none;
@@ -163,7 +149,7 @@ a {
   align-items: center;
   width: 100%;
   height: 100%;
-margin-bottom:80px;
+  margin-bottom: 80px;
 }
 
 /* main games title */
@@ -186,13 +172,11 @@ margin-bottom:80px;
 
 /* container of image and logo */
 .card-games {
-  padding: 10px;
+  padding: 14px;
   position: relative;
   width: 33.33%;
   height: 100%;
 }
-
-.image-box:hover {}
 
 .background {
   width: 100%;
@@ -211,7 +195,6 @@ margin-bottom:80px;
     width: 100%;
     height: 100%;
     filter: brightness(70%);
-
   }
 }
 
@@ -230,7 +213,7 @@ margin-bottom:80px;
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-image: linear-gradient(83deg, #0d1042, #ff4747);
   display: flex;
   justify-content: center;
@@ -242,21 +225,21 @@ margin-bottom:80px;
 }
 
 .logo-main-games {
-  width: 50%;
+  filter: drop-shadow(8px 7px 23px #000);
+  font-size: 1.6rem;
+  font-weight: 700;
+  left: 50%;
+  max-height: 20%;
+  pointer-events: none;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
+  transition: .4s ease;
+  width: 50%;
   color: white;
   text-align: center;
-  transition: .5s ease;
-  filter: drop-shadow(8px 7px 23px #000);
-  pointer-events: none;
   z-index: 2;
-}
-
-#thesims4 {
-  font-size: 2em;
+  word-break: break-word;
 }
 
 #apex_legends_logo {
@@ -277,10 +260,12 @@ margin-bottom:80px;
 #games-cta {
   color: black;
   border: black;
-  margin-top:15px;
+  margin-top: 15px;
 }
 
-/* media query 4k */
+/* media query mainGames section */
+
+/* media query mainGames 4k */
 @media screen and (max-width: 2560px) {
   .mainGamesContainer {
     max-width: 1120px;
@@ -289,19 +274,12 @@ margin-bottom:80px;
   }
 
   .mainGamesHeader {
-    font-size: 2.8em;
+    display: block;
+    font-size: 2.2em;
   }
 }
 
-@media screen and (max-width: 1456px) {
-  .mainGamesContainer {
-    /* padding-left: calc((90vw - 1120px)/2);
-    padding-right: calc((90vw - 1120px)/2); */
-   
-  }
-}
-
-/* media query 2k */
+/* media query mainGames 2k */
 @media screen and (max-width: 1440px) {
   .mainGamesContainer {
     max-width: 100%;
@@ -314,7 +292,7 @@ margin-bottom:80px;
   }
 }
 
-/* media query laptop */
+/* media query mainGames laptop */
 @media screen and (max-width: 1024px) {
   .mainGamesContainer {
     padding-left: 7vw;
@@ -326,12 +304,9 @@ margin-bottom:80px;
   }
 }
 
-
-/* media query tablet */
+/* media query mainGames tablet */
 @media screen and (max-width: 1023px) {
   .mainGamesContainer {
-  /*   padding-left: 7.8125vw;
-    padding-right: 7.8125vw; */
     width: 100%;
   }
 
@@ -342,6 +317,10 @@ margin-bottom:80px;
   .card-games {
     width: 50%;
   }
+
+  .logo-main-games {
+    width: 30%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -350,14 +329,18 @@ margin-bottom:80px;
   }
 }
 
-/* media query mobile */
+/* media query mainGames mobile */
 @media screen and (max-width: 767px) {
   .card-games {
     width: 100%;
   }
+
+  .logo-main-games {
+    width: 50%;
+  }
 }
 
-/* media query 425px */
+/* media query mainGames 425px */
 @media screen and (max-width: 425px) {
   .mainGamesContainer {
     padding-left: 4vw;
@@ -365,7 +348,7 @@ margin-bottom:80px;
   }
 }
 
-/* media query button */
+/* media query mainGames button */
 @media screen and (max-width: 639px) {
   #games-cta {
     width: 100%;
