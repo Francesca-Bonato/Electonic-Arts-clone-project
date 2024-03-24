@@ -663,10 +663,6 @@ a {
 
 /* ! Mediaquery Play section Laptop large */
 @media (min-width: 1456px) {
-  * {
-    font-size: 20px;
-  }
-
   .hero-content {
     left: calc((100vw - 1120px) / 2);
     max-width: 544px;
