@@ -229,11 +229,15 @@ a {
     color: #5a5a58;
     font-size: 15px;
     width: 100%;
+    min-width: 190px;
     height: 65px;
     border: 2px solid #c2c2c2;
     border-radius: 2px;
-    padding: 0px 36px 0px 24px;
+    padding: 0px 24px 0px 24px;
     margin-bottom: 27px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.6em;
 
     & .network-footer-select {
       color: transparent;
@@ -297,7 +301,7 @@ option {
   right: -22px;
   max-height: 493px;
   min-width: calc(100% + 44px);
-  overflow-x: scroll;
+  /* overflow-y: hidden; */
   padding: 12px 0;
 
   & .ea-regional-pricing-selector__column,
@@ -316,12 +320,19 @@ option {
 .ea-locale-selector__item {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   cursor: pointer;
   align-items: center;
   position: relative;
   height: 47px;
   white-space: nowrap;
   border-top: 2px solid #eaeaea;
+}
+
+.ea-locale-selector__column,
+.ea-regional-pricing-selector__column {
+  margin-right: 28px;
+  margin-left: 28px;
 }
 
 .ea-locale-selector__item-flag,
