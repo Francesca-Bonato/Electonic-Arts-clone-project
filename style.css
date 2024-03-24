@@ -291,7 +291,7 @@ option {
   right: -22px;
   max-height: 493px;
   min-width: calc(100% + 44px);
-  overflow-x: scroll;
+  /* overflow-y: hidden; */
   padding: 12px 0;
   & .ea-regional-pricing-selector__column,
   & .ea-locale-selector__column {
@@ -304,6 +304,7 @@ option {
 .ea-locale-selector__item {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   cursor: pointer;
   align-items: center;
   position: relative;
@@ -311,6 +312,13 @@ option {
   white-space: nowrap;
   border-top: 2px solid #eaeaea;
 }
+
+.ea-locale-selector__column,
+.ea-regional-pricing-selector__column {
+  margin-right: 28px;
+  margin-left: 28px;
+}
+
 .ea-locale-selector__item-flag,
 .ea-locale-selector__selected-flag {
   width: 16px;
