@@ -271,9 +271,517 @@
                 </a>
               </div>
               <div class="network-footer-buttons">
-                <button>
-                  <label for="network-footer-pricing">Prezzi per regione</label>
-                  <select id="network-footer-pricing">
+                <button
+                  id="ea-regional-pricing-button"
+                  class="network-footer-btn"
+                >
+                  <div class="ea-regional-pricing-button-label">
+                    Prezzi per regione
+                  </div>
+                  <div class="ea-regional-pricing-button-selected-container">
+                    <span class="ea-regional-pricing-button-selected-text"
+                      >Italy</span
+                    >
+                    <iron-icon
+                      icon="ea-action-16:chevron"
+                      class="ea-regional-pricing-selector__chevron"
+                    ></iron-icon>
+                  </div>
+
+                  <div id="items" class="network-footer-div-selector">
+                    <div class="ea-regional-pricing-selector__column">
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="0"
+                        data-text="Austria"
+                        data-value="AT"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Austria</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="1"
+                        data-text="Belgium"
+                        data-value="BE"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Belgium</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="2"
+                        data-text="Bulgaria"
+                        data-value="BG"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Bulgaria</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="3"
+                        data-text="Croatia"
+                        data-value="HR"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Croatia</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="4"
+                        data-text="Cyprus"
+                        data-value="CY"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Cyprus</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="5"
+                        data-text="Czech Republic"
+                        data-value="CZ"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Czech Republic</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="6"
+                        data-text="Denmark"
+                        data-value="DK"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Denmark</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="7"
+                        data-text="Estonia"
+                        data-value="EE"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Estonia</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="8"
+                        data-text="Finland"
+                        data-value="FI"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Finland</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <dom-repeat as="option" style="display: none"
+                        ><template is="dom-repeat"></template
+                      ></dom-repeat>
+                    </div>
+                    <div class="ea-regional-pricing-selector__column">
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="9"
+                        data-text="France"
+                        data-value="FR"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >France</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="10"
+                        data-text="Germany"
+                        data-value="DE"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Germany</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="11"
+                        data-text="Greece"
+                        data-value="GR"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Greece</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="12"
+                        data-text="Hungary"
+                        data-value="HU"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Hungary</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="13"
+                        data-text="Iceland"
+                        data-value="IS"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Iceland</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="14"
+                        data-text="Ireland"
+                        data-value="IE"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Ireland</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item ea-regional-pricing-selector__item-current"
+                        data-index="15"
+                        data-text="Italy"
+                        data-value="IT"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Italy</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="16"
+                        data-text="Latvia"
+                        data-value="LV"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Latvia</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="17"
+                        data-text="Liechtenstein"
+                        data-value="LI"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Liechtenstein</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <dom-repeat as="option" style="display: none"
+                        ><template is="dom-repeat"></template
+                      ></dom-repeat>
+                    </div>
+                    <div class="ea-regional-pricing-selector__column">
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="18"
+                        data-text="Lithuania"
+                        data-value="LT"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Lithuania</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="19"
+                        data-text="Luxembourg"
+                        data-value="LU"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Luxembourg</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="20"
+                        data-text="Malta"
+                        data-value="MT"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Malta</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="21"
+                        data-text="Netherlands"
+                        data-value="NL"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Netherlands</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="22"
+                        data-text="Norway"
+                        data-value="NO"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Norway</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="23"
+                        data-text="Poland"
+                        data-value="PL"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Poland</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="24"
+                        data-text="Portugal"
+                        data-value="PT"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Portugal</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="25"
+                        data-text="Romania"
+                        data-value="RO"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Romania</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="26"
+                        data-text="Slovakia"
+                        data-value="SK"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Slovakia</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <dom-repeat as="option" style="display: none"
+                        ><template is="dom-repeat"></template
+                      ></dom-repeat>
+                    </div>
+                    <div class="ea-regional-pricing-selector__column">
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="27"
+                        data-text="Slovenia"
+                        data-value="SL"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Slovenia</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="28"
+                        data-text="Spain"
+                        data-value="ES"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Spain</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="29"
+                        data-text="Sweden"
+                        data-value="SE"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Sweden</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-regional-pricing-selector__item"
+                        data-index="30"
+                        data-text="Switzerland"
+                        data-value="CH"
+                      >
+                        <span class="ea-regional-pricing-selector__item-text"
+                          >Switzerland</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-regional-pricing-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <dom-repeat as="option" style="display: none"
+                        ><template is="dom-repeat"></template
+                      ></dom-repeat>
+                    </div>
+                    <dom-repeat as="column" style="display: none"
+                      ><template is="dom-repeat"></template
+                    ></dom-repeat>
+                  </div>
+                  <select
+                    class="network-footer-select"
+                    id="network-footer-pricing"
+                  >
                     <option class="ea-regional-pricing-selector" value="AT">
                       Austria
                     </option>
@@ -373,9 +881,414 @@
                     </option>
                   </select>
                 </button>
-                <button>
-                  <label for="network-footer-language">Lingua</label>
-                  <select id="network-footer-language">
+                <button id="ea-locale-button" class="network-footer-btn">
+                  <div class="ea-locale-button-label">Lingua</div>
+                  <div class="ea-locale-selector__selected-container">
+                    <span class="ea-locale-selector__selected-flag"></span>
+                    <span class="ea-locale-selector__selected-text">Italia</span
+                    ><iron-icon
+                      icon="ea-action-16:chevron"
+                      class="ea-locale-selector__chevron"
+                    ></iron-icon>
+                  </div>
+
+                  <div id="items" class="network-footer-div-selector">
+                    <div class="ea-locale-selector__column">
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="0"
+                        data-text="United States"
+                        data-value="en-us"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >United States</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="1"
+                        data-text="United Kingdom"
+                        data-value="en-gb"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >United Kingdom</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="2"
+                        data-text="Australia"
+                        data-value="en-au"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >Australia</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="3"
+                        data-text="France"
+                        data-value="fr-fr"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">France</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="4"
+                        data-text="Deutschland"
+                        data-value="de-de"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >Deutschland</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item ea-locale-selector__item-current"
+                        data-index="5"
+                        data-text="Italia"
+                        data-value="it-it"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">Italia</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="6"
+                        data-text="日本"
+                        data-value="ja-jp"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">日本</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="7"
+                        data-text="Polska"
+                        data-value="pl-pl"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">Polska</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="8"
+                        data-text="Brasil"
+                        data-value="pt-br"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">Brasil</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <dom-repeat as="option" style="display: none"
+                        ><template is="dom-repeat"></template
+                      ></dom-repeat>
+                    </div>
+                    <div class="ea-locale-selector__column">
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="9"
+                        data-text="Россия"
+                        data-value="ru-ru"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">Россия</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="10"
+                        data-text="España"
+                        data-value="es-es"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">España</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="11"
+                        data-text="Česká republika"
+                        data-value="cs-cz"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >Česká republika</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="12"
+                        data-text="Canada (En)"
+                        data-value="en-ca"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >Canada (En)</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="13"
+                        data-text="Canada (Fr)"
+                        data-value="fr-ca"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >Canada (Fr)</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="14"
+                        data-text="Danmark"
+                        data-value="da-dk"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >Danmark</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="15"
+                        data-text="Suomi"
+                        data-value="fi-fi"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">Suomi</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="16"
+                        data-text="México"
+                        data-value="es-mx"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">México</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="17"
+                        data-text="Nederland"
+                        data-value="nl-nl"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >Nederland</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <dom-repeat as="option" style="display: none"
+                        ><template is="dom-repeat"></template
+                      ></dom-repeat>
+                    </div>
+                    <div class="ea-locale-selector__column">
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="18"
+                        data-text="Norge"
+                        data-value="nb-no"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">Norge</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="19"
+                        data-text="Sverige"
+                        data-value="sv-se"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >Sverige</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="20"
+                        data-text="中国"
+                        data-value="zh-cn"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text">中国</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="21"
+                        data-text="대한민국"
+                        data-value="ko-kr"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >대한민국</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="22"
+                        data-text="繁體中文"
+                        data-value="zh-tw"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >繁體中文</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <div
+                        role="menuitem"
+                        tabindex="0"
+                        class="ea-locale-selector__item"
+                        data-index="23"
+                        data-text="Türkiye"
+                        data-value="tr-tr"
+                      >
+                        <span class="ea-locale-selector__item-flag"></span>
+                        <span class="ea-locale-selector__item-text"
+                          >Türkiye</span
+                        ><iron-icon
+                          icon="ea-state-16:checked"
+                          class="ea-locale-selector__checkmark"
+                        ></iron-icon>
+                      </div>
+                      <dom-repeat as="option" style="display: none"
+                        ><template is="dom-repeat"></template
+                      ></dom-repeat>
+                    </div>
+                    <dom-repeat as="column" style="display: none"
+                      ><template is="dom-repeat"></template
+                    ></dom-repeat>
+                  </div>
+                  <select
+                    class="network-footer-select"
+                    id="network-footer-language"
+                  >
                     <option class="ea-locale-selector" value="en-us">
                       United States
                     </option>
