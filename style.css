@@ -316,6 +316,10 @@ option {
   display:flex;
 }
 
+.openLocale {
+  display:flex;
+}
+
 .ea-regional-pricing-selector__item,
 .ea-locale-selector__item {
   display: flex;
@@ -327,6 +331,12 @@ option {
   height: 47px;
   white-space: nowrap;
   border-top: 2px solid #eaeaea;
+  transition: ease 0.1s;
+}
+
+.ea-regional-pricing-selector__item:hover{
+  transition: ease 0.1s;
+  transform: translateX(10px)
 }
 
 .ea-locale-selector__column,
@@ -340,6 +350,11 @@ option {
   width: 16px;
   height: 11px;
   margin-bottom: 2px;
+}
+
+.ea-locale-selector__item:hover{
+  transition: ease 0.1s;
+  transform: translateX(10px)
 }
 
 .ea-locale-selector__item[data-value="en-us"] .ea-locale-selector__item-flag,
