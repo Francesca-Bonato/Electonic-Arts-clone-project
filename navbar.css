@@ -180,7 +180,7 @@ a {
 /* ! User Profile */
 .menu-subscribe {
   position: absolute;
-  top: 40px;
+  top: 39px;
   left: 0;
   display: flex;
   justify-content: center;
@@ -765,35 +765,86 @@ main {
 /* -------------------------------------------------------------------------------- */
 /* ! MENU RESPONSIVE & MEDIAQUERY */
 /* -------------------------------------------------------------------------------- */
-.hamburgher-menu{
+.hamburgher-menu {
   display: none;
 }
 
-.container-menuSection-responsive{
+.container-menuSection-responsive {
   display: none;
 }
 
 @media (max-width: 1024px) {
   /* Delete menu desktop and sidebar */
-  .container-dotsLogo{
+  .container-dotsLogo {
     display: none;
   }
 
-  .container-menuSection{
+  .container-menuSection {
     display: none;
   }
 
-  .ea-sidebar-lateral{
+  .ea-sidebar-lateral {
     display: none;
   }
 
-  .hamburgher-menu{
+  .hamburgher-menu {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  .container-menuSection-responsive{
-    display: block;
+
+  .background-responsive-menu{
+    background-color: #1616169c;
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+  }
+
+  .header-responsive-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 53px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 0 10px;
+    background-color: #f3f3f3;
+  }
+
+  .header-responsive-menu .ea-logo-menu {
+    margin-left: 0;
+  }
+
+  .header-responsive-menu span {
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-responsive-menu svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-menuSection-responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow-y: auto;
+    z-index: 1;
+    left: 0;
+    max-width: 375px;
+    height: 100vh;
+    display: none;
+    background-color: white;
+  }
+
+  .container-single-section-responsive{
+    overflow: hidden;
+    padding: 0 25px;
   }
 }
