@@ -148,7 +148,7 @@ a {
   width: 32px;
   height: 32px;
   padding: 3px;
-  fill: #f3f3f3;
+  fill: var(--primary-color);
 }
 
 .icon-menu-start {
@@ -187,7 +187,7 @@ a {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  color: #f3f3f3;
+  color: var(--primary-color);
   align-items: center;
   height: 0;
   visibility: hidden;
@@ -1369,7 +1369,19 @@ main {
 
 @media (max-width: 464px) {
   .opened-info-superior .info-superior {
-    height: 600px !important;
+    height: 500px !important;
+  }
+
+  .info-superior .box{
+    align-items: flex-start;
+  }
+  
+  .info-superior .option{ 
+    flex-direction: row;
+  }
+
+  #sub-text-info{
+    padding: 5px 65px;
   }
 }
 
