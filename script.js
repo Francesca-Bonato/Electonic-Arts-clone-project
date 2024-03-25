@@ -17,8 +17,12 @@ const localeList = document.querySelector("#locale-items")
 
 const mediaQuery = window.matchMedia("(min-width: 1007px)")
 
-/* ! Function to toggle div in pricing select on 1007px window*/
+const priceClassToHide = document.querySelector(".openPrice")
+const localeClassToHide = document.querySelector(".openLocale")
+
+// ! Function to toggle div in pricing select on 1007px window
 function pricingOnClick() {
+    // ! if click select add div class 
     pricingSelect.addEventListener('click', (e) => {
         if (mediaQuery.matches) {
             pricingList.classList.toggle("openPrice")
@@ -28,27 +32,60 @@ function pricingOnClick() {
         }
     })
 
+
+
+ /*    // ! if window < 1007px remove div class 
+    if (window.innerWidth < 1007) {
+        priceClassToHide.classList.remove("openPrice")
+    } else {
+        priceClassToHide.classList.add("openPrice")
+    } */
+
+
+
+    // ! if click anywhere on the screen remove class 
     document.addEventListener("click", (e) => {
         pricingList.classList.remove("openPrice")
         e.stopPropagation()
     })
 }
+
+/* window.addEventListener('resize', pricingOnClick); */
+
 pricingOnClick()
 
-/* ! Function to toggle div in locale select on 1007px window*/
+
+
+// ! Function to toggle div in locale select on 1007px window
 function localeOnClick() {
+    // ! if click select add div class 
     localeSelect.addEventListener('click', (e) => {
         if (mediaQuery.matches) {
-            localeList.classList.toggle("openPrice")
+            localeList.classList.toggle("openLocale")
             e.stopPropagation()
         } else {
-            localeList.classList.remove("openPrice")
+            localeList.classList.remove("openLocale")
         }
     })
 
+
+
+  /*   // ! if window < 1007px remove div class 
+    if (window.innerWidth < 1007) {
+        localeClassToHide.classList.remove("openLocale")
+    } else {
+        localeClassToHide.classList.add("openLocale")
+    } */
+    
+
+
+    // ! if click anywhere on the screen remove class 
     document.addEventListener("click", (e) => {
-        localeList.classList.remove("openPrice")
+        localeList.classList.remove("openLocale")
         e.stopPropagation()
     })
 }
+
+/* window.addEventListener('resize', localeOnClick); */
+
 localeOnClick()
