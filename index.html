@@ -1,702 +1,983 @@
 <!DOCTYPE html>
 <html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Electronic Arts è uno dei principali produttori di videogiochi per console, PC e dispositivi mobile."
+    />
+    <meta name="keywords" content="ea,teamproject,electronic Arts" />
+    <meta
+      name="author"
+      content="Luigi Balestrucci,Francesco Foti,Francesco Balleri,Francesca Bonato,Sergio Gagliano,Daniele De Lise"
+    />
+    <!-- Opengraph meta -->
+    <meta
+      property="og:title"
+      content="Home Page Electronic Arts - Sito EA ufficiale"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="Electronic Arts è uno dei principali produttori di videogiochi per console, PC e dispositivi mobile."
+    />
+    <meta property="og:url" content="https://www.ea.com/it-it" />
+    <meta property="og:site_name" content="Electronic Arts Inc." />
+    <meta
+      property="og:image"
+      content="https://media.contentapi.ea.com/content/dam/eacom/images/2021/03/ea-featured-tile-generic-electronic-arts.png.adapt.crop191x100.1200w.png"
+    />
+    <meta
+      name="title"
+      content="Home Page Electronic Arts - Sito EA ufficiale"
+    />
+    <!-- Icon EA -->
+    <link
+      rel="shortcut icon"
+      href="https://www.ea.com/assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Title -->
+    <title>Home Page Electronic Arts - Sito EA ufficiale</title>
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- File CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description"
-    content="Electronic Arts è uno dei principali produttori di videogiochi per console, PC e dispositivi mobile." />
-  <meta name="keywords" content="ea,teamproject,electronic Arts" />
-  <meta name="author"
-    content="Luigi Balestrucci,Francesco Foti,Francesco Balleri,Francesca Bonato,Sergio Gagliano,Daniele De Lise" />
-  <!-- Opengraph meta -->
-  <meta property="og:title" content="Home Page Electronic Arts - Sito EA ufficiale" />
-  <meta property="og:type" content="article" />
-  <meta property="og:description"
-    content="Electronic Arts è uno dei principali produttori di videogiochi per console, PC e dispositivi mobile." />
-  <meta property="og:url" content="https://www.ea.com/it-it" />
-  <meta property="og:site_name" content="Electronic Arts Inc." />
-  <meta property="og:image"
-    content="https://media.contentapi.ea.com/content/dam/eacom/images/2021/03/ea-featured-tile-generic-electronic-arts.png.adapt.crop191x100.1200w.png" />
-  <meta name="title" content="Home Page Electronic Arts - Sito EA ufficiale" />
-  <!-- Icon EA -->
-  <link rel="shortcut icon" href="https://www.ea.com/assets/images/favicon.png" type="image/x-icon" />
-  <!-- Title -->
-  <title>Home Page Electronic Arts - Sito EA ufficiale</title>
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- File CSS -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="navbar.css" />
-</head>
-
-<body>
-  <!-- Container all -->
-  <div class="container">
-    <!-- First navbar -->
-    <header id="header-menu">
-      <!-- Superior Navbar -->
-      <nav class="superior-navbar">
-        <div class="icon-menu-start user">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path class="user-profile-svg"
-              d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 7c2.67 0 8 1.33 8 4v3H4v-3c0-2.67 5.33-4 8-4m0 1.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1" />
-          </svg>
-        </div>
-        <div class="menu-subscribe user-superior">
-          <div class="closer-icon">
-            <ion-icon name="close"></ion-icon>
-          </div>
-          <div class="container-options">
-            <div class="option">
-              <div class="logo-subscribe">
-                <img src="img/eaglobalnav-iconsignin.svg" alt="login-profile-icon" />
-              </div>
-              <div class="text-option">
-                <h5>Accedi</h5>
-              </div>
-            </div>
-            <div class="option">
-              <div class="logo-subscribe">
-                <img src="img/eaglobalnav-iconregister.svg" alt="register-profile-icon" />
-              </div>
-              <div class="text-option">
-                <h5>Crea Account</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="icon-menu-start info">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path class="pointer-help"
-              d="M12 19a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3m0-17a6 6 0 0 1 6 6c0 2.165-.753 3.29-2.674 4.923C13.399 14.56 13 15.297 13 17h-2c0-2.474.787-3.695 3.031-5.601C15.548 10.11 16 9.434 16 8a4 4 0 0 0-8 0v1H6V8a6 6 0 0 1 6-6" />
-          </svg>
-        </div>
-        <div class="menu-subscribe info-superior">
-          <div class="closer-icon info-closing">
-            <ion-icon name="close"></ion-icon>
-          </div>
-          <p id="title-info">Ti serve aiuto?</p>
-          <div class="container-options">
-            <div class="box">
-              <div class="option">
-                <div class="logo-subscribe">
-                  <img src="img/ea-medallion-white.svg" alt="ea-logo-medallion" />
-                </div>
-                <div class="text-option">
-                  <h5>Verifica il mio accesso EA</h5>
-                </div>
-              </div>
-              <div class="option">
-                <div class="logo-subscribe">
-                  <img src="img/ea-medallion-white.svg" alt="code-coupon" />
-                </div>
-                <div class="text-option">
-                  <h5>Come riscattare un codice</h5>
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <div class="option">
-                <div class="logo-subscribe">
-                  <img src="img/eaglobalnav-iconlink-white.svg" alt="connect an account" />
-                </div>
-                <div class="text-option">
-                  <h5>
-                    Collegare gli account di una <br />
-                    piattaforma al tuo account EA
-                  </h5>
-                </div>
-              </div>
-              <div class="option">
-                <div class="logo-subscribe">
-                  <img src="img/eaglobalnav-iconalert-white.svg" alt="register-profile-icon" />
-                </div>
-                <div class="text-option">
-                  <h5>Non riesco a giocare online</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>
-            Non hai trovato ciò che cerchi? Vai su
-            <a adhocenable="false" href="https://help.ea.com/it/" target="_blank">Aiuto&nbsp;EA</a>,
-            <a adhocenable="false" href="https://answers.ea.com" target="_blank">Answers&nbsp;HQ</a>
-            oder die
-            <a adhocenable="false" href="https://www.ea.com/it-it/forums">Forum&nbsp;EA</a>.
-          </p>
-        </div>
-
-        <div class="icon-menu-start ea-logo-superior">
-          <a href="index.html">
-            <svg viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" focusable="false">
-              <g>
-                <path class="ea-logo-svg"
-                  d="M19.766,8.372L6.927,8.392l-2.093,3.337l12.818-0.004L19.766,8.372 M14.221,20.518c-0.151,0-7.604,0.016-8.114,0.016 c0.249-0.393,1.665-2.611,1.738-2.733c0.163,0,5.014,0,5.271,0l2.122-3.354L3.117,14.467l-2.114,3.342l2.827-0.005L0,23.874h16.151 c0.286-0.453,5.654-9.017,5.904-9.412c0.219,0.334,1.664,2.623,1.9,3.002c-0.363,0-1.682,0-1.682,0l-2.101,3.337 c0,0,0.009,0,0.029,0c0.428,0,5.719,0,5.875,0c0.085,0.135,1.827,2.876,1.921,3.023H32L22.038,8.127 C21.646,8.738,14.311,20.374,14.221,20.518">
-                </path>
-              </g>
+  <body>
+    <!-- Container all -->
+    <div class="container">
+      <!-- First navbar -->
+      <header id="header-menu">
+        <!-- Superior Navbar -->
+        <nav class="superior-navbar">
+          <div class="icon-menu-start user">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                class="user-profile-svg"
+                d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 7c2.67 0 8 1.33 8 4v3H4v-3c0-2.67 5.33-4 8-4m0 1.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1"
+              />
             </svg>
-          </a>
-        </div>
-      </nav>
-      <!-- Inferior Navbar -->
-      <nav id="inferior-navbar">
-        <div class="background-sidebar">
-          <div class="ea-sidebar-lateral">
-            <div class="header-sidebar">
-              <div>
-                <h4>
-                  <a href="https://www.ea.com/games">Tutti i giochi</a>
-                </h4>
-              </div>
-              <div id="close-sidebar">
-                <ion-icon name="close"></ion-icon>
-              </div>
+          </div>
+          <div class="menu-subscribe user-superior">
+            <div class="closer-icon">
+              <ion-icon name="close"></ion-icon>
             </div>
-            <div class="container-img">
-              <div class="ea-lazy-img">
-                <a title="EA Play" href="https://www.ea.com/it-it/ea-play-live">
-                  <img id="logo-ea-play" src="img/sidebar-img/ea-play-mono-logo-svg.svg" alt="logo-ea-play" />
-                  <img src="img/sidebar-img/ea-play.png" alt="lazy-image-ea" />
-                </a>
-              </div>
-              <div class="ea-container-img">
-                <div class="container-image">
-                  <div>
-                    <a href="https://www.ea.com/it-it/games/fifa/fifa-23" title="FIFA 23">
-                      <img src="img/sidebar-img/fifa23-logo-white-stacked.svg" alt="fifa-logo" />
-                      <img src="img/sidebar-img/eas-fifa22.jpg" alt="fifa-img" />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://www.ea.com/it-it/games/madden-nfl/madden-nfl-23" title="Madden NFL 23">
-                      <img src="img/sidebar-img/m23-gamebox-logo.svg" alt="m23-gamebox-logo" />
-                      <img src="img/sidebar-img/madden-23-keyart.jpg" alt="madden-23-keyart" />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://www.ea.com/it-it/games/battlefield/battlefield-2042" title="Battlefield™ 2042">
-                      <img src="img/sidebar-img/battlefield-2042-mono-logo-svg.svg" alt="battlefield-2042-mono-logo" />
-                      <img src="img/sidebar-img/battlefield-2042.jpg" alt="battlefield-2042" />
-                    </a>
-                  </div>
+            <div class="container-options">
+              <div class="option">
+                <div class="logo-subscribe">
+                  <img
+                    src="img/eaglobalnav-iconsignin.svg"
+                    alt="login-profile-icon"
+                  />
                 </div>
-                <div class="container-image">
-                  <div>
-                    <a href="https://www.ea.com/it-it/games/f1/f1-22" title="F1™ 2022">
-                      <img src="img/sidebar-img/f122-gamebox-logo.png" alt="f122-gamebox-logo" />
-                      <img src="img/sidebar-img/1-1-gamebox-f122.png" alt="1-1-gamebox-f122" />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://www.ea.com/games/apex-legends" title="Apex Legends">
-                      <img src="img/sidebar-img/apex-legends-mono-logo.svg" alt="apex-legends-mono-logo" />
-                      <img src="img/sidebar-img/apex-legends-keyart.jpg" alt="apex-legends-keyart" />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://www.ea.com/it-it/games/the-sims/the-sims-4" title="The Sims™ 4">
-                      <img src="img/sidebar-img/the-sims-4-mono-logo.png" alt="the-sims-4-mono-logo" />
-                      <img src="img/sidebar-img/the-sims-4.jpg" alt="the-sims-4" />
-                    </a>
-                  </div>
+                <div class="text-option">
+                  <h5>Accedi</h5>
+                </div>
+              </div>
+              <div class="option">
+                <div class="logo-subscribe">
+                  <img
+                    src="img/eaglobalnav-iconregister.svg"
+                    alt="register-profile-icon"
+                  />
+                </div>
+                <div class="text-option">
+                  <h5>Crea Account</h5>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="container-dotsLogo">
-          <div class="eapl-dots">
-            <ion-icon name="ellipsis-vertical"></ion-icon>
+          <div class="icon-menu-start info">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                class="pointer-help"
+                d="M12 19a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3m0-17a6 6 0 0 1 6 6c0 2.165-.753 3.29-2.674 4.923C13.399 14.56 13 15.297 13 17h-2c0-2.474.787-3.695 3.031-5.601C15.548 10.11 16 9.434 16 8a4 4 0 0 0-8 0v1H6V8a6 6 0 0 1 6-6"
+              />
+            </svg>
           </div>
-          <div class="ea-logo-menu">
-            <a href="index.html">
-              <img src="img/ea-wordmark-network-nav-coral.svg" alt="EA logo menu" />
-            </a>
-          </div>
-        </div>
-        <div class="container-menuSection">
-          <div class="container-single-section games">
-            <div class="section-menu">
-              <div class="container-section-menu">
-                <div class="title-section-menu">
-                  <span class="title-section">Giochi</span>
-                </div>
-                <div class="ea-dropdownChevron"></div>
-              </div>
-              <div class="subsection-menu subsection-games">
-                <div class="explore_games_list">
-                  <div class="title-subsection">
-                    <h4>ESPLORA I GIOCHI</h4>
-                  </div>
-                  <div class="link-subsection">
-                    <a href="#">Ultimi giochi</a>
-                    <a href="#">Prossimamente</a>
-                    <a href="#">Giochi gratuiti</a>
-                    <a href="#">EA SPORTS</a>
-                    <a href="#">EA Original</a>
-                    <a href="#">Libreria dei giochi</a>
-                    <a href="#">Offerte EA app</a>
-                  </div>
-                </div>
-                <div class="platform">
-                  <div class="title-subsection">
-                    <h4>PIATTAFOME</h4>
-                  </div>
-                  <div class="link-subsection">
-                    <a href="#">PC</a>
-                    <a href="#">PlayStation®5</a>
-                    <a href="#">Xbox Series X</a>
-                    <a href="#">Nintendo Switch™</a>
-                    <a href="#">Dispositivi mobili</a>
-                  </div>
-                </div>
-              </div>
+          <div class="menu-subscribe info-superior">
+            <div class="closer-icon info-closing">
+              <ion-icon name="close"></ion-icon>
             </div>
-          </div>
-          <div class="container-single-section experience">
-            <div class="section-menu">
-              <div class="container-section-menu">
-                <div class="title-section-menu">
-                  <span class="title-section">Altre esperienze</span>
+            <p id="title-info">Ti serve aiuto?</p>
+            <div class="container-options">
+              <div class="box">
+                <div class="option">
+                  <div class="logo-subscribe">
+                    <img
+                      src="img/ea-medallion-white.svg"
+                      alt="ea-logo-medallion"
+                    />
+                  </div>
+                  <div class="text-option">
+                    <h5>Verifica il mio accesso EA</h5>
+                  </div>
                 </div>
-                <div class="ea-dropdownChevron"></div>
+                <div class="option">
+                  <div class="logo-subscribe">
+                    <img src="img/ea-medallion-white.svg" alt="code-coupon" />
+                  </div>
+                  <div class="text-option">
+                    <h5>Come riscattare un codice</h5>
+                  </div>
+                </div>
               </div>
-              <div class="subsection-menu subsection-experience">
-                <div class="another-experience-list">
-                  <div class="link-subsection">
-                    <a href="#">EA Play</a>
-                    <a href="#">EA app</a>
-                    <a href="#">Competizioni videoludiche</a>
-                    <a href="#">Diretta di EA Play</a>
-                    <a href="#">Test di gioco</a>
+              <div class="box">
+                <div class="option">
+                  <div class="logo-subscribe">
+                    <img
+                      src="img/eaglobalnav-iconlink-white.svg"
+                      alt="connect an account"
+                    />
+                  </div>
+                  <div class="text-option">
+                    <h5>
+                      Collegare gli account di una <br />
+                      piattaforma al tuo account EA
+                    </h5>
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="logo-subscribe">
+                    <img
+                      src="img/eaglobalnav-iconalert-white.svg"
+                      alt="register-profile-icon"
+                    />
+                  </div>
+                  <div class="text-option">
+                    <h5>Non riesco a giocare online</h5>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="container-single-section information">
-            <div class="section-menu">
-              <div class="container-section-menu">
-                <div class="title-section-menu">
-                  <span class="title-section">Informazioni</span>
-                </div>
-                <div class="ea-dropdownChevron"></div>
-              </div>
-            </div>
-            <div class="subsection-menu subsection-information">
-              <div class="information-list">
-                <div class="link-subsection">
-                  <a href="#">Società</a>
-                  <a href="#">EA Studi</a>
-                  <a href="#">Lavora con noi</a>
-                  <a href="#">La nostra tecnologia</a>
-                  <a href="#">EA Partners</a>
-                  <a href="#">Notizie</a>
-                  <a href="#">Inside EA</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-single-section engagements">
-            <div class="section-menu">
-              <div class="container-section-menu">
-                <div class="title-section-menu">
-                  <span class="title-section">Impegni</span>
-                </div>
-                <div class="ea-dropdownChevron"></div>
-              </div>
-            </div>
-            <div class="subsection-menu subsection-engagements">
-              <div class="engagements-list">
-                <div class="link-subsection">
-                  <a href="#">I nostri impegni</a>
-                  <a href="#">Gioco positivo</a>
-                  <a href="#">Diversità e inclusione</a>
-                  <a href="#">Impatto sociale</a>
-                  <a href="#">Persone e cultura</a>
-                  <a href="#">Ambiente</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-single-section resources">
-            <div class="section-menu">
-              <div class="container-section-menu">
-                <div class="title-section-menu">
-                  <span class="title-section">Risorse</span>
-                </div>
-                <div class="ea-dropdownChevron"></div>
-              </div>
-            </div>
-            <div class="subsection-menu subsection-resources">
-              <div class="resources">
-                <div class="link-subsection">
-                  <a href="#">Aiuto</a>
-                  <a href="#">Forum</a>
-                  <a href="#">Filtro famiglia</a>
-                  <a href="#">Accessibilità</a>
-                  <a href="#">Stampa</a>
-                  <a href="#">Investitori</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Menu Responsive -->
-        <div class="container-menuSection-responsive">
-          <div class="container-single-section-responsive games-responsive">
-            <div class="section-menu-responsive">
-              <div class="container-section-menu-responsive">
-                <div class="title-section-menu-responsive">
-                  <span class="title-section-responsive">Giochi</span>
-                </div>
-                <div class="ea-dropdownChevron-responsive"></div>
-              </div>
-              <div class="subsection-menu-responsive subsection-games-responsive">
-                <div class="explore_games_list-responsive">
-                  <div class="title-subsection-responsive">
-                    <h4>ESPLORA I GIOCHI</h4>
-                  </div>
-                  <div class="link-subsection-responsive">
-                    <a href="#">Ultimi giochi</a>
-                    <a href="#">Prossimamente</a>
-                    <a href="#">Giochi gratuiti</a>
-                    <a href="#">EA SPORTS</a>
-                    <a href="#">EA Original</a>
-                    <a href="#">Libreria dei giochi</a>
-                    <a href="#">Offerte EA app</a>
-                  </div>
-                </div>
-                <div class="platform-responsive">
-                  <div class="title-subsection-responsive">
-                    <h4>PIATTAFOME</h4>
-                  </div>
-                  <div class="link-subsection-responsive">
-                    <a href="#">PC</a>
-                    <a href="#">PlayStation®5</a>
-                    <a href="#">Xbox Series X</a>
-                    <a href="#">Nintendo Switch™</a>
-                    <a href="#">Dispositivi mobili</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-single-section-responsive experience-responsive">
-            <div class="section-menu-responsive">
-              <div class="container-section-menu-responsive">
-                <div class="title-section-menu-responsive">
-                  <span class="title-section-responsive">Altre esperienze</span>
-                </div>
-                <div class="ea-dropdownChevron-responsive"></div>
-              </div>
-              <div class="subsection-menu-responsive subsection-experience-responsive">
-                <div class="another-experience-list-responsive">
-                  <div class="link-subsection-responsive">
-                    <a href="#">EA Play</a>
-                    <a href="#">EA app</a>
-                    <a href="#">Competizioni videoludiche</a>
-                    <a href="#">Diretta di EA Play</a>
-                    <a href="#">Test di gioco</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-single-section-responsive information-responsive">
-            <div class="section-menu-responsive">
-              <div class="container-section-menu-responsive">
-                <div class="title-section-menu-responsive">
-                  <span class="title-section-responsive">Informazioni</span>
-                </div>
-                <div class="ea-dropdownChevron-responsive"></div>
-              </div>
-            </div>
-            <div class="subsection-menu-responsive subsection-information-responsive">
-              <div class="information-list-responsive">
-                <div class="link-subsection-responsive">
-                  <a href="#">Società</a>
-                  <a href="#">EA Studi</a>
-                  <a href="#">Lavora con noi</a>
-                  <a href="#">La nostra tecnologia</a>
-                  <a href="#">EA Partners</a>
-                  <a href="#">Notizie</a>
-                  <a href="#">Inside EA</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-single-section-responsive engagements-responsive">
-            <div class="section-menu-responsive">
-              <div class="container-section-menu-responsive">
-                <div class="title-section-menu-responsive">
-                  <span class="title-section-responsive">Impegni</span>
-                </div>
-                <div class="ea-dropdownChevron-responsive"></div>
-              </div>
-            </div>
-            <div class="subsection-menu-responsive subsection-engagements-responsive">
-              <div class="engagements-list-responsive">
-                <div class="link-subsection-responsive">
-                  <a href="#">I nostri impegni</a>
-                  <a href="#">Gioco positivo</a>
-                  <a href="#">Diversità e inclusione</a>
-                  <a href="#">Impatto sociale</a>
-                  <a href="#">Persone e cultura</a>
-                  <a href="#">Ambiente</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-single-section-responsive resources-responsive">
-            <div class="section-menu-responsive">
-              <div class="container-section-menu-responsive">
-                <div class="title-section-menu-responsive">
-                  <span class="title-section-responsive">Risorse</span>
-                </div>
-                <div class="ea-dropdownChevron-responsive"></div>
-              </div>
-            </div>
-            <div class="subsection-menu-responsive subsection-resources-responsive">
-              <div class="resources-responsive">
-                <div class="link-subsection-responsive">
-                  <a href="#">Aiuto</a>
-                  <a href="#">Forum</a>
-                  <a href="#">Filtro famiglia</a>
-                  <a href="#">Accessibilità</a>
-                  <a href="#">Stampa</a>
-                  <a href="#">Investitori</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hamburgher-menu">
-          <ion-icon name="menu"></ion-icon>
-          <div class="ea-logo-menu">
-            <a href="index.html">
-              <img src="img/ea-wordmark-network-nav-coral.svg" alt="EA logo menu" />
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-
-    <!-- Main content -->
-    <main>
-      <!-- First section jumbotron -->
-      <section class="jumbotron">
-        <picture>
-          <div class="jumbotron-main">
-            <img id="bf2042-background" src="assets/bf-2042-section-768w.jpg" alt="">
-            <video id="video-xl" autoplay loop muted>
-              <source src="assets/bf-2042-s5-mse-section-hero-video-xl.mp4" type="video/mp4">
-            </video>
-            <div class="video-l">
-              <video id="video-l" autoplay loop muted>
-                <source src="assets/bf-2042-s5-mse-section-hero-video-l.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-m">
-              <video id="video" autoplay loop muted>
-                <source src="assets/bf-2042-s5-mse-hero-video-m.mp4" type="video/mp4">
-              </video>
-              <div class="video-s">
-                <video id="video" autoplay loop muted>
-                  <source src="assets/bf-2042-s5-mse-section-hero-video-s-xs.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="overlay-content animated animatedFadeInUp fadeInUp">
-                <img src="assets/bf2042-s5-mse-logo-horiz-white-it-it.png" alt="bf logo">
-                <div class="bf-2042-h6">
-                  <h6>Gioca subito all'evento! Tuffati nel caos delle forze combinate con il ritorno della
-                    modalità Controllo, ora disponibile su altre due mappe. Sblocca le ricompense dell'evento
-                    e ricorda: prendi il controllo prima che il nemico controlli te.</h6>
-                </div>
-                <div class="redirect-container">
-                  <a id="bf2042-redirect"
-                    href="https://www.ea.com/it-it/games/battlefield/battlefield-2042/community-calendar#arkangel-directive-section">Dettagli
-                    su Direttiva Arkangel</a>
-                </div>
-              </div>
-            </div>
-        </picture>
-      </section>
-      <!-- Section games featured -->
-      <section class="games-featured">
-        <div class="mainGamesContainer">
-          <h3 class="mainGamesHeader">Giochi in evidenza</h3>
-          <div class="layoutImages">
-            <div id="main-square-ufc" class="card-games">
-              <div class="image-box">
-                <img class="background"
-                  src="https://media.contentapi.ea.com/content/dam/gin/images/2023/09/ufc-5-keyart.jpg.adapt.crop1x1.767p.jpg"
-                  width="100%" />
-                <img class="logo-main-games"
-                  src="https://media.contentapi.ea.com/content/dam/gin/common/logos/ufc-5-logo.svg" alt="UFC® 5"
-                  title="UFC® 5" width="100%" />
-                <div class="overlay-gradient">
-                  <a href="https://www.ea.com/it-it/games/ufc/ufc-5" title="" class="official-site-a"></a>
-                  <span id="official-site-span">Sito ufficiale</span>
-                </div>
-              </div>
-            </div>
-            <div id="main-square-fc24" class="card-games">
-              <div class="image-box">
-                <img class="background"
-                  src="https://media.contentapi.ea.com/content/dam/gin/images/2023/07/fc24.jpeg.adapt.crop1x1.767p.jpeg"
-                  width="100%" />
-                <img class="logo-main-games"
-                  src="https://media.contentapi.ea.com/content/dam/ea/fc/common/global/fc24-logo-nav.svg" alt="FC 24"
-                  title="FC 24" width="100%" />
-                <div class="overlay-gradient">
-                  <a href="https://www.ea.com/it-it/games/ea-sports-fc/fc-24" title="" class="official-site-a"></a>
-                  <span id="official-site-span">Sito ufficiale</span>
-                </div>
-              </div>
-            </div>
-            <div id="main-square-f123" class="card-games">
-              <div class="image-box">
-                <img class="background"
-                  src="https://media.contentapi.ea.com/content/dam/gin/images/2023/02/f123-gametile-16x9.jpg.adapt.crop1x1.767p.jpg"
-                  width="100%" />
-                <img class="logo-main-games"
-                  src="https://media.contentapi.ea.com/content/dam/ea/f1/f1-23/common/f123-logo-horizontal-light.png"
-                  alt="F1® 23" title="F1® 23" />
-                <div class="overlay-gradient">
-                  <a href="https://www.ea.com/it-it/games/f1/f1-23" title="" class="official-site-a"></a>
-                  <span id="official-site-span">Sito ufficiale</span>
-                </div>
-              </div>
-            </div>
-            <div id="main-square-nfs-unbound" class="card-games">
-              <div class="image-box">
-                <img class="background"
-                  src="https://media.contentapi.ea.com/content/dam/gin/images/2022/10/nfs-unbound-1x1.png.adapt.crop1x1.767p.png"
-                  width="100%" />
-                <img class="logo-main-games"
-                  src="https://media.contentapi.ea.com/content/dam/gin/common/logos/nfs-unbound-logo.png"
-                  alt="NFS Unbound" title="Need for Speed™ Unbound" />
-                <div class="overlay-gradient">
-                  <a href="https://www.ea.com/it-it/games/need-for-speed/need-for-speed-unbound" title=""
-                    class="official-site-a"></a>
-                  <span id="official-site-span">Sito ufficiale</span>
-                </div>
-              </div>
-            </div>
-            <div id="main-square-thesims4" class="card-games">
-              <div class="image-box">
-                <img class="background"
-                  src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg"
-                  width="100%" />
-                <h4 class="logo-main-games" id="thesims4" src="" alt="The Sims 4" title="The Sims 4">
-                  The Sims 4
-                </h4>
-                <div class="overlay-gradient">
-                  <a href="https://www.ea.com/it/games/the-sims/the-sims-4" title="" class="official-site-a"></a>
-                  <span id="official-site-span">Sito ufficiale</span>
-                </div>
-              </div>
-            </div>
-            <div id="main-square-apex-legends" class="card-games">
-              <div class="image-box">
-                <img class="background"
-                  src="https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg"
-                  width="100%" />
-                <img class="logo-main-games"
-                  src="https://media.contentapi.ea.com/content/dam/gin/common/logos/apex-legends-mono-logo.svg"
-                  alt="Apex Legends" title="Apex Legends" id="apex_legends_logo" />
-                <div class="overlay-gradient">
-                  <a href="https://www.ea.com/it-it/games/apex-legends" title="" class="official-site-a"></a>
-                  <span id="official-site-span">Sito ufficiale</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a id="games-cta" class="btn-cta" draggable="true" href="https://www.ea.com/it-it/games">Ultimi giochi</a>
-        </div>
-      </section>
-      <!-- Card news -->
-      <section class="container-card"></section>
-      <!-- Section link to EA play -->
-      <section class="section-play">
-        <picture class="hero-figure">
-          <source media="(max-width: 320px)" srcset="
-                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop3x5.320w.jpg
-              " />
-          <source media="(max-width: 767px)" srcset="
-                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop3x5.767w.jpg
-              " />
-          <source media="(max-width: 1023px)" srcset="
-                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop2x1.1023w.jpg
-              " />
-          <source media="(max-width: 1455px)" srcset="
-                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop5x2.1455w.jpg
-              " />
-          <source media="(min-width: 1456px)" srcset="
-                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop7x2.1920w.jpg
-              " />
-          <img src="assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop3x5.320w.jpg" />
-        </picture>
-        </picture>
-        <picture class="hero-gradient">
-          <source media="(max-width: 320px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop3x5.320w.png">
-          <source media="(max-width: 767px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop3x5.767w.png">
-          <source media="(max-width: 1023px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop2x1.1023w.png">
-          <source media="(max-width: 1455px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop5x2.1455w.png">
-          <source media="(min-width: 1456px)" srcset="assets/ea-play-hero-gradient.png.adapt.crop7x2.1920w.png">
-          <img src="assets/ea-play-hero-gradient.png.adapt.crop3x5.320w.png" />
-        </picture>
-        <div class="hero-content">
-          <div class="hero-content-logo">
-            <img class="hero-logo" src="assets/ea-play-logo-coral-hero-logo-small.svg" />
-          </div>
-          <div class="hero-content-title">
             <p>
-              Non limitarti al gioco. Gioca al massimo. Sblocca ricompense
-              esclusive, contenuti per i soli membri e una libreria dei
-              migliori titoli.
+              Non hai trovato ciò che cerchi? Vai su
+              <a
+                adhocenable="false"
+                href="https://help.ea.com/it/"
+                target="_blank"
+                >Aiuto&nbsp;EA</a
+              >,
+              <a
+                adhocenable="false"
+                href="https://answers.ea.com"
+                target="_blank"
+                >Answers&nbsp;HQ</a
+              >
+              oder die
+              <a adhocenable="false" href="https://www.ea.com/it-it/forums"
+                >Forum&nbsp;EA</a
+              >.
             </p>
           </div>
-          <div class="hero-content-cta">
-            <a class="btn-cta" href="https://www.ea.com/it-it/ea-play">Iscriviti subito</a>
+
+          <div class="icon-menu-start ea-logo-superior">
+            <a href="index.html">
+              <svg
+                viewBox="0 0 32 32"
+                preserveAspectRatio="xMidYMid meet"
+                focusable="false"
+              >
+                <g>
+                  <path
+                    class="ea-logo-svg"
+                    d="M19.766,8.372L6.927,8.392l-2.093,3.337l12.818-0.004L19.766,8.372 M14.221,20.518c-0.151,0-7.604,0.016-8.114,0.016 c0.249-0.393,1.665-2.611,1.738-2.733c0.163,0,5.014,0,5.271,0l2.122-3.354L3.117,14.467l-2.114,3.342l2.827-0.005L0,23.874h16.151 c0.286-0.453,5.654-9.017,5.904-9.412c0.219,0.334,1.664,2.623,1.9,3.002c-0.363,0-1.682,0-1.682,0l-2.101,3.337 c0,0,0.009,0,0.029,0c0.428,0,5.719,0,5.875,0c0.085,0.135,1.827,2.876,1.921,3.023H32L22.038,8.127 C21.646,8.738,14.311,20.374,14.221,20.518"
+                  ></path>
+                </g>
+              </svg>
+            </a>
           </div>
-        </div>
-      </section>
-      <!-- Section blue banner parental tools -->
-      <section class="subsection-play">
-        <div class="subsection-play-title">
-          <h5>
-            Giocatori e genitori: il controllo dei videogiochi è nelle vostre
-            mani
-          </h5>
-        </div>
-        <div class="subsection-play-cta">
-          <a id="btn-scopri" class="btn-cta" href="/it-it/commitments/positive-play/player-and-parental-tools">Scopri di
-            più</a>
-        </div>
-      </section>
-      <!-- Terms and conditions -->
-      <div class="section-column"></div>
-      <!-- Footer page -->
-      <footer>
-        <div></div>
-        <div></div>
-      </footer>
-    </main>
-  </div>
+        </nav>
+        <!-- Inferior Navbar -->
+        <nav id="inferior-navbar">
+          <div class="background-sidebar">
+            <div class="ea-sidebar-lateral">
+              <div class="header-sidebar">
+                <div>
+                  <h4>
+                    <a href="https://www.ea.com/games">Tutti i giochi</a>
+                  </h4>
+                </div>
+                <div id="close-sidebar">
+                  <ion-icon name="close"></ion-icon>
+                </div>
+              </div>
+              <div class="container-img">
+                <div class="ea-lazy-img">
+                  <a
+                    title="EA Play"
+                    href="https://www.ea.com/it-it/ea-play-live"
+                  >
+                    <img
+                      id="logo-ea-play"
+                      src="img/sidebar-img/ea-play-mono-logo-svg.svg"
+                      alt="logo-ea-play"
+                    />
+                    <img
+                      src="img/sidebar-img/ea-play.png"
+                      alt="lazy-image-ea"
+                    />
+                  </a>
+                </div>
+                <div class="ea-container-img">
+                  <div class="container-image">
+                    <div>
+                      <a
+                        href="https://www.ea.com/it-it/games/fifa/fifa-23"
+                        title="FIFA 23"
+                      >
+                        <img
+                          src="img/sidebar-img/fifa23-logo-white-stacked.svg"
+                          alt="fifa-logo"
+                        />
+                        <img
+                          src="img/sidebar-img/eas-fifa22.jpg"
+                          alt="fifa-img"
+                        />
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        href="https://www.ea.com/it-it/games/madden-nfl/madden-nfl-23"
+                        title="Madden NFL 23"
+                      >
+                        <img
+                          src="img/sidebar-img/m23-gamebox-logo.svg"
+                          alt="m23-gamebox-logo"
+                        />
+                        <img
+                          src="img/sidebar-img/madden-23-keyart.jpg"
+                          alt="madden-23-keyart"
+                        />
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        href="https://www.ea.com/it-it/games/battlefield/battlefield-2042"
+                        title="Battlefield™ 2042"
+                      >
+                        <img
+                          src="img/sidebar-img/battlefield-2042-mono-logo-svg.svg"
+                          alt="battlefield-2042-mono-logo"
+                        />
+                        <img
+                          src="img/sidebar-img/battlefield-2042.jpg"
+                          alt="battlefield-2042"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="container-image">
+                    <div>
+                      <a
+                        href="https://www.ea.com/it-it/games/f1/f1-22"
+                        title="F1™ 2022"
+                      >
+                        <img
+                          src="img/sidebar-img/f122-gamebox-logo.png"
+                          alt="f122-gamebox-logo"
+                        />
+                        <img
+                          src="img/sidebar-img/1-1-gamebox-f122.png"
+                          alt="1-1-gamebox-f122"
+                        />
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        href="https://www.ea.com/games/apex-legends"
+                        title="Apex Legends"
+                      >
+                        <img
+                          src="img/sidebar-img/apex-legends-mono-logo.svg"
+                          alt="apex-legends-mono-logo"
+                        />
+                        <img
+                          src="img/sidebar-img/apex-legends-keyart.jpg"
+                          alt="apex-legends-keyart"
+                        />
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        href="https://www.ea.com/it-it/games/the-sims/the-sims-4"
+                        title="The Sims™ 4"
+                      >
+                        <img
+                          src="img/sidebar-img/the-sims-4-mono-logo.png"
+                          alt="the-sims-4-mono-logo"
+                        />
+                        <img
+                          src="img/sidebar-img/the-sims-4.jpg"
+                          alt="the-sims-4"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <!-- File JS -->
-  <script src="js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+          <div class="container-dotsLogo">
+            <div class="eapl-dots">
+              <ion-icon name="ellipsis-vertical"></ion-icon>
+            </div>
+            <div class="ea-logo-menu">
+              <a href="index.html">
+                <img
+                  src="img/ea-wordmark-network-nav-coral.svg"
+                  alt="EA logo menu"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="container-menuSection">
+            <div class="container-single-section games">
+              <div class="section-menu">
+                <div class="container-section-menu">
+                  <div class="title-section-menu">
+                    <span class="title-section">Giochi</span>
+                  </div>
+                  <div class="ea-dropdownChevron"></div>
+                </div>
+                <div class="subsection-menu subsection-games">
+                  <div class="explore_games_list">
+                    <div class="title-subsection">
+                      <h4>ESPLORA I GIOCHI</h4>
+                    </div>
+                    <div class="link-subsection">
+                      <a href="#">Ultimi giochi</a>
+                      <a href="#">Prossimamente</a>
+                      <a href="#">Giochi gratuiti</a>
+                      <a href="#">EA SPORTS</a>
+                      <a href="#">EA Original</a>
+                      <a href="#">Libreria dei giochi</a>
+                      <a href="#">Offerte EA app</a>
+                    </div>
+                  </div>
+                  <div class="platform">
+                    <div class="title-subsection">
+                      <h4>PIATTAFOME</h4>
+                    </div>
+                    <div class="link-subsection">
+                      <a href="#">PC</a>
+                      <a href="#">PlayStation®5</a>
+                      <a href="#">Xbox Series X</a>
+                      <a href="#">Nintendo Switch™</a>
+                      <a href="#">Dispositivi mobili</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-single-section experience">
+              <div class="section-menu">
+                <div class="container-section-menu">
+                  <div class="title-section-menu">
+                    <span class="title-section">Altre esperienze</span>
+                  </div>
+                  <div class="ea-dropdownChevron"></div>
+                </div>
+                <div class="subsection-menu subsection-experience">
+                  <div class="another-experience-list">
+                    <div class="link-subsection">
+                      <a href="#">EA Play</a>
+                      <a href="#">EA app</a>
+                      <a href="#">Competizioni videoludiche</a>
+                      <a href="#">Diretta di EA Play</a>
+                      <a href="#">Test di gioco</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-single-section information">
+              <div class="section-menu">
+                <div class="container-section-menu">
+                  <div class="title-section-menu">
+                    <span class="title-section">Informazioni</span>
+                  </div>
+                  <div class="ea-dropdownChevron"></div>
+                </div>
+              </div>
+              <div class="subsection-menu subsection-information">
+                <div class="information-list">
+                  <div class="link-subsection">
+                    <a href="#">Società</a>
+                    <a href="#">EA Studi</a>
+                    <a href="#">Lavora con noi</a>
+                    <a href="#">La nostra tecnologia</a>
+                    <a href="#">EA Partners</a>
+                    <a href="#">Notizie</a>
+                    <a href="#">Inside EA</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-single-section engagements">
+              <div class="section-menu">
+                <div class="container-section-menu">
+                  <div class="title-section-menu">
+                    <span class="title-section">Impegni</span>
+                  </div>
+                  <div class="ea-dropdownChevron"></div>
+                </div>
+              </div>
+              <div class="subsection-menu subsection-engagements">
+                <div class="engagements-list">
+                  <div class="link-subsection">
+                    <a href="#">I nostri impegni</a>
+                    <a href="#">Gioco positivo</a>
+                    <a href="#">Diversità e inclusione</a>
+                    <a href="#">Impatto sociale</a>
+                    <a href="#">Persone e cultura</a>
+                    <a href="#">Ambiente</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-single-section resources">
+              <div class="section-menu">
+                <div class="container-section-menu">
+                  <div class="title-section-menu">
+                    <span class="title-section">Risorse</span>
+                  </div>
+                  <div class="ea-dropdownChevron"></div>
+                </div>
+              </div>
+              <div class="subsection-menu subsection-resources">
+                <div class="resources">
+                  <div class="link-subsection">
+                    <a href="#">Aiuto</a>
+                    <a href="#">Forum</a>
+                    <a href="#">Filtro famiglia</a>
+                    <a href="#">Accessibilità</a>
+                    <a href="#">Stampa</a>
+                    <a href="#">Investitori</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Menu Responsive -->
+          <div class="container-menuSection-responsive">
+            <div class="container-single-section-responsive games-responsive">
+              <div class="section-menu-responsive">
+                <div class="container-section-menu-responsive">
+                  <div class="title-section-menu-responsive">
+                    <span class="title-section-responsive">Giochi</span>
+                  </div>
+                  <div class="ea-dropdownChevron-responsive"></div>
+                </div>
+                <div
+                  class="subsection-menu-responsive subsection-games-responsive"
+                >
+                  <div class="explore_games_list-responsive">
+                    <div class="title-subsection-responsive">
+                      <h4>ESPLORA I GIOCHI</h4>
+                    </div>
+                    <div class="link-subsection-responsive">
+                      <a href="#">Ultimi giochi</a>
+                      <a href="#">Prossimamente</a>
+                      <a href="#">Giochi gratuiti</a>
+                      <a href="#">EA SPORTS</a>
+                      <a href="#">EA Original</a>
+                      <a href="#">Libreria dei giochi</a>
+                      <a href="#">Offerte EA app</a>
+                    </div>
+                  </div>
+                  <div class="platform-responsive">
+                    <div class="title-subsection-responsive">
+                      <h4>PIATTAFOME</h4>
+                    </div>
+                    <div class="link-subsection-responsive">
+                      <a href="#">PC</a>
+                      <a href="#">PlayStation®5</a>
+                      <a href="#">Xbox Series X</a>
+                      <a href="#">Nintendo Switch™</a>
+                      <a href="#">Dispositivi mobili</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="container-single-section-responsive experience-responsive"
+            >
+              <div class="section-menu-responsive">
+                <div class="container-section-menu-responsive">
+                  <div class="title-section-menu-responsive">
+                    <span class="title-section-responsive"
+                      >Altre esperienze</span
+                    >
+                  </div>
+                  <div class="ea-dropdownChevron-responsive"></div>
+                </div>
+                <div
+                  class="subsection-menu-responsive subsection-experience-responsive"
+                >
+                  <div class="another-experience-list-responsive">
+                    <div class="link-subsection-responsive">
+                      <a href="#">EA Play</a>
+                      <a href="#">EA app</a>
+                      <a href="#">Competizioni videoludiche</a>
+                      <a href="#">Diretta di EA Play</a>
+                      <a href="#">Test di gioco</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="container-single-section-responsive information-responsive"
+            >
+              <div class="section-menu-responsive">
+                <div class="container-section-menu-responsive">
+                  <div class="title-section-menu-responsive">
+                    <span class="title-section-responsive">Informazioni</span>
+                  </div>
+                  <div class="ea-dropdownChevron-responsive"></div>
+                </div>
+              </div>
+              <div
+                class="subsection-menu-responsive subsection-information-responsive"
+              >
+                <div class="information-list-responsive">
+                  <div class="link-subsection-responsive">
+                    <a href="#">Società</a>
+                    <a href="#">EA Studi</a>
+                    <a href="#">Lavora con noi</a>
+                    <a href="#">La nostra tecnologia</a>
+                    <a href="#">EA Partners</a>
+                    <a href="#">Notizie</a>
+                    <a href="#">Inside EA</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="container-single-section-responsive engagements-responsive"
+            >
+              <div class="section-menu-responsive">
+                <div class="container-section-menu-responsive">
+                  <div class="title-section-menu-responsive">
+                    <span class="title-section-responsive">Impegni</span>
+                  </div>
+                  <div class="ea-dropdownChevron-responsive"></div>
+                </div>
+              </div>
+              <div
+                class="subsection-menu-responsive subsection-engagements-responsive"
+              >
+                <div class="engagements-list-responsive">
+                  <div class="link-subsection-responsive">
+                    <a href="#">I nostri impegni</a>
+                    <a href="#">Gioco positivo</a>
+                    <a href="#">Diversità e inclusione</a>
+                    <a href="#">Impatto sociale</a>
+                    <a href="#">Persone e cultura</a>
+                    <a href="#">Ambiente</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="container-single-section-responsive resources-responsive"
+            >
+              <div class="section-menu-responsive">
+                <div class="container-section-menu-responsive">
+                  <div class="title-section-menu-responsive">
+                    <span class="title-section-responsive">Risorse</span>
+                  </div>
+                  <div class="ea-dropdownChevron-responsive"></div>
+                </div>
+              </div>
+              <div
+                class="subsection-menu-responsive subsection-resources-responsive"
+              >
+                <div class="resources-responsive">
+                  <div class="link-subsection-responsive">
+                    <a href="#">Aiuto</a>
+                    <a href="#">Forum</a>
+                    <a href="#">Filtro famiglia</a>
+                    <a href="#">Accessibilità</a>
+                    <a href="#">Stampa</a>
+                    <a href="#">Investitori</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hamburgher-menu">
+            <ion-icon name="menu"></ion-icon>
+            <div class="ea-logo-menu">
+              <a href="index.html">
+                <img
+                  src="img/ea-wordmark-network-nav-coral.svg"
+                  alt="EA logo menu"
+                />
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main content -->
+      <main>
+        <!-- First section jumbotron -->
+        <section class="jumbotron">
+          <picture>
+            <div class="jumbotron-main">
+              <img
+                id="bf2042-background"
+                src="assets/bf-2042-section-768w.jpg"
+                alt=""
+              />
+              <video id="video-xl" autoplay loop muted>
+                <source
+                  src="assets/bf-2042-s5-mse-section-hero-video-xl.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <div class="video-l">
+                <video id="video-l" autoplay loop muted>
+                  <source
+                    src="assets/bf-2042-s5-mse-section-hero-video-l.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="video-m">
+                <video id="video" autoplay loop muted>
+                  <source
+                    src="assets/bf-2042-s5-mse-hero-video-m.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="video-s">
+                  <video id="video" autoplay loop muted>
+                    <source
+                      src="assets/bf-2042-s5-mse-section-hero-video-s-xs.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="overlay-content animated animatedFadeInUp fadeInUp">
+                  <img
+                    src="assets/bf2042-s5-mse-logo-horiz-white-it-it.png"
+                    alt="bf logo"
+                  />
+                  <div class="bf-2042-h6">
+                    <h6>
+                      Gioca subito all'evento! Tuffati nel caos delle forze
+                      combinate con il ritorno della modalità Controllo, ora
+                      disponibile su altre due mappe. Sblocca le ricompense
+                      dell'evento e ricorda: prendi il controllo prima che il
+                      nemico controlli te.
+                    </h6>
+                  </div>
+                  <div class="redirect-container">
+                    <a
+                      id="bf2042-redirect"
+                      href="https://www.ea.com/it-it/games/battlefield/battlefield-2042/community-calendar#arkangel-directive-section"
+                      >Dettagli su Direttiva Arkangel</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </picture>
+        </section>
+        <!-- Section games featured -->
+        <section class="games-featured">
+          <div class="mainGamesContainer">
+            <h3 class="mainGamesHeader">Giochi in evidenza</h3>
+            <div class="layoutImages">
+              <div id="main-square-ufc" class="card-games">
+                <div class="image-box">
+                  <img
+                    class="background"
+                    src="https://media.contentapi.ea.com/content/dam/gin/images/2023/09/ufc-5-keyart.jpg.adapt.crop1x1.767p.jpg"
+                    width="100%"
+                  />
+                  <img
+                    class="logo-main-games"
+                    src="https://media.contentapi.ea.com/content/dam/gin/common/logos/ufc-5-logo.svg"
+                    alt="UFC® 5"
+                    title="UFC® 5"
+                    width="100%"
+                  />
+                  <div class="overlay-gradient">
+                    <a
+                      href="https://www.ea.com/it-it/games/ufc/ufc-5"
+                      title=""
+                      class="official-site-a"
+                    ></a>
+                    <span id="official-site-span">Sito ufficiale</span>
+                  </div>
+                </div>
+              </div>
+              <div id="main-square-fc24" class="card-games">
+                <div class="image-box">
+                  <img
+                    class="background"
+                    src="https://media.contentapi.ea.com/content/dam/gin/images/2023/07/fc24.jpeg.adapt.crop1x1.767p.jpeg"
+                    width="100%"
+                  />
+                  <img
+                    class="logo-main-games"
+                    src="https://media.contentapi.ea.com/content/dam/ea/fc/common/global/fc24-logo-nav.svg"
+                    alt="FC 24"
+                    title="FC 24"
+                    width="100%"
+                  />
+                  <div class="overlay-gradient">
+                    <a
+                      href="https://www.ea.com/it-it/games/ea-sports-fc/fc-24"
+                      title=""
+                      class="official-site-a"
+                    ></a>
+                    <span id="official-site-span">Sito ufficiale</span>
+                  </div>
+                </div>
+              </div>
+              <div id="main-square-f123" class="card-games">
+                <div class="image-box">
+                  <img
+                    class="background"
+                    src="https://media.contentapi.ea.com/content/dam/gin/images/2023/02/f123-gametile-16x9.jpg.adapt.crop1x1.767p.jpg"
+                    width="100%"
+                  />
+                  <img
+                    class="logo-main-games"
+                    src="https://media.contentapi.ea.com/content/dam/ea/f1/f1-23/common/f123-logo-horizontal-light.png"
+                    alt="F1® 23"
+                    title="F1® 23"
+                  />
+                  <div class="overlay-gradient">
+                    <a
+                      href="https://www.ea.com/it-it/games/f1/f1-23"
+                      title=""
+                      class="official-site-a"
+                    ></a>
+                    <span id="official-site-span">Sito ufficiale</span>
+                  </div>
+                </div>
+              </div>
+              <div id="main-square-nfs-unbound" class="card-games">
+                <div class="image-box">
+                  <img
+                    class="background"
+                    src="https://media.contentapi.ea.com/content/dam/gin/images/2022/10/nfs-unbound-1x1.png.adapt.crop1x1.767p.png"
+                    width="100%"
+                  />
+                  <img
+                    class="logo-main-games"
+                    src="https://media.contentapi.ea.com/content/dam/gin/common/logos/nfs-unbound-logo.png"
+                    alt="NFS Unbound"
+                    title="Need for Speed™ Unbound"
+                  />
+                  <div class="overlay-gradient">
+                    <a
+                      href="https://www.ea.com/it-it/games/need-for-speed/need-for-speed-unbound"
+                      title=""
+                      class="official-site-a"
+                    ></a>
+                    <span id="official-site-span">Sito ufficiale</span>
+                  </div>
+                </div>
+              </div>
+              <div id="main-square-thesims4" class="card-games">
+                <div class="image-box">
+                  <img
+                    class="background"
+                    src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg"
+                    width="100%"
+                  />
+                  <h4
+                    class="logo-main-games"
+                    id="thesims4"
+                    src=""
+                    alt="The Sims 4"
+                    title="The Sims 4"
+                  >
+                    The Sims 4
+                  </h4>
+                  <div class="overlay-gradient">
+                    <a
+                      href="https://www.ea.com/it/games/the-sims/the-sims-4"
+                      title=""
+                      class="official-site-a"
+                    ></a>
+                    <span id="official-site-span">Sito ufficiale</span>
+                  </div>
+                </div>
+              </div>
+              <div id="main-square-apex-legends" class="card-games">
+                <div class="image-box">
+                  <img
+                    class="background"
+                    src="https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg"
+                    width="100%"
+                  />
+                  <img
+                    class="logo-main-games"
+                    src="https://media.contentapi.ea.com/content/dam/gin/common/logos/apex-legends-mono-logo.svg"
+                    alt="Apex Legends"
+                    title="Apex Legends"
+                    id="apex_legends_logo"
+                  />
+                  <div class="overlay-gradient">
+                    <a
+                      href="https://www.ea.com/it-it/games/apex-legends"
+                      title=""
+                      class="official-site-a"
+                    ></a>
+                    <span id="official-site-span">Sito ufficiale</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              id="games-cta"
+              class="btn-cta"
+              draggable="true"
+              href="https://www.ea.com/it-it/games"
+              >Ultimi giochi</a
+            >
+          </div>
+        </section>
+        <!-- Card news -->
+        <section class="container-card"></section>
+        <!-- Section link to EA play -->
+        <section class="section-play">
+          <picture class="hero-figure">
+            <source
+              media="(max-width: 320px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop3x5.320w.jpg
+              "
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop3x5.767w.jpg
+              "
+            />
+            <source
+              media="(max-width: 1023px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop2x1.1023w.jpg
+              "
+            />
+            <source
+              media="(max-width: 1455px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop5x2.1455w.jpg
+              "
+            />
+            <source
+              media="(min-width: 1456px)"
+              srcset="
+                assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop7x2.1920w.jpg
+              "
+            />
+            <img
+              src="assets/ea-play-grid-evergreen-hero-md-7x2-xl.jpg.adapt.crop3x5.320w.jpg"
+            />
+          </picture>
+          <picture class="hero-gradient">
+            <source
+              media="(max-width: 320px)"
+              srcset="assets/ea-play-hero-gradient.png.adapt.crop3x5.320w.png"
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="assets/ea-play-hero-gradient.png.adapt.crop3x5.767w.png"
+            />
+            <source
+              media="(max-width: 1023px)"
+              srcset="assets/ea-play-hero-gradient.png.adapt.crop2x1.1023w.png"
+            />
+            <source
+              media="(max-width: 1455px)"
+              srcset="assets/ea-play-hero-gradient.png.adapt.crop5x2.1455w.png"
+            />
+            <source
+              media="(min-width: 1456px)"
+              srcset="assets/ea-play-hero-gradient.png.adapt.crop7x2.1920w.png"
+            />
+            <img
+              src="assets/ea-play-hero-gradient.png.adapt.crop3x5.320w.png"
+            />
+          </picture>
+          <div class="hero-content">
+            <div class="hero-content-logo">
+              <img
+                class="hero-logo"
+                src="assets/ea-play-logo-coral-hero-logo-small.svg"
+              />
+            </div>
+            <div class="hero-content-title">
+              <p>
+                Non limitarti al gioco. Gioca al massimo. Sblocca ricompense
+                esclusive, contenuti per i soli membri e una libreria dei
+                migliori titoli.
+              </p>
+            </div>
+            <div class="hero-content-cta">
+              <a class="btn-cta" href="https://www.ea.com/it-it/ea-play"
+                >Iscriviti subito</a
+              >
+            </div>
+          </div>
+        </section>
+        <!-- Section blue banner parental tools -->
+        <section class="subsection-play">
+          <div class="subsection-play-title">
+            <h5>
+              Giocatori e genitori: il controllo dei videogiochi è nelle vostre
+              mani
+            </h5>
+          </div>
+          <div class="subsection-play-cta">
+            <a
+              id="btn-scopri"
+              class="btn-cta"
+              href="/it-it/commitments/positive-play/player-and-parental-tools"
+              >Scopri di più</a
+            >
+          </div>
+        </section>
+        <!-- Terms and conditions -->
+        <div class="section-column"></div>
+        <!-- Footer page -->
+        <footer>
+          <div></div>
+          <div></div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- File JS -->
+    <script src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
