@@ -105,7 +105,6 @@ ul {
   list-style-type: none;
 }
 
-
 h1 {
   font-size: 4rem;
 }
@@ -143,8 +142,6 @@ a {
 
 /* Menù contenente le novità */
 .menu-cards-novita {
-
-
   /* Allineamento verticale della lista */
   & ul {
     display: flex;
@@ -164,13 +161,12 @@ a {
     margin: 15px 0;
     padding: 0 15px;
     border-left: 2px solid #dedede;
-    width: max-content;
+
   }
 
   & ul li:hover {
     background-color: #dededea6;
   }
-
 
   /* Annullo del bordo sinistro al primo li */
   & ul > :nth-child(1) div {
@@ -178,30 +174,48 @@ a {
   }
 }
 
+/* Aggiunta con js */
 .btn-onclick {
   background-color: #dededea6;
+  & .bar {
+    transform: scaleX(
+      1
+    ); 
+  }
 }
 
-.btn-onclick a {
+/* .btn-onclick a {
   border-bottom: #fb4646 2px solid;
   padding-bottom: 13px;
   
+} */
+
+.ultime-novitabtn {
+  height: 10px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-@keyframes expandBorder {
-  0% {
-    border-bottom-width: 0;
-  }
-  100% {
-    border-bottom-width: 100%; /* Larghezza desiderata del bordo */
-  }
+.bar {
+  position: absolute;
+  top: 8px;
+  width: 75%;
+  height: 2px;
+  background-color: #fb4646;
+  transform: scaleX(0); /* Inizialmente la barra è invisibile */
+  transform-origin: center; /* Il punto di origine della trasformazione è al centro */
+  transition: transform 0.2s ease; /* Aggiungi una transizione per creare l'effetto di espansione */
 }
 
-/* Applica l'animazione al nuovo elemento */
-.expand-border {
-  border-right: 0 solid transparent; /* Imposta lo spessore e il colore del bordo desiderati */
-  animation: expandBorder 0.5s ease-in-out forwards; /* Durata e timing dell'animazione */
+
+
+.hidden {
+  display: none;
 }
+
 
 /* Allineamento orizzontale Contenitore Card */
 .flex-container-cards-novita {
@@ -285,7 +299,6 @@ a {
   border: none;
 }
 
-
 /* Wrapper Scroll menu */
 .menu-scroll {
   width: 100%;
@@ -306,7 +319,6 @@ a {
   color: black;
 }
 
-
 @media screen and (min-width: 1456px) {
   .single-card-novita {
     max-width: 358px;
@@ -322,8 +334,6 @@ a {
   li div {
     flex: 0 1 60px;
   }
-
-
 }
 
 @media screen and (min-width: 769px) and (max-width: 1025px) {
@@ -339,7 +349,6 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-
   .single-card-novita p,
   .single-card-novita .header-card-novita {
     display: none;
@@ -364,14 +373,13 @@ a {
     display: flex;
     width: 100%;
     padding: 0 50px;
-  & a {
-    width: 100%;
-  }
+    & a {
+      width: 100%;
+    }
   }
 }
 
 @media screen and (max-width: 1256px) {
-
   /* Codice SACRO che permette di rendere totalmente responsive la menu bar  */
   .menu-scroll {
     position: relative;
@@ -386,20 +394,19 @@ a {
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-  } 
+  }
 
   .menu-cards-novita ul {
     display: block;
   }
 
-
   .menu-cards-novita li {
     display: inline-block;
-		height: 100%;
+    height: 100%;
   }
 
   #menu-novita-scroll-left,
-  #menu-novita-scroll-right{
+  #menu-novita-scroll-right {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -408,28 +415,33 @@ a {
 
   #menu-novita-scroll-left {
     left: 0;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 93%);
-
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 60%,
+      rgba(255, 255, 255, 0) 93%
+      
+    );
+    z-index: 1;
   }
 
-  #menu-novita-scroll-right{
+  #menu-novita-scroll-right {
     right: 0;
-    background: rgb(255,255,255);
-    background: linear-gradient(270deg, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 93%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 1) 60%,
+      rgba(255, 255, 255, 0) 93%
+    );
   }
-
 }
 
-@media screen and (min-width: 867px){
+@media screen and (min-width: 867px) {
   #menu-novita-scroll-left,
   #menu-novita-scroll-right {
     display: none;
+  }
 }
-
-
-}
-
 
 /* EA play section */
 .section-play {

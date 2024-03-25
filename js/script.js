@@ -6,10 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkScroll() {
     const scrollLength = scrollMenu.scrollWidth - scrollMenu.clientWidth;
     const currentScroll = scrollMenu.scrollLeft;
-    if (currentScroll === 0) {
+
+    // Aggiungi una tolleranza di 1 pixel
+    const tolerance = 1;
+
+    if (currentScroll <= tolerance) {
       leftButton.classList.add("hidden");
       rightButton.classList.remove("hidden");
-    } else if (currentScroll === scrollLength) {
+    } else if (currentScroll >= scrollLength - tolerance) {
       rightButton.classList.add("hidden");
       leftButton.classList.remove("hidden");
     } else {
@@ -17,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
       rightButton.classList.remove("hidden");
     }
   }
-
   scrollMenu.addEventListener("scroll", checkScroll);
   window.addEventListener("resize", checkScroll);
   checkScroll();
@@ -41,7 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Richiamo di tutta la sezione
-let ultimeNovitaFilter = Array.from(document.querySelectorAll(".ultime-novitabtn"));
+let ultimeNovitaFilter = Array.from(
+  document.querySelectorAll(".ultime-novitabtn")
+);
 
 //Singola card novità
 const singleCard = document.querySelector(".single-card-novita");
@@ -571,10 +576,10 @@ function generateCards(arr) {
     containerCard.appendChild(divCard);
   });
 
-  createdCards = document.querySelectorAll(".single-card-novita")
+  createdCards = document.querySelectorAll(".single-card-novita");
   createdCards.forEach((card) => {
-    card.classList.add('fadeIn')
-  })
+    card.classList.add("fadeIn");
+  });
 }
 
 //Recupero tutte le card per ogni sezione
@@ -587,26 +592,21 @@ const cardsF1 = sectionCards[5][0].data;
 const cardsBattlefield = sectionCards[6][0].data;
 const cardsNFS = sectionCards[7][0].data;
 
-
 //mi prendo tutte le singole card
 let createdCards = Array.from(document.querySelectorAll(".single-card-novita"));
 
-
-
 //avvio come prime card, la funzione che genera card
 
-const ul = Array.from(document.querySelectorAll('.menu-scroll-active li'))
-const ulLinks = Array.from(document.querySelectorAll('.ultime-novitabtn a'))
+const ul = Array.from(document.querySelectorAll(".menu-scroll-active li"));
+const ulLinks = Array.from(document.querySelectorAll(".ultime-novitabtn a"));
 ulLinks.forEach((link) => {
-  link.addEventListener('click', () => {
+  link.addEventListener("click", () => {
     ulLinks.forEach((e) => {
-      e.classList.remove('expand-border')
-    })
-    link.classList.add('expand-border')
-  })
-})
-
-
+      e.classList.remove("expand-border");
+    });
+    link.classList.add("expand-border");
+  });
+});
 
 window.addEventListener("load", () => {
   generateCards(cardsNotizieEa);
@@ -614,14 +614,14 @@ window.addEventListener("load", () => {
     btn.addEventListener("click", () => {
       // Rimuove la classe 'active' da tutti i bottoni
       ul.forEach((button) => {
-        button.classList.remove('btn-onclick');
+        button.classList.remove("btn-onclick");
       });
       // Aggiunge la classe 'btn-onclick' al bottone cliccato
-      btn.classList.add('btn-onclick');
-    })})
+      btn.classList.add("btn-onclick");
+    });
+  });
   ultimeNovitaFilter.forEach((btn) => {
     btn.addEventListener("click", () => {
-
       // Effettua il controllo per generare le carte appropriate
       containerCard.innerHTML = "";
       if (btn.id === "notizie-ea") {
@@ -644,12 +644,3 @@ window.addEventListener("load", () => {
     });
   });
 });
-
-
-
-
-
-
-
-
-
