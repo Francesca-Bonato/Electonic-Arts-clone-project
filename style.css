@@ -244,6 +244,7 @@ a {
   padding: 16px 24px;
   font-size: 18px;
   color: black;
+  transition: all .1s;
 }
 
 #bf2042-redirect:hover {
