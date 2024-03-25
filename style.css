@@ -376,6 +376,8 @@ a {
   color: black;
   border: black;
   margin-top: 15px;
+  padding-left:14px;
+  padding-right:14px;
 }
 
 /* EA play section */
@@ -606,18 +608,21 @@ a {
   }
 }
 
+/* media query mainGames button */
+@media screen and (max-width: 639px) {
+  #games-cta {
+    width: 95%;
+  }
+}
+
 /* media query mainGames 425px */
 @media screen and (max-width: 425px) {
   .mainGamesContainer {
     padding-left: 4vw;
     padding-right: 4vw;
   }
-}
-
-/* media query mainGames button */
-@media screen and (max-width: 639px) {
   #games-cta {
-    width: 100%;
+    width: 92%;
   }
 }
 
