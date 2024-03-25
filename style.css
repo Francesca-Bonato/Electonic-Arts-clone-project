@@ -397,7 +397,7 @@ a {
   }
 
   .menu-cards-novita ul {
-    display: block;
+    display: -webkit-box;
   }
 
   .menu-cards-novita li {
