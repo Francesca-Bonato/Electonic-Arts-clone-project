@@ -107,6 +107,7 @@ a {
   left: 0;
   width: 100%;
   background-color: #ffff;
+  color: var(--font-color);
 }
 
 /* ! Superior Navbar */
@@ -773,8 +774,9 @@ main {
   display: none;
 }
 
+/* ! MEDIAQUERY MENU-RESPONSIVE-LATERALE */
 @media (max-width: 1024px) {
-  /* Delete menu desktop and sidebar */
+  /* Hidden menu desktop and sidebar */
   .container-dotsLogo {
     display: none;
   }
@@ -787,21 +789,71 @@ main {
     display: none;
   }
 
+  /* ! Stylink opening menu */
+  .open {
+    overflow: hidden;
+  }
+
+  .open .background-responsive-menu {
+    width: 100%;
+  }
+
+  .open .container-menuSection-responsive {
+    transform: translateX(0);
+  }
+
+  .open .superior-navbar {
+    visibility: visible;
+    height: 40px;
+    transform: translateY(0);
+  }
+
+  .open .icon-menu-start {
+    opacity: 0.7;
+  }
+
+  .open .icon-menu-start:hover {
+    opacity: 1;
+  }
+  /* ! Create a hamburgher menu */
   .hamburgher-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .hamburgher-menu .ea-logo-menu {
+    max-width: 212px;
+  }
+
+  .icon-hamburgher {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .background-responsive-menu{
+  .icon-hamburgher:hover .eapl-local-nav__open-icon {
+    fill: #ff1e3c;
+  }
+
+  .eapl-local-nav__open-icon {
+    height: 1em;
+    width: 1.25em;
+    transition: all 0.2s;
+  }
+
+  /* ! Add background lateral menu responsive */
+  .background-responsive-menu {
     background-color: #1616169c;
     position: absolute;
     left: 0;
     height: 100vh;
-    width: 100%;
-    display: none;
+    width: 0;
   }
 
+  /* ! Styling header menu responsive */
   .header-responsive-menu {
     display: flex;
     justify-content: space-between;
@@ -809,8 +861,9 @@ main {
     flex: 0 0 53px;
     position: sticky;
     top: 0;
+    z-index: 1;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 15px;
     background-color: #f3f3f3;
   }
 
@@ -823,11 +876,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .header-responsive-menu svg {
     width: 100%;
     height: 100%;
+  }
+
+  /* ! styling main content menu responsive */
+  .main-responsive-menu {
+    padding-bottom: 64px;
   }
 
   .container-menuSection-responsive {
@@ -837,14 +896,491 @@ main {
     overflow-y: auto;
     z-index: 1;
     left: 0;
-    max-width: 375px;
+    width: 375px;
     height: 100vh;
-    display: none;
+    transform: translateX(-150%);
     background-color: white;
+    transition-duration: 450ms;
+    transition-property: transform, visibility;
+    transition-timing-function: ease-in-out;
   }
 
-  .container-single-section-responsive{
+  .container-single-section-responsive {
+    padding: 0 20px;
+  }
+
+  /* ! Sub-menu */
+  .section-menu-responsive {
+    border-bottom: 1px solid #000;
+  }
+
+  .subsection-menu-responsive {
+    height: 0;
+    opacity: 0;
     overflow: hidden;
-    padding: 0 25px;
+    transition: all 390ms ease-in-out;
+  }
+
+  .container-section-menu-responsive {
+    padding: 14px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .container-section-menu-responsive:hover {
+    color: #ff1e3c;
+  }
+
+  /* ! Dropdown chevron menu responsive */
+  .ea-dropdownChevron-responsive {
+    position: relative;
+    height: 8px;
+    width: 16px;
+    margin-left: 5px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ea-dropdownChevron-responsive::after,
+  .ea-dropdownChevron-responsive::before {
+    border-radius: 0.5em;
+    border-top: 2px solid;
+    height: 2px;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    content: "";
+    transition: all 0.3s;
+  }
+
+  .ea-dropdownChevron-responsive::after {
+    right: 0;
+    transform: rotate(-45deg);
+  }
+
+  .ea-dropdownChevron-responsive::before {
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  /* ! link sub-menu */
+  .link-subsection-responsive {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .link-subsection-responsive a {
+    padding: 14px 0 13px 14px;
+    border-bottom: 1px solid #a3a3a3;
+    color: #a3a3a3;
+  }
+
+  .link-subsection-responsive a:hover {
+    color: #ff1e3c;
+  }
+
+  /* ! Resources responsive */
+  .opened-responsive-resource
+    .resources-responsive
+    .subsection-menu-responsive {
+    height: 295px;
+    opacity: 1;
+  }
+
+  .opened-responsive-resource
+    .resources-responsive
+    .container-section-menu-responsive {
+    color: #ff1e3c;
+  }
+
+  .opened-responsive-resource .resources-responsive .section-menu-responsive {
+    border-bottom: 1px solid #ff1e3c;
+  }
+
+  .opened-responsive-resource
+    .resources-responsive
+    .ea-dropdownChevron-responsive::after {
+    transform: rotate(45deg);
+  }
+
+  .opened-responsive-resource
+    .resources-responsive
+    .ea-dropdownChevron-responsive::before {
+    transform: rotate(-45deg);
+  }
+
+  .opened-responsive-resource
+    .resources-responsive
+    .link-subsection-responsive
+    a:last-child {
+    border-bottom: 1px solid #ff1e3c;
+  }
+  /* ! Engagements responsive */
+  .opened-responsive-engagement
+    .engagements-responsive
+    .subsection-menu-responsive {
+    height: 295px;
+    opacity: 1;
+  }
+
+  .opened-responsive-engagement
+    .engagements-responsive
+    .container-section-menu-responsive {
+    color: #ff1e3c;
+  }
+
+  .opened-responsive-engagement
+    .engagements-responsive
+    .section-menu-responsive {
+    border-bottom: 1px solid #ff1e3c;
+  }
+
+  .opened-responsive-engagement
+    .engagements-responsive
+    .ea-dropdownChevron-responsive::after {
+    transform: rotate(45deg);
+  }
+
+  .opened-responsive-engagement
+    .engagements-responsive
+    .ea-dropdownChevron-responsive::before {
+    transform: rotate(-45deg);
+  }
+
+  .opened-responsive-engagement
+    .engagements-responsive
+    .link-subsection-responsive
+    a:last-child {
+    border-bottom: 1px solid #ff1e3c;
+  }
+  /* ! Information responsive */
+  .opened-responsive-information
+    .information-responsive
+    .subsection-menu-responsive {
+    height: 345px;
+    opacity: 1;
+  }
+
+  .opened-responsive-information
+    .information-responsive
+    .container-section-menu-responsive {
+    color: #ff1e3c;
+  }
+
+  .opened-responsive-information
+    .information-responsive
+    .section-menu-responsive {
+    border-bottom: 1px solid #ff1e3c;
+  }
+
+  .opened-responsive-information
+    .information-responsive
+    .ea-dropdownChevron-responsive::after {
+    transform: rotate(45deg);
+  }
+
+  .opened-responsive-information
+    .information-responsive
+    .ea-dropdownChevron-responsive::before {
+    transform: rotate(-45deg);
+  }
+
+  .opened-responsive-information
+    .information-responsive
+    .link-subsection-responsive
+    a:last-child {
+    border-bottom: 1px solid #ff1e3c;
+  }
+  /* ! Another Experience responsive */
+  .opened-responsive-experience
+    .experience-responsive
+    .subsection-menu-responsive {
+    height: 245px;
+    opacity: 1;
+  }
+
+  .opened-responsive-experience
+    .experience-responsive
+    .container-section-menu-responsive {
+    color: #ff1e3c;
+  }
+
+  .opened-responsive-experience
+    .experience-responsive
+    .section-menu-responsive {
+    border-bottom: 1px solid #ff1e3c;
+  }
+
+  .opened-responsive-experience
+    .experience-responsive
+    .ea-dropdownChevron-responsive::after {
+    transform: rotate(45deg);
+  }
+
+  .opened-responsive-experience
+    .experience-responsive
+    .ea-dropdownChevron-responsive::before {
+    transform: rotate(-45deg);
+  }
+
+  .opened-responsive-experience
+    .experience-responsive
+    .link-subsection-responsive
+    a:last-child {
+    border-bottom: 1px solid #ff1e3c;
+  }
+
+  /* ! Games responsive */
+  .opened-responsive-games .games-responsive .subsection-menu-responsive {
+    height: 100px;
+    opacity: 1;
+  }
+
+  .opened-responsive-games
+    .games-responsive
+    .container-section-menu-responsive {
+    color: #ff1e3c;
+  }
+
+  .opened-responsive-games .games-responsive .section-menu-responsive {
+    border-bottom: 1px solid #ff1e3c;
+  }
+
+  .opened-responsive-games
+    .games-responsive
+    .ea-dropdownChevron-responsive::after {
+    transform: rotate(45deg);
+  }
+
+  .opened-responsive-games
+    .games-responsive
+    .ea-dropdownChevron-responsive::before {
+    transform: rotate(-45deg);
+  }
+
+  .games-responsive .link-subsection-responsive {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 390ms ease-in-out;
+  }
+
+  .explore_games_list-responsive {
+    border-bottom: 1px solid #a3a3a3;
+  }
+
+  .platform-responsive {
+    border-bottom: 1px solid #a3a3a3;
+  }
+
+  .opened-responsive-games .platform-responsive {
+    border-bottom: 1px solid #ff1e3c;
+  }
+  .games-responsive .title-subsection-responsive {
+    color: #a3a3a3;
+    margin: 0 14px;
+    padding: 14px 0 13px 0;
+  }
+
+  /* ! DROPDOWN CLOSER */
+  .container-sergio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #a3a3a3;
+    cursor: pointer;
+  }
+
+  .container-sergio:hover {
+    color: #ff1e3c;
+  }
+
+  .container-sergio:hover p {
+    color: #ff1e3c;
+  }
+
+  .ea-dropdown-closer {
+    position: relative;
+    height: 8px;
+    width: 16px;
+    margin-left: 5px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 390ms ease-in-out;
+  }
+
+  .ea-dropdown-closer::after,
+  .ea-dropdown-closer::before {
+    border-radius: 0.5em;
+    border-top: 2px solid;
+    height: 2px;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    content: "";
+  }
+
+  .ea-dropdown-closer::before {
+    transform: rotate(90deg);
+  }
+
+  .games-responsive .link-subsection-responsive a {
+    border: none;
+    margin: 0 38px;
+    padding: 7px 0;
+  }
+
+  /* ! OPEN SUB-MENU GAMES */
+  .open-list-games .games-responsive .subsection-menu-responsive {
+    height: 100%;
+  }
+  .open-list-games
+    .games-responsive
+    .explore_games_list-responsive
+    .link-subsection-responsive {
+    height: 260px;
+    opacity: 1;
+    color: #161616;
+  }
+
+  .open-list-games .games-responsive .link-subsection-responsive a {
+    color: #161616;
+  }
+
+  .open-list-games .explore_games_list-responsive .container-sergio {
+    color: #161616;
+  }
+
+  .open-list-games .explore_games_list-responsive .container-sergio p {
+    color: #161616;
+  }
+
+  .open-list-games .explore_games_list-responsive {
+    border-bottom: 1px solid #161616;
+  }
+
+  .open-list-games .explore_games_list-responsive .ea-dropdown-closer {
+    transform: rotate(45deg);
+  }
+
+  .open-list-games
+    .subsection-games-responsive
+    .explore_games_list-responsive
+    .container-sergio:hover {
+    color: #ff1e3c;
+  }
+
+  .open-list-games
+    .subsection-games-responsive
+    .explore_games_list-responsive
+    .container-sergio:hover
+    p {
+    color: #ff1e3c !important;
+    transition: all 390ms ease-in-out;
+  }
+
+  .open-list-games
+    .subsection-games-responsive
+    .explore_games_list-responsive
+    .link-subsection-responsive
+    a:hover {
+    color: #ff1e3c;
+  }
+
+  /* ! OPEN SUB-MENU PLATFORM */
+  .open-list-platform .games-responsive .subsection-menu-responsive {
+    height: 100%;
+  }
+
+  .open-list-platform
+    .games-responsive
+    .platform-responsive
+    .link-subsection-responsive {
+    height: 190px;
+    opacity: 1;
+    color: #161616;
+  }
+
+  .open-list-platform .games-responsive .link-subsection-responsive a {
+    color: #161616;
+  }
+
+  .open-list-platform .platform-responsive .container-sergio {
+    color: #161616;
+  }
+
+  .open-list-platform .platform-responsive .container-sergio p {
+    color: #161616;
+  }
+
+  .open-list-platform .platform-responsive {
+    border-bottom: 1px solid #161616;
+  }
+
+  .open-list-platform .platform-responsive .ea-dropdown-closer {
+    transform: rotate(45deg);
+  }
+
+  .open-list-platform
+    .subsection-games-responsive
+    .platform-responsive
+    .container-sergio:hover {
+    color: #ff1e3c;
+  }
+
+  .open-list-platform
+    .subsection-games-responsive
+    .platform-responsive
+    .container-sergio:hover
+    p {
+    color: #ff1e3c !important;
+    transition: all 390ms ease-in-out;
+  }
+
+  .open-list-platform
+    .subsection-games-responsive
+    .platform-responsive
+    .link-subsection-responsive
+    a:hover {
+    color: #ff1e3c;
+  }
+}
+
+@media (max-width: 520px) {
+  .container-options {
+    flex-wrap: wrap;
+  }
+
+  .info-superior p {
+    text-align: center;
+  }
+
+  .user-superior .container-options {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 464px) {
+  .opened-info-superior .info-superior {
+    height: 600px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .user-superior .container-options {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  .container-menuSection-responsive {
+    width: 100%;
   }
 }
