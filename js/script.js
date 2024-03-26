@@ -610,20 +610,17 @@ ulLinks.forEach((link) => {
 
 window.addEventListener("load", () => {
   generateCards(cardsNotizieEa);
-  const firstButton = ul[0];
-  firstButton.classList.add('btn-onclick');
+  
   ul.forEach((btn) => {
     btn.addEventListener("click", () => {
-      // Rimuove la classe 'active' da tutti i bottoni
+
+      // Rimuove la classe 'btn-onclick' da tutti i pulsanti
       ul.forEach((button) => {
         button.classList.remove("btn-onclick");
       });
-      // Aggiunge la classe 'btn-onclick' al bottone cliccato
+      // Aggiunge la classe 'btn-onclick' al pulsante cliccato
       btn.classList.add("btn-onclick");
-    });
-  });
-  ultimeNovitaFilter.forEach((btn) => {
-    btn.addEventListener("click", () => {
+      
       // Effettua il controllo per generare le carte appropriate
       containerCard.innerHTML = "";
       if (btn.id === "notizie-ea") {
@@ -646,3 +643,5 @@ window.addEventListener("load", () => {
     });
   });
 });
+
+
