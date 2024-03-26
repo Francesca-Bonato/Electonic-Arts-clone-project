@@ -158,10 +158,9 @@ a {
   }
 
   & ul div {
-    margin: 15px 0;
+    margin: 23px 0;
     padding: 0 15px;
     border-left: 2px solid #dedede;
-
   }
 
   & ul li:hover {

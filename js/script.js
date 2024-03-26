@@ -610,6 +610,8 @@ ulLinks.forEach((link) => {
 
 window.addEventListener("load", () => {
   generateCards(cardsNotizieEa);
+  const firstButton = ul[0];
+  firstButton.classList.add('btn-onclick');
   ul.forEach((btn) => {
     btn.addEventListener("click", () => {
       // Rimuove la classe 'active' da tutti i bottoni
