@@ -13,6 +13,10 @@
       name="author"
       content="Luigi Balestrucci,Francesco Foti,Francesco Balleri,Francesca Bonato,Sergio Gagliano,Daniele De Lise"
     />
+    <meta
+      name="title"
+      content="Home Page Electronic Arts - Sito EA ufficiale"
+    />
     <!-- Opengraph meta -->
     <meta
       property="og:title"
@@ -28,10 +32,6 @@
     <meta
       property="og:image"
       content="https://media.contentapi.ea.com/content/dam/eacom/images/2021/03/ea-featured-tile-generic-electronic-arts.png.adapt.crop191x100.1200w.png"
-    />
-    <meta
-      name="title"
-      content="Home Page Electronic Arts - Sito EA ufficiale"
     />
     <!-- Icon EA -->
     <link
@@ -49,6 +49,14 @@
     <!-- File CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="ultimenovita.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -743,8 +751,7 @@
                     <a
                       id="bf2042-redirect"
                       href="https://www.ea.com/it-it/games/battlefield/battlefield-2042/community-calendar#arkangel-directive-section"
-                      >Dettagli su Direttiva Arkangel</a
-                    >
+                      >Dettagli su Direttiva Arkangel</a>
                   </div>
                 </div>
               </div>
@@ -821,8 +828,8 @@
                     <a
                       href="https://www.ea.com/it-it/games/f1/f1-23"
                       title="F1® 23"
-                      class="official-site-a"
-                    ></a>
+                      class="official-site-a">
+                    </a>
                     <span id="official-site-span">Sito ufficiale</span>
                   </div>
                 </div>
@@ -910,8 +917,62 @@
             >
           </div>
         </section>
+
         <!-- Card news -->
-        <section class="container-card"></section>
+        <section class="container-card">
+          <div class="title-novita">
+            <h3>Ultime Novità</h3>
+          </div>
+          <div class="menu-novità">
+            <div class="menu-scroll">
+              <div class="menu-cards-novita">
+                <button id="menu-novita-scroll-left">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+                <ul class="menu-scroll-active">
+                  <li id="notizie-ea">
+                    <div class="ultime-novitabtn" id="notizie-ea"><a href="#">Notizie EA</a><div class="bar"></div></div>
+                  </li>
+                  <li id="ea-sports-news">
+                    <div class="ultime-novitabtn"><a href="#">EA SPORTS FC</a><div class="bar"></div></div>
+                  </li>
+                  <li id="apex-legends-news">
+                    <div class="ultime-novitabtn"><a href="#">Apex Legends</a><div class="bar"></div></div>
+                  </li>
+                  <li id="the-sims-news">
+                    <div class="ultime-novitabtn"><a href="#">The Sims 4</a><div class="bar"></div></div>
+                  </li>
+                  <li id="star-wars-news">
+                    <div class="ultime-novitabtn"><a href="#">Star Wars</a><div class="bar"></div></div>
+                  </li>
+                  <li id="f1-news">
+                    <div class="ultime-novitabtn"><a href="#">F1</a><div class="bar"></div></div>
+                  </li>
+                  <li id="battlefield-news">
+                    <div class="ultime-novitabtn"><a href="#">Battlefield</a><div class="bar"></div></div>
+                  </li>
+                  <li id="need-for-speed-news">
+                    <div class="ultime-novitabtn"><a href="#">Need For Speed</a><div class="bar"></div></div>
+                  </li>
+                </ul>
+                <button id="menu-novita-scroll-right">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+            <div class="flex-container-cards-novita">
+              <div class="wrapper-cards">
+                <div class="container-Cards-novita">
+                </div>
+              </div>
+
+            </div>
+              <div class="details-button">
+                <a href="https://www.ea.com/it-it/news" class="btn-cta" id="ultime-novita-dettagli">Più dettagli</a>
+              </div>
+          </div>
+        </section>
+
         <!-- Section link to EA play -->
         <section class="section-play">
           <picture class="hero-figure">
@@ -999,6 +1060,9 @@
               >Scopri di più</a
             >
           </div>
+        </section>
+        <!-- Section blue banner parental tools -->
+        <section class="subsection-play">
         </section>
         <!-- Terms and conditions -->
         <div class="section-column"></div>
