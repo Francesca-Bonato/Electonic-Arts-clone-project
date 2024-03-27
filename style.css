@@ -265,8 +265,8 @@ a {
 
 /* media query mainGames section */
 
-/* media query mainGames 4k */
-@media screen and (max-width: 2560px) {
+/* media query mainGames 4k and higher screen*/
+@media screen and (max-width: 2592px) {
   .mainGamesContainer {
     max-width: 1120px;
     padding-left: 0%;
