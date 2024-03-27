@@ -320,6 +320,19 @@ option {
   display:flex;
 }
 
+/* ! Dropdown chevron */
+.ea-locale-selector__selected-container,
+.ea-regional-pricing-button-selected-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ea-chevron-footer{
+  display: flex;
+  align-items: center;
+}
+
 .ea-regional-pricing-selector__item,
 .ea-locale-selector__item {
   display: flex;
