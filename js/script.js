@@ -610,6 +610,13 @@ ulLinks.forEach((link) => {
 
 window.addEventListener("load", () => {
   generateCards(cardsNotizieEa);
+
+    // Seleziona il primo pulsante
+    const firstButton = ul[0];
+  
+    // Aggiungi la classe 'btn-onclick' al primo pulsante
+    firstButton.classList.add('btn-onclick');
+  
   
   ul.forEach((btn) => {
     btn.addEventListener("click", () => {
