@@ -313,11 +313,11 @@ option {
 }
 
 .openPrice {
-  display:flex;
+  display: flex;
 }
 
 .openLocale {
-  display:flex;
+  display: flex;
 }
 
 /* ! Dropdown chevron */
@@ -347,7 +347,7 @@ option {
   transition: ease 0.1s;
 }
 
-.ea-regional-pricing-selector__item:hover{
+.ea-regional-pricing-selector__item:hover {
   transition: ease 0.1s;
   transform: translateX(10px)
 }
@@ -365,7 +365,7 @@ option {
   margin-bottom: 2px;
 }
 
-.ea-locale-selector__item:hover{
+.ea-locale-selector__item:hover {
   transition: ease 0.1s;
   transform: translateX(10px)
 }
