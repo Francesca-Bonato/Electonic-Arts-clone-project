@@ -1,4 +1,9 @@
 /* Start Code */
+/* Container cards */
+.container-card {
+  background-color: var(--primary-color);
+}
+
 /* Allineamento titolo */
 .title-novita {
   text-align: center;
@@ -42,9 +47,7 @@
 .btn-onclick {
   background-color: #dededea6;
   & .bar {
-    transform: scaleX(
-      1
-    ); 
+    transform: scaleX(1);
   }
 }
 
@@ -76,12 +79,9 @@
   transition: transform 0.2s ease; /* Aggiungi una transizione per creare l'effetto di espansione */
 }
 
-
-
 .hidden {
   display: none;
 }
-
 
 /* Allineamento orizzontale Contenitore Card */
 .flex-container-cards-novita {
@@ -103,6 +103,7 @@
   & .single-card-novita {
     box-shadow: 0 0 7px -1px gray;
     transition: all 0.3s;
+    background-color: white;
   }
   /* Spostamento verticale cards */
   & .single-card-novita:hover {
@@ -286,7 +287,6 @@
       90deg,
       rgba(255, 255, 255, 1) 60%,
       rgba(255, 255, 255, 0) 93%
-      
     );
     z-index: 1;
   }
@@ -308,4 +308,3 @@
     display: none;
   }
 }
-
