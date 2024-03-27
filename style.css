@@ -244,6 +244,7 @@ a {
   padding: 16px 24px;
   font-size: 18px;
   color: black;
+  transition: all .1s;
 }
 
 #bf2042-redirect:hover {
@@ -678,10 +679,6 @@ a {
 
 /* ! Mediaquery Play section Laptop large */
 @media (min-width: 1456px) {
-  * {
-    font-size: 20px;
-  }
-
   .hero-content {
     left: calc((100vw - 1120px) / 2);
     max-width: 544px;
