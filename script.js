@@ -32,25 +32,12 @@ function pricingOnClick() {
         }
     })
 
-
-
- /*    // ! if window < 1007px remove div class 
-    if (window.innerWidth < 1007) {
-        priceClassToHide.classList.remove("openPrice")
-    } else {
-        priceClassToHide.classList.add("openPrice")
-    } */
-
-
-
     // ! if click anywhere on the screen remove class 
     document.addEventListener("click", (e) => {
         pricingList.classList.remove("openPrice")
         e.stopPropagation()
     })
 }
-
-/* window.addEventListener('resize', pricingOnClick); */
 
 pricingOnClick()
 
@@ -68,24 +55,11 @@ function localeOnClick() {
         }
     })
 
-
-
-  /*   // ! if window < 1007px remove div class 
-    if (window.innerWidth < 1007) {
-        localeClassToHide.classList.remove("openLocale")
-    } else {
-        localeClassToHide.classList.add("openLocale")
-    } */
-    
-
-
     // ! if click anywhere on the screen remove class 
     document.addEventListener("click", (e) => {
         localeList.classList.remove("openLocale")
         e.stopPropagation()
     })
 }
-
-/* window.addEventListener('resize', localeOnClick); */
 
 localeOnClick()
