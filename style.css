@@ -700,9 +700,10 @@ option {
   height: 68px;
   z-index: 1;
   position: absolute;
-  top: -1px;
+  top: -1.5px;
   left: -2px;
   background-color: #F3F3F3;
+  pointer-events: none;
 }
 
 .ea-regional-pricing-button-label,
@@ -710,6 +711,7 @@ option {
 .ea-locale-button-label,
 .ea-locale-selector__selected-container {
   position: relative;
+  pointer-events: none;
   z-index: 3;
 }
 
