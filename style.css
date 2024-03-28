@@ -90,7 +90,7 @@ h6,
 p,
 ol,
 ul {
-  margin: 0 0 1rem 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -125,15 +125,15 @@ h3 {
 }
 
 h4 {
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 h5 {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 0.6rem;
 }
 
 a {
@@ -244,6 +244,7 @@ a {
   padding: 16px 24px;
   font-size: 18px;
   color: black;
+  transition: all .1s;
 }
 
 #bf2042-redirect:hover {
@@ -376,6 +377,8 @@ a {
   color: black;
   border: black;
   margin-top: 15px;
+  padding-left:14px;
+  padding-right:14px;
 }
 
 /* EA play section */
@@ -395,6 +398,7 @@ a {
   height: 100%;
   top: 0;
   left: 0;
+  width:100%;
 }
 
 .hero-content {
@@ -607,18 +611,21 @@ a {
   }
 }
 
+/* media query mainGames button */
+@media screen and (max-width: 639px) {
+  #games-cta {
+    width: 95%;
+  }
+}
+
 /* media query mainGames 425px */
 @media screen and (max-width: 425px) {
   .mainGamesContainer {
     padding-left: 4vw;
     padding-right: 4vw;
   }
-}
-
-/* media query mainGames button */
-@media screen and (max-width: 639px) {
   #games-cta {
-    width: 100%;
+    width: 92%;
   }
 }
 
@@ -677,10 +684,6 @@ a {
 
 /* ! Mediaquery Play section Laptop large */
 @media (min-width: 1456px) {
-  * {
-    font-size: 20px;
-  }
-
   .hero-content {
     left: calc((100vw - 1120px) / 2);
     max-width: 544px;
@@ -699,3 +702,4 @@ a {
     padding: 20px 24px !important;
   }
 }
+
