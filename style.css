@@ -28,7 +28,9 @@
     border: var(--border-button);
     border-radius: var(--border-radius-button);
     transition: 100ms;
+=======
     transition: border 0.3s;
+>>>>>>> footer
     content: "";
     position: absolute;
     left: 0;
@@ -490,224 +492,37 @@ a {
   }
 }
 
-/* MediaQuery Jumbotron */
-@media screen and (min-width: 1024px) and (max-width: 1456px) {
-  .jumbotron-main {
-    background-image: url(assets/bf-2042-s5-mse-hero-video-m.mp4);
-  }
-
-  .jumbotron-main video {
-    display: none;
-  }
-
-  .video-l video {
-    display: block;
-  }
+#btn-scopri {
+  min-width: 148.65px;
 }
 
-@media screen and (min-width: 425px) and (max-width: 768px) {
-
-  .video-l video,
-  .jumbotron-main video {
-    display: none;
-  }
-
-  .video-m video {
-    display: block;
-    z-index: 2;
-  }
-
-  .jumbotron-main {
-    background-image: url(assets/bf-2042-section-768w.jpg);
-  }
-
-  .overlay-content img {
-    width: 55%;
-  }
-
-  & .overlay-content h6 {
-    font-size: 15px;
-    width: 55%;
-  }
+/* style local footer */
+.local-footer {
+  box-sizing: border-box;
+  background-color: #eaeaea;
+  line-height: var(--primary-line-height);
+  color: #161616;
+  padding: 32px 22px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media screen and (max-width: 425px) {
-
-  .video-l video,
-  .video-m video,
-  .jumbotron-main video {
-    display: none;
+.ea-terms {
+  box-sizing: border-box;
+  font-size: 14px;
+  border-bottom: 1px solid #969696;
+  padding: 0 0 16px 0.65em;
+  text-indent: -0.65em;
+  line-height: 1.5;
+  & p {
+    margin-bottom: 0px;
   }
-
-  .jumbotron-main {
-    height: 85vh;
-    background-image: url(assets/bf-2042-section-bg-s5-mid-season-homepage-xl.jpg.adapt.320w.jpg);
-  }
-
-  .video-s video {
-    display: block;
-    z-index: 2;
-  }
-
-  .overlay-content img {
-    width: 55%;
-  }
-
-  & .overlay-content h6 {
-    font-size: 15px;
-    width: 55%;
+  & a {
+    color: var(--coral-color);
   }
 }
-
-/* media query mainGames section */
-
-/* media query mainGames 4k */
-@media screen and (max-width: 2560px) {
-  .mainGamesContainer {
-    max-width: 1120px;
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-
-  .mainGamesHeader {
-    display: block;
-    font-size: 2.2em;
-  }
-}
-
-/* media query mainGames 2k */
-@media screen and (max-width: 1440px) {
-  .mainGamesContainer {
-    max-width: 100%;
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-
-  .mainGamesHeader {
-    font-size: 2.5em;
-  }
-}
-
-/* media query mainGames laptop */
-@media screen and (max-width: 1024px) {
-  .mainGamesContainer {
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-
-  .mainGamesHeader {
-    font-size: 2.5em;
-  }
-}
-
-/* media query mainGames tablet */
-@media screen and (max-width: 1023px) {
-  .mainGamesContainer {
-    width: 100%;
-  }
-
-  .mainGamesHeader {
-    font-size: 2.7em;
-  }
-
-  .card-games {
-    width: 50%;
-  }
-
-  .logo-main-games {
-    width: 30%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .mainGamesHeader {
-    font-size: 2em;
-  }
-}
-
-/* media query mainGames mobile */
-@media screen and (max-width: 767px) {
-  .card-games {
-    width: 100%;
-  }
-
-  .logo-main-games {
-    width: 50%;
-  }
-}
-
-/* media query mainGames button */
-@media screen and (max-width: 639px) {
-  #games-cta {
-    width: 95%;
-  }
-}
-
-/* media query mainGames 425px */
-@media screen and (max-width: 425px) {
-  .mainGamesContainer {
-    padding-left: 4vw;
-    padding-right: 4vw;
-  }
-
-  #games-cta {
-    width: 92%;
-  }
-}
-
-/* ! Mediaquery Play section Tablet*/
-@media (min-width: 768px) {
-  .hero-content {
-    height: auto;
-    width: 40.625%;
-    position: absolute;
-    top: 50%;
-    left: 7.8125vw;
-    padding: 0px;
-    transform: translate(0%, -50%);
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-  }
-
-  .subsection-play {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-content-cta a {
-    width: auto;
-  }
-
-  .subsection-play-cta {
-    width: 145px;
-  }
-}
-
-/* ! Mediaquery Play section desktop */
-@media (min-width: 1024px) {
-  .hero-content p {
-    font-size: 18px;
-  }
-
-  .subsection-play {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.4% 7.4218vw;
-  }
-
-  .subsection-play-title {
-    text-align: left;
-    max-width: 544px;
-
-    & h5 {
-      margin: 0;
-      color: var(--coral-color);
-    }
-  }
 
   .link-section {
     box-sizing: border-box;
@@ -716,52 +531,29 @@ a {
     margin-top: 12px;
   }
 
-  .local-links {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: column wrap;
-    width: 100vw;
-    padding-bottom: 9px;
-    border-bottom: 1px solid #969696;
-    margin: 0px;
-
-    & a {
-      display: inline-block;
-      padding: 6px 0 5px;
-      width: 50%;
-
-      &:hover {
-        color: var(--coral-color);
-      }
+.local-links {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100vw;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #969696;
+  margin: 0px;
+  & a {
+    display: inline-block;
+    padding: 6px 0 5px;
+    width: 50%;
+    &:hover {
+      color: var(--coral-color);
     }
   }
+}
 
-  /* ! Mediaquery Play section Laptop large */
-  @media (min-width: 1456px) {
-    .hero-content {
-      left: calc((100vw - 1120px) / 2);
-      max-width: 544px;
-    }
-
-    .subsection-play {
-      padding-left: calc((100vw - 1120px) / 2);
-      padding-right: calc((100vw - 1120px) / 2);
-    }
-
-    .subsection-play-title h5 {
-      font-size: 26px;
-    }
-
-    .btn-cta {
-      padding: 20px 24px !important;
-    }
-  }
-
-  .social-networks h3 {
-    margin: 25px 0 18px;
-    text-align: left;
-    font-size: 14px;
-  }
+.social-networks h3 {
+  margin: 25px 0 18px;
+  text-align: left;
+  font-size: 14px;
+}
 
   .social-links {
     display: flex;
@@ -1099,10 +891,246 @@ a {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAGYktHRAD/AP8A/6C9p5MAAAEuSURBVChTpVK9SgNBEP7mNmcul4h24kmSB7AUfAEbsbGx8TVsU2gEwTewsbfxScRCCAo2Eg0YIsglISZ3udtdd9djUS8kgh8sOzszOz/fDHX8NYl/wMluCykEZBRDpmmmmY8fAWQUQUQhvN0dsGDdvBeBHbmVEy3IeApWr6IadiGHQ1C5DHIY0vazcYTjgIi+5G+wHPBxDzXOMWicon/eVKUtG4el7S2I3hvEewip7L+D2BZ0FFJZxlfXYGwVVCoZ7UqzgaB9Dz7qzqzABtAmTaB/eADO+5CTidEOjs/wWt8EqyhOZH5gtgXDQW0DwVMLo4tLTO9aSNSJb25BrgsUCvM50DBTEB/w9/aRPDyCv3RAnpdZZyO3SLoNJImaDwOprIuQWyRNJBWLf/oMAJ+5mHSXRuZmqAAAAABJRU5ErkJggg==);
   }
 
-  .copyright {
-    margin-top: 9px;
-    margin-bottom: 35px;
+.copyright {
+  margin-top: 9px;
+  margin-bottom: 35px;
+}
+
+/* MediaQuery Jumbotron */
+@media screen and (min-width: 1024px) and (max-width: 1456px) {
+  .jumbotron-main {
+    background-image: url(assets/bf-2042-s5-mse-hero-video-m.mp4);
   }
+
+  .jumbotron-main video {
+    display: none;
+  }
+
+  .video-l video {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .video-l video,
+  .jumbotron-main video {
+    display: none;
+  }
+
+  .video-m video {
+    display: block;
+    z-index: 2;
+  }
+
+  .jumbotron-main {
+    background-image: url(assets/bf-2042-section-768w.jpg);
+  }
+
+  .overlay-content img {
+    width: 55%;
+  }
+
+  & .overlay-content h6 {
+    font-size: 15px;
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .video-l video,
+  .video-m video,
+  .jumbotron-main video {
+    display: none;
+  }
+
+  .jumbotron-main {
+    height: 85vh;
+    background-image: url(assets/bf-2042-section-bg-s5-mid-season-homepage-xl.jpg.adapt.320w.jpg);
+  }
+
+  .video-s video {
+    display: block;
+    z-index: 2;
+  }
+
+  .overlay-content img {
+    width: 55%;
+  }
+
+  & .overlay-content h6 {
+    font-size: 15px;
+    width: 55%;
+  }
+}
+
+/* media query mainGames section */
+
+/* media query mainGames 4k */
+@media screen and (max-width: 2560px) {
+  .mainGamesContainer {
+    max-width: 1120px;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .mainGamesHeader {
+    display: block;
+    font-size: 2.2em;
+  }
+}
+
+/* media query mainGames 2k */
+@media screen and (max-width: 1440px) {
+  .mainGamesContainer {
+    max-width: 100%;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .mainGamesHeader {
+    font-size: 2.5em;
+  }
+}
+
+/* media query mainGames laptop */
+@media screen and (max-width: 1024px) {
+  .mainGamesContainer {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .mainGamesHeader {
+    font-size: 2.5em;
+  }
+}
+
+/* media query mainGames tablet */
+@media screen and (max-width: 1023px) {
+  .mainGamesContainer {
+    width: 100%;
+  }
+
+  .mainGamesHeader {
+    font-size: 2.7em;
+  }
+
+  .card-games {
+    width: 50%;
+  }
+
+  .logo-main-games {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainGamesHeader {
+    font-size: 2em;
+  }
+}
+
+/* media query mainGames mobile */
+@media screen and (max-width: 767px) {
+  .card-games {
+    width: 100%;
+  }
+
+  .logo-main-games {
+    width: 50%;
+  }
+}
+
+/* media query mainGames button */
+@media screen and (max-width: 639px) {
+  #games-cta {
+    width: 95%;
+  }
+}
+
+/* media query mainGames 425px */
+@media screen and (max-width: 425px) {
+  .mainGamesContainer {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+  #games-cta {
+    width: 92%;
+  }
+}
+
+/* ! Mediaquery Play section Tablet*/
+@media (min-width: 768px) {
+  .hero-content {
+    height: auto;
+    width: 40.625%;
+    position: absolute;
+    top: 50%;
+    left: 7.8125vw;
+    padding: 0px;
+    transform: translate(0%, -50%);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+  }
+
+  .subsection-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content-cta a {
+    width: auto;
+  }
+
+  .subsection-play-cta {
+    width: 145px;
+  }
+}
+
+/* ! Mediaquery Play section desktop */
+@media (min-width: 1024px) {
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .subsection-play {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4% 7.4218vw;
+  }
+
+  .subsection-play-title {
+    text-align: left;
+    max-width: 544px;
+    & h5 {
+      margin: 0;
+    }
+  }
+}
+
+/* ! Mediaquery Play section Laptop large */
+@media (min-width: 1456px) {
+  .hero-content {
+    left: calc((100vw - 1120px) / 2);
+    max-width: 544px;
+  }
+
+  .subsection-play {
+    padding-left: calc((100vw - 1120px) / 2);
+    padding-right: calc((100vw - 1120px) / 2);
+  }
+
+  .subsection-play-title h5 {
+    font-size: 26px;
+  }
+  
+  .btn-cta {
+    padding: 20px 24px !important;
+  }
+}
 
   /* media query mobile - footer*/
   @media (min-width: 321px) {
@@ -1282,10 +1310,9 @@ a {
     }
   }
 
-  @media (min-width: 1440px) {
-
-    .local-footer,
-    .network-footer {
-      font-size: calc(1em + 2px);
-    }
+@media (min-width: 1440px) {
+  .local-footer,
+  .network-footer {
+    font-size: calc(1em + 2px);
   }
+}
