@@ -738,6 +738,7 @@ a {
 .ea-locale-selector__selected-container {
   position: relative;
   z-index: 3;
+  pointer-events: none;
 }
 
   .ea-regional-pricing-selector__item,
