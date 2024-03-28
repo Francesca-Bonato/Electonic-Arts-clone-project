@@ -18,10 +18,6 @@
   --primary-line-height: 1.7em;
 
   & .btn-cta {
-<<<<<<< HEAD
-    font-size: 18px;
-=======
->>>>>>> footer
     position: relative;
     padding: 12px 24px;
     text-align: center;
@@ -30,11 +26,7 @@
   & .btn-cta::before {
     border: var(--border-button);
     border-radius: var(--border-radius-button);
-<<<<<<< HEAD
-    transition: 100ms;
-=======
     transition: border 0.3s;
->>>>>>> footer
     content: "";
     position: absolute;
     left: 0;
@@ -48,10 +40,6 @@
     left: -3px;
     right: -3px;
     top: -3px;
-<<<<<<< HEAD
-    transition: 100ms;
-=======
->>>>>>> footer
   }
 }
 
@@ -100,7 +88,7 @@ h6,
 p,
 ol,
 ul {
-  margin: 0;
+  margin: 0 0 1rem 0;
   padding: 0;
 }
 
@@ -135,15 +123,15 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 h5 {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
 }
 
 h6 {
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 
 a {
@@ -151,320 +139,6 @@ a {
   color: black;
 }
 
-<<<<<<< HEAD
-/* Jumbotron Styling */
-
-.jumbotron-main {
-  height: 50vh;
-  background-color: black;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  background-image: url(assets/bf-2042-s5-mse-section-hero-video-xl.mp4);
-}
-
-.jumbotron-main video {
-  height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#bf2042-background {
-  display: none;
-}
-
-.video-l video,
-.video-m video,
-.video-s video {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 40px, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-.animated {
-  animation-duration: 1.2s;
-  animation-fill-mode: both;
-}
-
-.animatedFadeInUp {
-  opacity: 0;
-}
-
-.fadeInUp {
-  opacity: 0;
-  animation-name: fadeInUp;
-}
-
-.overlay-content img {
-  width: 720px;
-}
-
-.overlay-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  gap: 10px;
-}
-
-.bf-2042-h6 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bf-2042-h6 h6 {
-  width: 720px;
-  color: white;
-  font-size: 18px;
-  font-weight: 200;
-  text-align: center;
-  letter-spacing: normal;
-  line-height: 1.5;
-}
-
-.redirect-container {
-  margin-top: 15px;
-}
-
-.redirect-container a {
-  background-color: #f3f3f3;
-  padding: 16px 24px;
-  font-size: 18px;
-  color: black;
-  transition: all .1s;
-}
-
-#bf2042-redirect:hover {
-  padding: 19px 27px;
-}
-
-/* full section of main games */
-.games-featured {
-  width: 100%;
-  background-color: #f3f3f3;
-  display: flex;
-  justify-content: center;
-}
-
-.mainGamesContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 80px;
-}
-
-/* main games title */
-.mainGamesHeader {
-  color: #161616;
-  margin-top: 40px;
-  font-size: 3.5em;
-  display: flex;
-  text-align: center;
-  box-sizing: border-box;
-  line-height: 1.15;
-}
-
-/* main games container*/
-.layoutImages {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-/* container of image and logo */
-.card-games {
-  padding: 14px;
-  position: relative;
-  width: 33.33%;
-  height: 100%;
-}
-
-.background {
-  width: 100%;
-  height: 100%;
-  filter: brightness(70%);
-}
-
-.image-box {
-  padding-top: 100%;
-  position: relative;
-
-  & .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: brightness(70%);
-  }
-}
-
-.image-box:hover {
-  & .logo-main-games {
-    transform: translate(-50%, -180%);
-  }
-}
-
-.overlay-gradient {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-image: linear-gradient(83deg, #0d1042, #ff4747);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.overlay-gradient:hover {
-  opacity: 0.9;
-}
-
-.logo-main-games {
-  filter: drop-shadow(8px 7px 23px #000);
-  font-size: 1.6rem;
-  font-weight: 700;
-  left: 50%;
-  max-height: 20%;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  transition: .4s ease;
-  width: 50%;
-  color: white;
-  text-align: center;
-  z-index: 2;
-  word-break: break-word;
-}
-
-#apex_legends_logo {
-  width: 30%;
-}
-
-.official-site-a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-#official-site-span {
-  color: white;
-  font-size: 1em;
-}
-
-#games-cta {
-  color: black;
-  border: black;
-  margin-top: 15px;
-  padding-left:14px;
-  padding-right:14px;
-}
-
-/* EA play section */
-.section-play {
-  position: relative;
-}
-
-.section-play picture img {
-  display: block;
-  width: 100%;
-  max-height: 100%;
-}
-
-.hero-gradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  width:100%;
-}
-
-.hero-content {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 32px 7.5vw;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  color: white;
-  & p {
-    line-height: var(--primary-line-height);
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
-}
-
-.hero-content-cta {
-  display: flex;
-  width: 100%;
-
-  & a {
-    width: 100%;
-    color: white;
-  }
-  & a::before {
-    border: white;
-  }
-}
-
-.subsection-play {
-  width: 100%;
-  height: auto;
-  background-color: #6fb0d6;
-  padding: 32px 7.5vw 16px 7.5vw;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  text-align: center;
-}
-
-.subsection-play-title h5 {
-  line-height: 1.4em;
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #161616;
-}
-
-.subsection-play-cta {
-=======
 /* style local footer */
 .local-footer {
   box-sizing: border-box;
@@ -473,7 +147,6 @@ a {
   color: #161616;
   padding: 32px 22px;
   width: 100vw;
->>>>>>> footer
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -490,229 +163,6 @@ a {
     margin-bottom: 0px;
   }
   & a {
-<<<<<<< HEAD
-    color: black;
-  }
-  & a::before {
-    border: black;
-  }
-  & #btn-scopri {
-    min-width: 148.65px;
-  }
-}
-
-/* MediaQuery Jumbotron */
-@media screen and (min-width: 1024px) and (max-width: 1456px) {
-  .jumbotron-main {
-    background-image: url(assets/bf-2042-s5-mse-hero-video-m.mp4);
-  }
-
-  .jumbotron-main video {
-    display: none;
-  }
-
-  .video-l video {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 425px) and (max-width: 768px) {
-  .video-l video,
-  .jumbotron-main video {
-    display: none;
-  }
-
-  .video-m video {
-    display: block;
-    z-index: 2;
-  }
-
-  .jumbotron-main {
-    background-image: url(assets/bf-2042-section-768w.jpg);
-  }
-
-  .overlay-content img {
-    width: 55%;
-  }
-
-  & .overlay-content h6 {
-    font-size: 15px;
-    width: 55%;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .video-l video,
-  .video-m video,
-  .jumbotron-main video {
-    display: none;
-  }
-
-  .jumbotron-main {
-    height: 85vh;
-    background-image: url(assets/bf-2042-section-bg-s5-mid-season-homepage-xl.jpg.adapt.320w.jpg);
-  }
-
-  .video-s video {
-    display: block;
-    z-index: 2;
-  }
-
-  .overlay-content img {
-    width: 55%;
-  }
-
-  & .overlay-content h6 {
-    font-size: 15px;
-    width: 55%;
-  }
-}
-
-/* media query mainGames section */
-
-/* media query mainGames 4k */
-@media screen and (max-width: 2560px) {
-  .mainGamesContainer {
-    max-width: 1120px;
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-
-  .mainGamesHeader {
-    display: block;
-    font-size: 2.2em;
-  }
-}
-
-/* media query mainGames 2k */
-@media screen and (max-width: 1440px) {
-  .mainGamesContainer {
-    max-width: 100%;
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-
-  .mainGamesHeader {
-    font-size: 2.5em;
-  }
-}
-
-/* media query mainGames laptop */
-@media screen and (max-width: 1024px) {
-  .mainGamesContainer {
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-
-  .mainGamesHeader {
-    font-size: 2.5em;
-  }
-}
-
-/* media query mainGames tablet */
-@media screen and (max-width: 1023px) {
-  .mainGamesContainer {
-    width: 100%;
-  }
-
-  .mainGamesHeader {
-    font-size: 2.7em;
-  }
-
-  .card-games {
-    width: 50%;
-  }
-
-  .logo-main-games {
-    width: 30%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .mainGamesHeader {
-    font-size: 2em;
-  }
-}
-
-/* media query mainGames mobile */
-@media screen and (max-width: 767px) {
-  .card-games {
-    width: 100%;
-  }
-
-  .logo-main-games {
-    width: 50%;
-  }
-}
-
-/* media query mainGames button */
-@media screen and (max-width: 639px) {
-  #games-cta {
-    width: 95%;
-  }
-}
-
-/* media query mainGames 425px */
-@media screen and (max-width: 425px) {
-  .mainGamesContainer {
-    padding-left: 4vw;
-    padding-right: 4vw;
-  }
-  #games-cta {
-    width: 92%;
-  }
-}
-
-/* ! Mediaquery Play section Tablet*/
-@media (min-width: 768px) {
-  .hero-content {
-    height: auto;
-    width: 40.625%;
-    position: absolute;
-    top: 50%;
-    left: 7.8125vw;
-    padding: 0px;
-    transform: translate(0%, -50%);
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-  }
-
-  .subsection-play {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-content-cta a {
-    width: auto;
-  }
-
-  .subsection-play-cta {
-    width: 145px;
-  }
-}
-
-/* ! Mediaquery Play section desktop */
-@media (min-width: 1024px) {
-  .hero-content p {
-    font-size: 18px;
-  }
-
-  .subsection-play {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.4% 7.4218vw;
-  }
-
-  .subsection-play-title {
-    text-align: left;
-    max-width: 544px;
-    & h5 {
-      margin: 0;
-=======
     color: var(--coral-color);
   }
 }
@@ -738,34 +188,10 @@ a {
     width: 50%;
     &:hover {
       color: var(--coral-color);
->>>>>>> footer
     }
   }
 }
 
-<<<<<<< HEAD
-/* ! Mediaquery Play section Laptop large */
-@media (min-width: 1456px) {
-  .hero-content {
-    left: calc((100vw - 1120px) / 2);
-    max-width: 544px;
-  }
-
-  .subsection-play {
-    padding-left: calc((100vw - 1120px) / 2);
-    padding-right: calc((100vw - 1120px) / 2);
-  }
-
-  .subsection-play-title h5 {
-    font-size: 26px;
-  }
-  
-  .btn-cta {
-    padding: 20px 24px !important;
-  }
-}
-
-=======
 .social-networks h3 {
   margin: 25px 0 18px;
   text-align: left;
@@ -1279,4 +705,3 @@ option {
     font-size: calc(1em + 2px);
   }
 }
->>>>>>> footer
