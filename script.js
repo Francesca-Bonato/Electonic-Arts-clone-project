@@ -1,3 +1,4 @@
+
 //access the two select elements (active below 1007px)
 let pricingSelect = document.querySelector('#network-footer-pricing');
 let localeSelect = document.querySelector('#network-footer-language');
@@ -17,16 +18,14 @@ const selectedLocaleSpan = document.querySelector('.ea-locale-selector__selected
 selectedLocaleSpan.innerText = localeSelect.value;
 
 const selectedLocaleFlagSpan = document.querySelector('.ea-locale-selector__selected-flag')
-selectedLocaleFlagSpan.id = (localeSelect.value).split(" ").join("-");
+//selectedLocaleFlagSpan.id = (localeSelect.value).split(" ").join("-");
 
 //add an event listener for the "change" event of the "select" element
 localeSelect.addEventListener('change', () => {
     const selectedLocale = localeSelect.value;
     selectedLocaleSpan.innerText=selectedLocale;
-    selectedLocaleFlagSpan.id = (localeSelect.value).split(" ").join("-");
+    //selectedLocaleFlagSpan.id = (localeSelect.value).split(" ").join("-");
 })
-
-
 
 //access the two network footer buttons relative to pricing and locale:
 const pricingButton = document.querySelector("#ea-regional-pricing-button")
@@ -40,6 +39,24 @@ const mediaQuery = window.matchMedia("(min-width: 1007px)")
 
 const priceClassToHide = document.querySelector(".openPrice")
 const localeClassToHide = document.querySelector(".openLocale")
+
+//add an event listener for the "click" event of the items of the lists
+const pricingListItems = document.querySelectorAll('.ea-regional-pricing-selector__item')
+const localeListItems = document.querySelectorAll('.ea-locale-selector__item')
+
+pricingListItems.forEach ((item) => {
+    item.addEventListener('click', () => {
+        const dataTextValue = item.getAttribute("data-text");
+        selectedPricingSpan.innerText = dataTextValue;
+    })
+})
+
+localeListItems.forEach ((item) => {
+    item.addEventListener('click', () => {
+        const dataTextValue = item.getAttribute("data-text");
+        selectedLocaleSpan.innerText = dataTextValue;
+    })
+})
 
 // ! Function to toggle div in pricing select on 1007px window
 function pricingOnClick() {
@@ -83,10 +100,7 @@ function localeOnClick() {
 
 localeOnClick()
 
-//
-
-//---- Copyright
-
+//---- Copyright -----
 // Set the copyright dynamically in the footer
 const copyrightYear = document.querySelector("#copyright-year");
 
