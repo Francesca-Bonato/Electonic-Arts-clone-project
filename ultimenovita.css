@@ -178,7 +178,7 @@
 /* Bottone dettagli */
 .details-button {
   text-align: center;
-  margin-bottom: 50px;
+  padding: 0 50px 50px 50px
 }
 
 #ultime-novita-dettagli {
@@ -239,7 +239,8 @@
   .details-button {
     display: flex;
     width: 100%;
-    padding: 0 50px;
+    padding-left: 50px;
+    padding-right: 50px;
     & a {
       width: 100%;
     }
@@ -264,6 +265,7 @@
   }
 
   .menu-cards-novita ul {
+    padding: 0 25px;
     display: -webkit-box;
   }
 
@@ -282,10 +284,10 @@
 
   #menu-novita-scroll-left {
     left: 0;
-    background: rgb(255, 255, 255);
+    background: inherit;
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 1) 60%,
+      rgba(243, 243, 243, 1) 60%,
       rgba(255, 255, 255, 0) 93%
     );
     z-index: 1;
@@ -293,10 +295,10 @@
 
   #menu-novita-scroll-right {
     right: 0;
-    background: rgb(255, 255, 255);
+    background: inherit;
     background: linear-gradient(
       270deg,
-      rgba(255, 255, 255, 1) 60%,
+      rgba(243, 243, 243, 1) 60%,
       rgba(255, 255, 255, 0) 93%
     );
   }
