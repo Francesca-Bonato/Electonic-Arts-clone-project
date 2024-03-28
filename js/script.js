@@ -958,6 +958,8 @@ function pricingOnClick() {
       pricingChevron.classList.toggle("upside-down");
       pricingWhitespace.classList.toggle("whitespace");
       pricingList.classList.toggle("openPrice");
+      localeChevron.classList.remove("upside-down");
+      localeWhitespace.classList.remove("whitespace");
       localeList.classList.remove("openLocale");
       e.stopPropagation();
     } else {
@@ -987,6 +989,8 @@ function localeOnClick() {
       localeChevron.classList.toggle("upside-down");
       localeWhitespace.classList.toggle("whitespace");
       localeList.classList.toggle("openLocale");
+      pricingChevron.classList.remove("upside-down");
+      pricingWhitespace.classList.remove("whitespace");
       pricingList.classList.remove("openPrice");
 
       e.stopPropagation();

@@ -717,27 +717,28 @@ a {
     transform: rotate(180deg);
   }
 
-  .whitespace {
-    width: calc(100% + 4px);
-    border: 2px solid #C3C3C3;
-    border-top: none;
-    border-end-end-radius: 3px;
-    border-end-start-radius: 3px;
-    height: 68px;
-    z-index: 1;
-    position: absolute;
-    top: -1px;
-    left: -2px;
-    background-color: #F3F3F3;
-  }
+.whitespace {
+  width: calc(100% + 4px);
+  border: 2px solid #C3C3C3;
+  border-top: none;
+ border-end-end-radius: 3px;
+  border-end-start-radius: 3px;
+  height: 68px;
+  z-index: 1;
+  position: absolute;
+  top: -1.5px;
+  left: -2px;
+  background-color: #F3F3F3;
+  pointer-events: none;
+}
 
-  .ea-regional-pricing-button-label,
-  .ea-regional-pricing-button-selected-container,
-  .ea-locale-button-label,
-  .ea-locale-selector__selected-container {
-    position: relative;
-    z-index: 3;
-  }
+.ea-regional-pricing-button-label,
+.ea-regional-pricing-button-selected-container,
+.ea-locale-button-label,
+.ea-locale-selector__selected-container {
+  position: relative;
+  z-index: 3;
+}
 
   .ea-regional-pricing-selector__item,
   .ea-locale-selector__item {
