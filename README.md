@@ -2,7 +2,7 @@
 
 ### [Live site](https://eaclone.netlify.app/)
 
-![Sneak peek](https://ibb.co/VDR0gb2)
+![Sneak peek](https://ibb.co/VDR0gb2][img]https://i.ibb.co/P4KscJw/screencapture-eaclone-netlify-app-2024-05-01-16-46-39.png)
 
 ## Introduction
 This is our team's Electonic Arts Cloning Project!
