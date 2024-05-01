@@ -1,9 +1,10 @@
 # Electronic Arts Cloning Project
 
-###[Live site](https://eaclone.netlify.app/)
-![Sneak peek](https://ibb.co/VDR0gb2)
+### [Live site](https://eaclone.netlify.app/)
 
-##Introduction
+! [Sneak peek](https://ibb.co/VDR0gb2)
+
+## Introduction
 This is our team's Electonic Arts Cloning Project!
 This repository serves as the central hub for our team's collaborative efforts to clone the Electronic Arts (EA) website using vanilla JavaScript, HTML and CSS.
 
